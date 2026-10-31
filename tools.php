@@ -9,6 +9,9 @@ require_once __DIR__ . '/db.php';
 
 const CITY = 'Los Angeles, CA 90045';
 
+// Thrown when a tool cannot answer. Its message is meant for Claude (and the user) to read.
+class ToolError extends Exception {}
+
 const TOOLS = [
     [
         'name' => 'SearchProperty',
@@ -37,10 +40,10 @@ const TOOLS = [
 ];
 
 // Claude asked for tool $name with inputs $input: call the PHP function of that name.
-// A tool that cannot answer throws; agent.php sends the message back to Claude as an error.
+// A tool that cannot answer throws a ToolError; agent.php sends its message back to Claude.
 function run_tool(string $name, array $input): array
 {
-    if (!in_array($name, array_column(TOOLS, 'name'), true)) throw new InvalidArgumentException("Unknown tool $name");
+    if (!in_array($name, array_column(TOOLS, 'name'), true)) throw new ToolError("Unknown tool $name.");
     return $name(...$input);
 }
 
@@ -56,14 +59,14 @@ function SearchProperty(string $address): array
 {
     $q = db()->prepare('SELECT id, address FROM properties WHERE address_key = ?');
     $q->execute([address_key($address)]);
-    return $q->fetch() ?: throw new RuntimeException("No property found at \"$address\". This demo covers Westchester, " . CITY . '.');
+    return $q->fetch() ?: throw new ToolError("No property found at \"$address\". This demo covers Westchester, " . CITY . '.');
 }
 
 function PropertyDetail(int $id): array
 {
     $q = db()->prepare('SELECT * FROM properties WHERE id = ?');
     $q->execute([$id]);
-    $p = $q->fetch() ?: throw new RuntimeException("No property with id $id.");
+    $p = $q->fetch() ?: throw new ToolError("No property with id $id.");
 
     $q = db()->prepare('SELECT lender, loan_type, original_amount, balance, interest_rate, recorded_date
                         FROM mortgages WHERE property_id = ? ORDER BY recorded_date');
@@ -100,7 +103,7 @@ function OwnerDetail(int $id): array
     $q = db()->prepare('SELECT o.names, o.owner_type, o.mailing_address, o.owner_occupied, o.age_range, o.email, p.last_sale_date
                         FROM owners.owners o JOIN properties p ON p.id = o.property_id WHERE o.property_id = ?');
     $q->execute([$id]);
-    $o = $q->fetch() ?: throw new RuntimeException("No owner record for property id $id.");
+    $o = $q->fetch() ?: throw new ToolError("No owner record for property id $id.");
 
     $q = db()->prepare('SELECT number, line_type, do_not_call FROM owners.phones WHERE property_id = ?');
     $q->execute([$id]);

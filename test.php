@@ -6,7 +6,7 @@ $scratch = sys_get_temp_dir() . '/real-estate-agent-test-' . getmypid();   // on
 mkdir($scratch);
 register_shutdown_function(fn() => exec('rm -rf ' . escapeshellarg($scratch)));
 putenv("DATA_DIR=$scratch");
-foreach (parse_ini_file(__DIR__ . '/.env') as $key => $value) putenv("$key=$value");
+foreach (parse_ini_file(__DIR__ . '/.env', false, INI_SCANNER_RAW) as $key => $value) putenv("$key=$value");
 require __DIR__ . '/agent.php';
 
 $tests = [];
@@ -52,12 +52,12 @@ test('tools', 'every_real_house_is_searchable', function () use ($houses) {
     check(SearchProperty('  ' . strtoupper(str_replace(' ', '  ', $h['address'])))['address'] === $h['address'], 'search is not case/space tolerant');
 });
 
-test('tools', 'unknown_address_throws', fn() => check(throws(fn() => SearchProperty('1 Fake Street'), RuntimeException::class, 'No property found'), 'no error for a made-up address'));
+test('tools', 'unknown_address_throws', fn() => check(throws(fn() => SearchProperty('1 Fake Street'), ToolError::class, 'No property found'), 'no error for a made-up address'));
 
 test('tools', 'common_address_spellings_match', function () {
     foreach (['8311 Kenyon Ave' => '8311 Kenyon Avenue', '8311 kenyon ave., LA' => '8311 Kenyon Avenue',
               '6421 W 87th Pl' => '6421 West 87th Place', '6421 W. 87th St' => null] as $typed => $real) {
-        if ($real === null) { check(throws(fn() => SearchProperty($typed), RuntimeException::class, 'No property found'), "$typed matched a house"); continue; }
+        if ($real === null) { check(throws(fn() => SearchProperty($typed), ToolError::class, 'No property found'), "$typed matched a house"); continue; }
         check(SearchProperty($typed)['address'] === $real, "$typed did not find $real");
     }
 });
@@ -121,14 +121,14 @@ test('tools', 'owner_record', function () {
 });
 
 test('tools', 'missing_ids_throw', function () {
-    check(throws(fn() => PropertyDetail(99999), RuntimeException::class, 'No property with id 99999'), 'PropertyDetail(99999) did not throw');
-    check(throws(fn() => OwnerDetail(99999), RuntimeException::class, 'No owner record'), 'OwnerDetail(99999) did not throw');
+    check(throws(fn() => PropertyDetail(99999), ToolError::class, 'No property with id 99999'), 'PropertyDetail(99999) did not throw');
+    check(throws(fn() => OwnerDetail(99999), ToolError::class, 'No owner record'), 'OwnerDetail(99999) did not throw');
 });
 
 test('tools', 'run_tool_dispatch', function () {
     check(run_tool('PropertyDetail', ['id' => 5])['apn'] === raw('SELECT apn FROM properties WHERE id = 5')[0]['apn'], 'dispatch hit the wrong tool');
     ob_start();
-    $blocked = throws(fn() => run_tool('system', ['echo RAN']), InvalidArgumentException::class, 'Unknown tool system');
+    $blocked = throws(fn() => run_tool('system', ['echo RAN']), ToolError::class, 'Unknown tool system');
     check($blocked && ob_get_clean() === '', 'a PHP function outside TOOLS was callable');
     check(throws(fn() => run_tool('PropertyDetail', ['idx' => 5]), Error::class, 'Unknown named parameter'), 'an unknown argument was accepted');
 });
@@ -145,16 +145,17 @@ function turn(array &$messages, string $text): array
     echo "  > user: $text\n";
     $messages[] = ['role' => 'user', 'content' => $text];
     $added = [];
-    run_agent($messages, function (array $new, float $cost) use (&$added) {
+    run_agent($messages, function (array $new, array $usages) use (&$added) {
         $last = end($new);
         check(!($last['role'] === 'assistant' && in_array('tool_use', array_column($last['content'], 'type'), true)), 'saved a tool call without its result');
+        check(count($usages) === count(array_filter($new, fn($m) => $m['role'] === 'assistant')), 'not exactly one usage per Claude call');
         foreach ($new as $m) foreach ($m['content'] as $b) echo match ($b['type']) {
             'tool_use' => "  . Used tool: $b[name] " . json_encode($b['input']) . "\n",
             'tool_result' => '  . result: ' . (($b['is_error'] ?? false) ? 'ERROR ' : '') . substr($b['content'], 0, 100) . "...\n",
             'text' => '  < agent: ' . str_replace("\n", "\n           ", $b['text']) . "\n",
             default => '',
         };
-        printf("  \$ %.6f\n", $cost);
+        printf("  \$ %.6f\n", array_sum(array_map('price', $usages)));
         array_push($added, ...$new);
     });
     return $added;
@@ -175,7 +176,7 @@ test('agent', 'address_turn_searches_then_details_then_offers', function () use 
     $calls = blocks($added, 'tool_use');
     check(array_column($calls, 'name') === ['SearchProperty', 'PropertyDetail'], 'expected SearchProperty then PropertyDetail, got ' . implode(',', array_column($calls, 'name')));
     check($calls[1]['input']['id'] === $subject['id'], 'PropertyDetail was not called with the id SearchProperty returned');
-    check(str_contains(final_text($added), OFFER), 'reply does not end with the offer sentence');
+    check(str_ends_with(trim(final_text($added)), OFFER), 'reply does not end with the offer sentence');
 });
 
 test('agent', 'yes_both_calls_comps_and_owner', function () use (&$chat, $subject) {
@@ -223,7 +224,7 @@ test('agent', 'api_errors_surface_with_their_message', function () {
     catch (RuntimeException $e) { $message = $e->getMessage(); }
     finally { putenv("ANTHROPIC_API_KEY=$key"); }
     echo "  error: $message\n";
-    check($message !== null && str_starts_with($message, 'Claude API error: ') && stripos($message, 'api') !== false, 'bad key did not raise the API error message');
+    check($message === 'Claude API error: invalid x-api-key', 'bad key did not raise Anthropic\'s error message');
 });
 
 
