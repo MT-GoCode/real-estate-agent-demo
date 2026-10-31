@@ -1,0 +1,6074 @@
+[
+{
+"address":"8324 Chase Avenue",
+"lat":33.962615,
+"lon":-118.410049,
+"apn":"4112-013-015",
+"year_built":1945,
+"units":1
+},
+{
+"address":"8328 Chase Avenue",
+"lat":33.962477,
+"lon":-118.409999,
+"apn":"4112-013-014",
+"year_built":1945,
+"units":1
+},
+{
+"address":"8332 Chase Avenue",
+"lat":33.962363,
+"lon":-118.409929,
+"apn":"4112-013-013",
+"year_built":1945,
+"units":1
+},
+{
+"address":"8336 Chase Avenue",
+"lat":33.962251,
+"lon":-118.409824,
+"apn":"4112-013-012",
+"year_built":1945,
+"units":1
+},
+{
+"address":"8340 Chase Avenue",
+"lat":33.962146,
+"lon":-118.409707,
+"apn":"4112-013-011",
+"year_built":1945,
+"units":1
+},
+{
+"address":"8344 Chase Avenue",
+"lat":33.962022,
+"lon":-118.409639,
+"apn":"4112-013-010",
+"year_built":1945,
+"units":1
+},
+{
+"address":"8348 Chase Avenue",
+"lat":33.961911,
+"lon":-118.40955,
+"apn":"4112-016-024",
+"year_built":1945,
+"units":1
+},
+{
+"address":"8349 Chase Avenue",
+"lat":33.961734,
+"lon":-118.410028,
+"apn":"4112-015-014",
+"year_built":1946,
+"units":1
+},
+{
+"address":"8352 Chase Avenue",
+"lat":33.96178,
+"lon":-118.40949,
+"apn":"4112-016-023",
+"year_built":1945,
+"units":1
+},
+{
+"address":"8353 Chase Avenue",
+"lat":33.961618,
+"lon":-118.409945,
+"apn":"4112-015-015",
+"year_built":1946,
+"units":1
+},
+{
+"address":"8356 Chase Avenue",
+"lat":33.96165,
+"lon":-118.409416,
+"apn":"4112-016-022",
+"year_built":1945,
+"units":1
+},
+{
+"address":"8357 Chase Avenue",
+"lat":33.961496,
+"lon":-118.409863,
+"apn":"4112-015-016",
+"year_built":1946,
+"units":1
+},
+{
+"address":"8360 Chase Avenue",
+"lat":33.961531,
+"lon":-118.409327,
+"apn":"4112-016-021",
+"year_built":1945,
+"units":1
+},
+{
+"address":"8361 Chase Avenue",
+"lat":33.961377,
+"lon":-118.409777,
+"apn":"4112-015-017",
+"year_built":1946,
+"units":1
+},
+{
+"address":"8364 Chase Avenue",
+"lat":33.96142,
+"lon":-118.409212,
+"apn":"4112-016-020",
+"year_built":1945,
+"units":1
+},
+{
+"address":"8365 Chase Avenue",
+"lat":33.961247,
+"lon":-118.409689,
+"apn":"4112-015-018",
+"year_built":1946,
+"units":1
+},
+{
+"address":"8368 Chase Avenue",
+"lat":33.961296,
+"lon":-118.409115,
+"apn":"4112-016-019",
+"year_built":1945,
+"units":1
+},
+{
+"address":"8369 Chase Avenue",
+"lat":33.961115,
+"lon":-118.409652,
+"apn":"4112-015-019",
+"year_built":1946,
+"units":1
+},
+{
+"address":"8372 Chase Avenue",
+"lat":33.961162,
+"lon":-118.409062,
+"apn":"4112-016-018",
+"year_built":1945,
+"units":1
+},
+{
+"address":"8373 Chase Avenue",
+"lat":33.960979,
+"lon":-118.409542,
+"apn":"4112-015-020",
+"year_built":1946,
+"units":1
+},
+{
+"address":"8376 Chase Avenue",
+"lat":33.961014,
+"lon":-118.409043,
+"apn":"4112-016-017",
+"year_built":1945,
+"units":1
+},
+{
+"address":"8377 Chase Avenue",
+"lat":33.960857,
+"lon":-118.409508,
+"apn":"4112-015-021",
+"year_built":1946,
+"units":1
+},
+{
+"address":"8380 Chase Avenue",
+"lat":33.960895,
+"lon":-118.408913,
+"apn":"4112-016-016",
+"year_built":1945,
+"units":1
+},
+{
+"address":"8381 Chase Avenue",
+"lat":33.960732,
+"lon":-118.40943,
+"apn":"4112-015-022",
+"year_built":1946,
+"units":1
+},
+{
+"address":"8384 Chase Avenue",
+"lat":33.960768,
+"lon":-118.408912,
+"apn":"4112-016-015",
+"year_built":1945,
+"units":1
+},
+{
+"address":"8385 Chase Avenue",
+"lat":33.960589,
+"lon":-118.409327,
+"apn":"4112-015-023",
+"year_built":1951,
+"units":1
+},
+{
+"address":"8388 Chase Avenue",
+"lat":33.960602,
+"lon":-118.408861,
+"apn":"4112-016-014",
+"year_built":1948,
+"units":1
+},
+{
+"address":"8325-8327 Dunbarton Avenue",
+"lat":33.962816,
+"lon":-118.406279,
+"apn":"4112-031-002",
+"year_built":1948,
+"units":2
+},
+{
+"address":"8329-8331 Dunbarton Avenue",
+"lat":33.962667,
+"lon":-118.406228,
+"apn":"4112-031-021",
+"year_built":1948,
+"units":2
+},
+{
+"address":"8333-8335 Dunbarton Avenue",
+"lat":33.962576,
+"lon":-118.406122,
+"apn":"4112-031-005",
+"year_built":1948,
+"units":2
+},
+{
+"address":"8337-8339 Dunbarton Avenue",
+"lat":33.962453,
+"lon":-118.406048,
+"apn":"4112-031-006",
+"year_built":1948,
+"units":2
+},
+{
+"address":"8341-8343 Dunbarton Avenue",
+"lat":33.962337,
+"lon":-118.406005,
+"apn":"4112-031-022",
+"year_built":1948,
+"units":2
+},
+{
+"address":"8345-8347 Dunbarton Avenue",
+"lat":33.962192,
+"lon":-118.405936,
+"apn":"4112-031-009",
+"year_built":1948,
+"units":2
+},
+{
+"address":"8349-8351 Dunbarton Avenue",
+"lat":33.962046,
+"lon":-118.405898,
+"apn":"4112-030-012;4112031009",
+"year_built":1948,
+"units":1
+},
+{
+"address":"8353-8355 Dunbarton Avenue",
+"lat":33.96194,
+"lon":-118.405807,
+"apn":"4112-030-013",
+"year_built":1948,
+"units":2
+},
+{
+"address":"8357-8359 Dunbarton Avenue",
+"lat":33.96182,
+"lon":-118.405759,
+"apn":"4112-030-014;4112030013",
+"year_built":1948,
+"units":2
+},
+{
+"address":"8361-8363 Dunbarton Avenue",
+"lat":33.961676,
+"lon":-118.405724,
+"apn":"4112-030-015",
+"year_built":1948,
+"units":2
+},
+{
+"address":"8365-8367 Dunbarton Avenue",
+"lat":33.961543,
+"lon":-118.405671,
+"apn":"4112-030-016",
+"year_built":1948,
+"units":2
+},
+{
+"address":"8369-8371 Dunbarton Avenue",
+"lat":33.961402,
+"lon":-118.405677,
+"apn":"4112-030-017",
+"year_built":1948,
+"units":2
+},
+{
+"address":"8373-8375 Dunbarton Avenue",
+"lat":33.961286,
+"lon":-118.405608,
+"apn":"4112-030-018",
+"year_built":1948,
+"units":2
+},
+{
+"address":"8377-8379 Dunbarton Avenue",
+"lat":33.961136,
+"lon":-118.405583,
+"apn":"4112-030-019",
+"year_built":1948,
+"units":2
+},
+{
+"address":"8381-8383 Dunbarton Avenue",
+"lat":33.961013,
+"lon":-118.405565,
+"apn":"4112-030-020",
+"year_built":1948,
+"units":2
+},
+{
+"address":"8385-8387 Dunbarton Avenue",
+"lat":33.960847,
+"lon":-118.405552,
+"apn":"4112-030-021",
+"year_built":1948,
+"units":2
+},
+{
+"address":"8389-8391 Dunbarton Avenue",
+"lat":33.960724,
+"lon":-118.405542,
+"apn":"4112-030-022",
+"year_built":1948,
+"units":2
+},
+{
+"address":"8393-8395 Dunbarton Avenue",
+"lat":33.960572,
+"lon":-118.405543,
+"apn":"4112-030-023",
+"year_built":1948,
+"units":2
+},
+{
+"address":"8616-8618 El Manor Avenue",
+"lat":33.959162,
+"lon":-118.398495,
+"apn":"4122-002-026",
+"year_built":1944,
+"units":2
+},
+{
+"address":"8620-8622 El Manor Avenue",
+"lat":33.959014,
+"lon":-118.398484,
+"apn":"4122-002-021",
+"year_built":1944,
+"units":2
+},
+{
+"address":"8625 El Manor Avenue",
+"lat":33.958936,
+"lon":-118.398976,
+"apn":"4122-006-008",
+"year_built":1944,
+"units":1
+},
+{
+"address":"8626-8628 El Manor Avenue",
+"lat":33.958834,
+"lon":-118.398489,
+"apn":"4122-002-024",
+"year_built":1944,
+"units":2
+},
+{
+"address":"8630-8632 El Manor Avenue",
+"lat":33.95868,
+"lon":-118.398495,
+"apn":"4122-002-020",
+"year_built":1944,
+"units":2
+},
+{
+"address":"8700-8702 El Manor Avenue",
+"lat":33.958505,
+"lon":-118.398489,
+"apn":"4122-002-008",
+"year_built":1944,
+"units":2
+},
+{
+"address":"8704-8706 El Manor Avenue",
+"lat":33.958349,
+"lon":-118.398489,
+"apn":"4122-002-022",
+"year_built":1944,
+"units":2
+},
+{
+"address":"8710-8712 El Manor Avenue",
+"lat":33.958168,
+"lon":-118.398482,
+"apn":"4122-002-027",
+"year_built":1944,
+"units":2
+},
+{
+"address":"8711 El Manor Avenue",
+"lat":33.958202,
+"lon":-118.398974,
+"apn":"4122-009-015",
+"year_built":1944,
+"units":1
+},
+{
+"address":"8714-8716 El Manor Avenue",
+"lat":33.958023,
+"lon":-118.398494,
+"apn":"4122-002-025",
+"year_built":1944,
+"units":2
+},
+{
+"address":"8720-8722 El Manor Avenue",
+"lat":33.957842,
+"lon":-118.398482,
+"apn":"4122-002-003",
+"year_built":1944,
+"units":2
+},
+{
+"address":"8724-8726 El Manor Avenue",
+"lat":33.957665,
+"lon":-118.398477,
+"apn":"4122-002-002",
+"year_built":1944,
+"units":2
+},
+{
+"address":"8730-8732 El Manor Avenue",
+"lat":33.957491,
+"lon":-118.39847,
+"apn":"4122-002-023",
+"year_built":1944,
+"units":2
+},
+{
+"address":"8515-8517 Emerson Avenue",
+"lat":33.960658,
+"lon":-118.404668,
+"apn":"4108-001-001",
+"year_built":1948,
+"units":8
+},
+{
+"address":"8555 Emerson Avenue",
+"lat":33.960158,
+"lon":-118.404724,
+"apn":"4112-029-028",
+"year_built":1990,
+"units":30
+},
+{
+"address":"8751 Emerson Avenue",
+"lat":33.957473,
+"lon":-118.404604,
+"apn":"4122-019-012",
+"year_built":1949,
+"units":1
+},
+{
+"address":"8549 Kentwood Avenue",
+"lat":33.960259,
+"lon":-118.400603,
+"apn":"4108-018-020",
+"year_built":1949,
+"units":1
+},
+{
+"address":"8632 Kentwood Avenue",
+"lat":33.958726,
+"lon":-118.400183,
+"apn":"4122-006-016",
+"year_built":1944,
+"units":1
+},
+{
+"address":"8311 Kenyon Avenue",
+"lat":33.962987,
+"lon":-118.409756,
+"apn":"4112-013-003",
+"year_built":1946,
+"units":1
+},
+{
+"address":"8314 Kenyon Avenue",
+"lat":33.963009,
+"lon":-118.409196,
+"apn":"4112-018-010",
+"year_built":1945,
+"units":1
+},
+{
+"address":"8315 Kenyon Avenue",
+"lat":33.962852,
+"lon":-118.409674,
+"apn":"4112-013-004",
+"year_built":1946,
+"units":1
+},
+{
+"address":"8318 Kenyon Avenue",
+"lat":33.962892,
+"lon":-118.409076,
+"apn":"4112-018-009",
+"year_built":1945,
+"units":1
+},
+{
+"address":"8321 Kenyon Avenue",
+"lat":33.962733,
+"lon":-118.409604,
+"apn":"4112-013-005",
+"year_built":1946,
+"units":1
+},
+{
+"address":"8324 Kenyon Avenue",
+"lat":33.962753,
+"lon":-118.409064,
+"apn":"4112-018-008",
+"year_built":1945,
+"units":1
+},
+{
+"address":"8325 Kenyon Avenue",
+"lat":33.962602,
+"lon":-118.409542,
+"apn":"4112-013-006",
+"year_built":1946,
+"units":1
+},
+{
+"address":"8326 Kenyon Avenue",
+"lat":33.962649,
+"lon":-118.408963,
+"apn":"4112-018-007",
+"year_built":1945,
+"units":1
+},
+{
+"address":"8331 Kenyon Avenue",
+"lat":33.962487,
+"lon":-118.409421,
+"apn":"4112-013-007",
+"year_built":1946,
+"units":1
+},
+{
+"address":"8334 Kenyon Avenue",
+"lat":33.962524,
+"lon":-118.408897,
+"apn":"4112-018-006",
+"year_built":1945,
+"units":1
+},
+{
+"address":"8335 Kenyon Avenue",
+"lat":33.962367,
+"lon":-118.409365,
+"apn":"4112-013-008",
+"year_built":1946,
+"units":1
+},
+{
+"address":"8338 Kenyon Avenue",
+"lat":33.962396,
+"lon":-118.40879,
+"apn":"4112-018-005",
+"year_built":1945,
+"units":1
+},
+{
+"address":"8339 Kenyon Avenue",
+"lat":33.962253,
+"lon":-118.409236,
+"apn":"4112-013-009",
+"year_built":1946,
+"units":1
+},
+{
+"address":"8343 Kenyon Avenue",
+"lat":33.962141,
+"lon":-118.409158,
+"apn":"4112-016-001",
+"year_built":1946,
+"units":1
+},
+{
+"address":"8344 Kenyon Avenue",
+"lat":33.96229,
+"lon":-118.408717,
+"apn":"4112-018-004",
+"year_built":1945,
+"units":1
+},
+{
+"address":"8347 Kenyon Avenue",
+"lat":33.962003,
+"lon":-118.409108,
+"apn":"4112-016-002",
+"year_built":1946,
+"units":1
+},
+{
+"address":"8348 Kenyon Avenue",
+"lat":33.962162,
+"lon":-118.408626,
+"apn":"4112-018-003",
+"year_built":1945,
+"units":1
+},
+{
+"address":"8351 Kenyon Avenue",
+"lat":33.961906,
+"lon":-118.408967,
+"apn":"4112-016-003",
+"year_built":1946,
+"units":1
+},
+{
+"address":"8352 Kenyon Avenue",
+"lat":33.962054,
+"lon":-118.408545,
+"apn":"4112-018-002",
+"year_built":1945,
+"units":1
+},
+{
+"address":"8355 Kenyon Avenue",
+"lat":33.961785,
+"lon":-118.408891,
+"apn":"4112-016-003;4112016004",
+"year_built":1946,
+"units":1
+},
+{
+"address":"8356 Kenyon Avenue",
+"lat":33.961943,
+"lon":-118.408442,
+"apn":"4112-018-001",
+"year_built":1945,
+"units":1
+},
+{
+"address":"8359 Kenyon Avenue",
+"lat":33.961657,
+"lon":-118.40885,
+"apn":"4112-016-005",
+"year_built":1946,
+"units":1
+},
+{
+"address":"8360 Kenyon Avenue",
+"lat":33.961837,
+"lon":-118.408324,
+"apn":"4112-017-010",
+"year_built":1945,
+"units":1
+},
+{
+"address":"8364 Kenyon Avenue",
+"lat":33.961701,
+"lon":-118.408273,
+"apn":"4112-017-009",
+"year_built":1945,
+"units":1
+},
+{
+"address":"8365 Kenyon Avenue",
+"lat":33.9615,
+"lon":-118.408765,
+"apn":"4112-016-006",
+"year_built":1946,
+"units":1
+},
+{
+"address":"8368 Kenyon Avenue",
+"lat":33.961575,
+"lon":-118.40817,
+"apn":"4112-017-008",
+"year_built":1945,
+"units":1
+},
+{
+"address":"8369 Kenyon Avenue",
+"lat":33.961411,
+"lon":-118.408673,
+"apn":"4112-016-007",
+"year_built":1946,
+"units":1
+},
+{
+"address":"8372 Kenyon Avenue",
+"lat":33.961446,
+"lon":-118.408107,
+"apn":"4112-017-007",
+"year_built":1945,
+"units":1
+},
+{
+"address":"8376 Kenyon Avenue",
+"lat":33.96129,
+"lon":-118.408099,
+"apn":"4112-017-006",
+"year_built":1946,
+"units":1
+},
+{
+"address":"8377 Kenyon Avenue",
+"lat":33.961155,
+"lon":-118.408555,
+"apn":"4112-016-009",
+"year_built":1946,
+"units":1
+},
+{
+"address":"8380 Kenyon Avenue",
+"lat":33.961153,
+"lon":-118.40802,
+"apn":"4112-017-005",
+"year_built":1945,
+"units":1
+},
+{
+"address":"8381 Kenyon Avenue",
+"lat":33.961014,
+"lon":-118.408466,
+"apn":"4112-016-010",
+"year_built":1946,
+"units":1
+},
+{
+"address":"8384 Kenyon Avenue",
+"lat":33.961026,
+"lon":-118.407988,
+"apn":"4112-017-004",
+"year_built":1945,
+"units":1
+},
+{
+"address":"8387 Kenyon Avenue",
+"lat":33.960874,
+"lon":-118.408467,
+"apn":"4112-016-011",
+"year_built":1946,
+"units":1
+},
+{
+"address":"8388 Kenyon Avenue",
+"lat":33.960883,
+"lon":-118.40796,
+"apn":"4112-017-003",
+"year_built":1945,
+"units":1
+},
+{
+"address":"8391 Kenyon Avenue",
+"lat":33.960734,
+"lon":-118.408465,
+"apn":"4112-016-012",
+"year_built":1946,
+"units":1
+},
+{
+"address":"8392 Kenyon Avenue",
+"lat":33.960742,
+"lon":-118.407939,
+"apn":"4112-017-002",
+"year_built":1945,
+"units":1
+},
+{
+"address":"8395 Kenyon Avenue",
+"lat":33.960575,
+"lon":-118.408438,
+"apn":"4112-016-013",
+"year_built":1946,
+"units":1
+},
+{
+"address":"8396 Kenyon Avenue",
+"lat":33.960601,
+"lon":-118.407933,
+"apn":"4112-017-001",
+"year_built":1945,
+"units":1
+},
+{
+"address":"8744 Liberator Avenue",
+"lat":33.958246,
+"lon":-118.403111,
+"apn":"4122-010-022",
+"year_built":1944,
+"units":1
+},
+{
+"address":"8745 Liberator Avenue",
+"lat":33.958014,
+"lon":-118.403435,
+"apn":"4122-013-001",
+"year_built":1944,
+"units":1
+},
+{
+"address":"8750 Liberator Avenue",
+"lat":33.958145,
+"lon":-118.402968,
+"apn":"4122-010-021",
+"year_built":1944,
+"units":1
+},
+{
+"address":"8751 Liberator Avenue",
+"lat":33.957878,
+"lon":-118.403313,
+"apn":"4122-013-002",
+"year_built":1944,
+"units":1
+},
+{
+"address":"8755 Liberator Avenue",
+"lat":33.957756,
+"lon":-118.403217,
+"apn":"4122-013-003",
+"year_built":1944,
+"units":1
+},
+{
+"address":"8759 Liberator Avenue",
+"lat":33.95763,
+"lon":-118.403147,
+"apn":"4122-013-004",
+"year_built":1944,
+"units":1
+},
+{
+"address":"8763 Liberator Avenue",
+"lat":33.957496,
+"lon":-118.403058,
+"apn":"4122-013-005",
+"year_built":1944,
+"units":1
+},
+{
+"address":"8520 McConnell Avenue",
+"lat":33.961001,
+"lon":-118.410055,
+"apn":"4112-015-008",
+"year_built":1947,
+"units":1
+},
+{
+"address":"8524 McConnell Avenue",
+"lat":33.96086,
+"lon":-118.410007,
+"apn":"4112-015-009",
+"year_built":1947,
+"units":1
+},
+{
+"address":"8530 McConnell Avenue",
+"lat":33.960737,
+"lon":-118.409935,
+"apn":"4112-015-010",
+"year_built":1947,
+"units":1
+},
+{
+"address":"8536 McConnell Avenue",
+"lat":33.960597,
+"lon":-118.409793,
+"apn":"4112-015-011",
+"year_built":1947,
+"units":1
+},
+{
+"address":"8616-8622 McConnell Avenue",
+"lat":33.959092,
+"lon":-118.409006,
+"apn":"4122-016-001",
+"year_built":1947,
+"units":4
+},
+{
+"address":"8711-8715 McConnell Avenue",
+"lat":33.957977,
+"lon":-118.409198,
+"apn":"4122-037-009",
+"year_built":1946,
+"units":1
+},
+{
+"address":"8716 McConnell Avenue",
+"lat":33.958111,
+"lon":-118.408788,
+"apn":"4122-018-025",
+"year_built":1953,
+"units":1
+},
+{
+"address":"8717-8719 McConnell Avenue",
+"lat":33.957881,
+"lon":-118.409096,
+"apn":"4122-037-008",
+"year_built":1946,
+"units":1
+},
+{
+"address":"8723 McConnell Avenue",
+"lat":33.95777,
+"lon":-118.408996,
+"apn":"4122-037-008;4122037007",
+"year_built":1946,
+"units":1
+},
+{
+"address":"8729 McConnell Avenue",
+"lat":33.957619,
+"lon":-118.408858,
+"apn":"4122-037-006",
+"year_built":1947,
+"units":1
+},
+{
+"address":"8734 McConnell Avenue",
+"lat":33.9577,
+"lon":-118.408336,
+"apn":"4122-020-001",
+"year_built":1946,
+"units":1
+},
+{
+"address":"8735 McConnell Avenue",
+"lat":33.957512,
+"lon":-118.408742,
+"apn":"4122-037-005",
+"year_built":1947,
+"units":1
+},
+{
+"address":"8741 McConnell Avenue",
+"lat":33.957332,
+"lon":-118.408556,
+"apn":"4122-037-001",
+"year_built":1947,
+"units":1
+},
+{
+"address":"8750 McConnell Avenue",
+"lat":33.957379,
+"lon":-118.40808,
+"apn":"4122-020-017",
+"year_built":1947,
+"units":1
+},
+{
+"address":"8309 Stewart Avenue",
+"lat":33.96299,
+"lon":-118.408656,
+"apn":"4112-018-015",
+"year_built":1944,
+"units":1
+},
+{
+"address":"8310 Stewart Avenue",
+"lat":33.963023,
+"lon":-118.408081,
+"apn":"4112-027-021",
+"year_built":1944,
+"units":1
+},
+{
+"address":"8313 Stewart Avenue",
+"lat":33.962876,
+"lon":-118.408553,
+"apn":"4112-018-016",
+"year_built":1944,
+"units":1
+},
+{
+"address":"8316 Stewart Avenue",
+"lat":33.962899,
+"lon":-118.407995,
+"apn":"4112-027-020",
+"year_built":1944,
+"units":1
+},
+{
+"address":"8319 Stewart Avenue",
+"lat":33.962739,
+"lon":-118.408509,
+"apn":"4112-018-017",
+"year_built":1944,
+"units":1
+},
+{
+"address":"8320 Stewart Avenue",
+"lat":33.962787,
+"lon":-118.407921,
+"apn":"4112-027-019",
+"year_built":1944,
+"units":1
+},
+{
+"address":"8323 Stewart Avenue",
+"lat":33.962636,
+"lon":-118.408365,
+"apn":"4112-018-018",
+"year_built":1944,
+"units":1
+},
+{
+"address":"8324 Stewart Avenue",
+"lat":33.962668,
+"lon":-118.40784,
+"apn":"4112-027-018",
+"year_built":1944,
+"units":1
+},
+{
+"address":"8327 Stewart Avenue",
+"lat":33.962513,
+"lon":-118.408332,
+"apn":"4112-018-019",
+"year_built":1944,
+"units":1
+},
+{
+"address":"8328 Stewart Avenue",
+"lat":33.962544,
+"lon":-118.407757,
+"apn":"4112-027-017",
+"year_built":1944,
+"units":1
+},
+{
+"address":"8331 Stewart Avenue",
+"lat":33.962365,
+"lon":-118.408258,
+"apn":"4112-018-020",
+"year_built":1944,
+"units":1
+},
+{
+"address":"8332 Stewart Avenue",
+"lat":33.962415,
+"lon":-118.407683,
+"apn":"4112-027-016",
+"year_built":1944,
+"units":1
+},
+{
+"address":"8335 Stewart Avenue",
+"lat":33.962286,
+"lon":-118.408136,
+"apn":"4112-018-021",
+"year_built":1944,
+"units":1
+},
+{
+"address":"8336 Stewart Avenue",
+"lat":33.962317,
+"lon":-118.407561,
+"apn":"4112-027-015",
+"year_built":1944,
+"units":1
+},
+{
+"address":"8339 Stewart Avenue",
+"lat":33.962166,
+"lon":-118.408055,
+"apn":"4112-018-022",
+"year_built":1944,
+"units":1
+},
+{
+"address":"8340 Stewart Avenue",
+"lat":33.962176,
+"lon":-118.407502,
+"apn":"4112-027-014",
+"year_built":1944,
+"units":1
+},
+{
+"address":"8343 Stewart Avenue",
+"lat":33.962045,
+"lon":-118.407938,
+"apn":"4112-017-011",
+"year_built":1945,
+"units":1
+},
+{
+"address":"8344 Stewart Avenue",
+"lat":33.962071,
+"lon":-118.407403,
+"apn":"4112-027-013",
+"year_built":1944,
+"units":1
+},
+{
+"address":"8347 Stewart Avenue",
+"lat":33.961932,
+"lon":-118.407839,
+"apn":"4112-017-012",
+"year_built":1945,
+"units":1
+},
+{
+"address":"8348 Stewart Avenue",
+"lat":33.961934,
+"lon":-118.407337,
+"apn":"4112-027-012",
+"year_built":1944,
+"units":1
+},
+{
+"address":"8351 Stewart Avenue",
+"lat":33.961805,
+"lon":-118.407815,
+"apn":"4112-017-013",
+"year_built":1945,
+"units":1
+},
+{
+"address":"8352 Stewart Avenue",
+"lat":33.961808,
+"lon":-118.40726,
+"apn":"4112-028-020",
+"year_built":1944,
+"units":1
+},
+{
+"address":"8355 Stewart Avenue",
+"lat":33.961672,
+"lon":-118.407751,
+"apn":"4112-017-014",
+"year_built":1945,
+"units":1
+},
+{
+"address":"8356 Stewart Avenue",
+"lat":33.961678,
+"lon":-118.407212,
+"apn":"4112-028-019",
+"year_built":1944,
+"units":1
+},
+{
+"address":"8359 Stewart Avenue",
+"lat":33.961547,
+"lon":-118.407704,
+"apn":"4112-017-015",
+"year_built":1945,
+"units":1
+},
+{
+"address":"8360 Stewart Avenue",
+"lat":33.961547,
+"lon":-118.407147,
+"apn":"4112-028-021",
+"year_built":1944,
+"units":1
+},
+{
+"address":"8364 Stewart Avenue",
+"lat":33.961405,
+"lon":-118.407117,
+"apn":"4112-028-018",
+"year_built":1944,
+"units":1
+},
+{
+"address":"8367 Stewart Avenue",
+"lat":33.961272,
+"lon":-118.407562,
+"apn":"4112-017-017",
+"year_built":1945,
+"units":1
+},
+{
+"address":"8368 Stewart Avenue",
+"lat":33.96127,
+"lon":-118.407074,
+"apn":"4112-028-017",
+"year_built":1944,
+"units":1
+},
+{
+"address":"8371 Stewart Avenue",
+"lat":33.961144,
+"lon":-118.4075,
+"apn":"4112-017-018",
+"year_built":1945,
+"units":1
+},
+{
+"address":"8372 Stewart Avenue",
+"lat":33.961129,
+"lon":-118.407054,
+"apn":"4112-028-016",
+"year_built":1944,
+"units":1
+},
+{
+"address":"8375 Stewart Avenue",
+"lat":33.961007,
+"lon":-118.407509,
+"apn":"4112-017-019",
+"year_built":1945,
+"units":1
+},
+{
+"address":"8376 Stewart Avenue",
+"lat":33.960998,
+"lon":-118.406987,
+"apn":"4112-028-015",
+"year_built":1944,
+"units":1
+},
+{
+"address":"8379 Stewart Avenue",
+"lat":33.960864,
+"lon":-118.407506,
+"apn":"4112-017-020",
+"year_built":1945,
+"units":1
+},
+{
+"address":"8380 Stewart Avenue",
+"lat":33.960853,
+"lon":-118.407009,
+"apn":"4112-028-014",
+"year_built":1944,
+"units":1
+},
+{
+"address":"8383 Stewart Avenue",
+"lat":33.960727,
+"lon":-118.407448,
+"apn":"4112-017-021",
+"year_built":1945,
+"units":1
+},
+{
+"address":"8384 Stewart Avenue",
+"lat":33.960715,
+"lon":-118.40695,
+"apn":"4112-028-013",
+"year_built":1944,
+"units":1
+},
+{
+"address":"8387 Stewart Avenue",
+"lat":33.960581,
+"lon":-118.407435,
+"apn":"4112-017-022",
+"year_built":1945,
+"units":1
+},
+{
+"address":"8388 Stewart Avenue",
+"lat":33.960576,
+"lon":-118.406994,
+"apn":"4112-028-012",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6346 West 84th Place",
+"lat":33.961851,
+"lon":-118.398009,
+"apn":"4108-021-026",
+"year_built":1942,
+"units":1
+},
+{
+"address":"6347 West 84th Place",
+"lat":33.962258,
+"lon":-118.398007,
+"apn":"4108-022-033",
+"year_built":1943,
+"units":1
+},
+{
+"address":"6352 West 84th Place",
+"lat":33.96182,
+"lon":-118.398178,
+"apn":"4108-021-027",
+"year_built":1950,
+"units":1
+},
+{
+"address":"6353 West 84th Place",
+"lat":33.96228,
+"lon":-118.398173,
+"apn":"4108-022-032",
+"year_built":1942,
+"units":1
+},
+{
+"address":"6356 West 84th Place",
+"lat":33.961873,
+"lon":-118.398342,
+"apn":"4108-021-028",
+"year_built":1942,
+"units":1
+},
+{
+"address":"6357 West 84th Place",
+"lat":33.96228,
+"lon":-118.39833,
+"apn":"4108-022-031",
+"year_built":1942,
+"units":1
+},
+{
+"address":"6362 West 84th Place",
+"lat":33.96186,
+"lon":-118.39851,
+"apn":"4108-021-029",
+"year_built":1942,
+"units":1
+},
+{
+"address":"6363 West 84th Place",
+"lat":33.962314,
+"lon":-118.398509,
+"apn":"4108-022-030",
+"year_built":1942,
+"units":1
+},
+{
+"address":"6366 West 84th Place",
+"lat":33.961909,
+"lon":-118.398674,
+"apn":"4108-021-030",
+"year_built":1943,
+"units":1
+},
+{
+"address":"6367 West 84th Place",
+"lat":33.962301,
+"lon":-118.398674,
+"apn":"4108-022-029",
+"year_built":1942,
+"units":1
+},
+{
+"address":"6372 West 84th Place",
+"lat":33.96188,
+"lon":-118.398851,
+"apn":"4108-021-031",
+"year_built":1942,
+"units":1
+},
+{
+"address":"6373 West 84th Place",
+"lat":33.962322,
+"lon":-118.398839,
+"apn":"4108-022-028",
+"year_built":1942,
+"units":1
+},
+{
+"address":"6376 West 84th Place",
+"lat":33.961902,
+"lon":-118.399011,
+"apn":"4108-021-032",
+"year_built":1942,
+"units":1
+},
+{
+"address":"6377 West 84th Place",
+"lat":33.962323,
+"lon":-118.39901,
+"apn":"4108-022-027",
+"year_built":1942,
+"units":1
+},
+{
+"address":"6400 West 84th Place",
+"lat":33.961877,
+"lon":-118.399171,
+"apn":"4108-021-033",
+"year_built":2007,
+"units":1
+},
+{
+"address":"6401 West 84th Place",
+"lat":33.962316,
+"lon":-118.399174,
+"apn":"4108-022-026",
+"year_built":1942,
+"units":1
+},
+{
+"address":"6404 West 84th Place",
+"lat":33.961895,
+"lon":-118.399346,
+"apn":"4108-021-034",
+"year_built":1942,
+"units":1
+},
+{
+"address":"6405 West 84th Place",
+"lat":33.962325,
+"lon":-118.399343,
+"apn":"4108-022-025",
+"year_built":1942,
+"units":1
+},
+{
+"address":"6410 West 84th Place",
+"lat":33.961909,
+"lon":-118.399512,
+"apn":"4108-021-035",
+"year_built":1942,
+"units":1
+},
+{
+"address":"6411 West 84th Place",
+"lat":33.96234,
+"lon":-118.399504,
+"apn":"4108-022-024",
+"year_built":1942,
+"units":1
+},
+{
+"address":"6414 West 84th Place",
+"lat":33.961923,
+"lon":-118.39968,
+"apn":"4108-021-036",
+"year_built":1943,
+"units":1
+},
+{
+"address":"6415 West 84th Place",
+"lat":33.962358,
+"lon":-118.399667,
+"apn":"4108-022-023",
+"year_built":1958,
+"units":1
+},
+{
+"address":"6420 West 84th Place",
+"lat":33.961914,
+"lon":-118.39985,
+"apn":"4108-021-037",
+"year_built":1942,
+"units":1
+},
+{
+"address":"6421 West 84th Place",
+"lat":33.962328,
+"lon":-118.399844,
+"apn":"4108-022-022",
+"year_built":1942,
+"units":1
+},
+{
+"address":"6426 West 84th Place",
+"lat":33.961911,
+"lon":-118.400016,
+"apn":"4108-021-038",
+"year_built":1942,
+"units":1
+},
+{
+"address":"6427 West 84th Place",
+"lat":33.96236,
+"lon":-118.399994,
+"apn":"4108-022-021",
+"year_built":1942,
+"units":1
+},
+{
+"address":"6430 West 84th Place",
+"lat":33.961926,
+"lon":-118.400166,
+"apn":"4108-021-039",
+"year_built":1943,
+"units":1
+},
+{
+"address":"6431 West 84th Place",
+"lat":33.962351,
+"lon":-118.400165,
+"apn":"4108-022-020",
+"year_built":1947,
+"units":1
+},
+{
+"address":"6440 West 84th Place",
+"lat":33.96196,
+"lon":-118.400599,
+"apn":"4108-015-001",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6441 West 84th Place",
+"lat":33.962378,
+"lon":-118.40056,
+"apn":"4108-012-011",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6446 West 84th Place",
+"lat":33.961963,
+"lon":-118.400768,
+"apn":"4108-015-002",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6447 West 84th Place",
+"lat":33.962342,
+"lon":-118.400755,
+"apn":"4108-012-010",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6450 West 84th Place",
+"lat":33.961942,
+"lon":-118.400936,
+"apn":"4108-015-003",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6451 West 84th Place",
+"lat":33.962335,
+"lon":-118.400926,
+"apn":"4108-012-009",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6456 West 84th Place",
+"lat":33.961923,
+"lon":-118.401107,
+"apn":"4108-015-004",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6457 West 84th Place",
+"lat":33.962354,
+"lon":-118.401094,
+"apn":"4108-012-008",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6460 West 84th Place",
+"lat":33.961945,
+"lon":-118.40128,
+"apn":"4108-015-006;4108015005",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6461 West 84th Place",
+"lat":33.962348,
+"lon":-118.40126,
+"apn":"4108-012-007",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6466 West 84th Place",
+"lat":33.961931,
+"lon":-118.401439,
+"apn":"4108-015-006",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6467 West 84th Place",
+"lat":33.962345,
+"lon":-118.401425,
+"apn":"4108-012-006",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6470 West 84th Place",
+"lat":33.961932,
+"lon":-118.401606,
+"apn":"4108-015-007",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6471 West 84th Place",
+"lat":33.962313,
+"lon":-118.40159,
+"apn":"4108-012-005",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6500 West 84th Place",
+"lat":33.961924,
+"lon":-118.401776,
+"apn":"4108-015-008",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6501 West 84th Place",
+"lat":33.962342,
+"lon":-118.401757,
+"apn":"4108-012-004",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6506 West 84th Place",
+"lat":33.96194,
+"lon":-118.401942,
+"apn":"4108-015-009",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6507 West 84th Place",
+"lat":33.962329,
+"lon":-118.401921,
+"apn":"4108-012-003",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6510 West 84th Place",
+"lat":33.961917,
+"lon":-118.402113,
+"apn":"4108-015-010",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6511 West 84th Place",
+"lat":33.962297,
+"lon":-118.402086,
+"apn":"4108-012-002",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6516 West 84th Place",
+"lat":33.961928,
+"lon":-118.402281,
+"apn":"4108-015-011",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6517 West 84th Place",
+"lat":33.962334,
+"lon":-118.402255,
+"apn":"4108-012-001",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6520 West 84th Place",
+"lat":33.961904,
+"lon":-118.402447,
+"apn":"4108-014-001",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6521 West 84th Place",
+"lat":33.9623,
+"lon":-118.402419,
+"apn":"4108-013-011",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6526 West 84th Place",
+"lat":33.961871,
+"lon":-118.402613,
+"apn":"4108-014-002",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6527 West 84th Place",
+"lat":33.962308,
+"lon":-118.40259,
+"apn":"4108-013-010",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6530 West 84th Place",
+"lat":33.961904,
+"lon":-118.40278,
+"apn":"4108-014-003",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6531 West 84th Place",
+"lat":33.962316,
+"lon":-118.402754,
+"apn":"4108-013-009",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6536 West 84th Place",
+"lat":33.961902,
+"lon":-118.402952,
+"apn":"4108-014-004",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6537 West 84th Place",
+"lat":33.962279,
+"lon":-118.40292,
+"apn":"4108-013-008",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6540 West 84th Place",
+"lat":33.961854,
+"lon":-118.403113,
+"apn":"4108-014-005",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6541 West 84th Place",
+"lat":33.962272,
+"lon":-118.403084,
+"apn":"4108-013-007",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6546 West 84th Place",
+"lat":33.961858,
+"lon":-118.403286,
+"apn":"4108-014-006",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6547 West 84th Place",
+"lat":33.962257,
+"lon":-118.403247,
+"apn":"4108-013-006",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6550 West 84th Place",
+"lat":33.961859,
+"lon":-118.40345,
+"apn":"4108-014-007",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6551 West 84th Place",
+"lat":33.962232,
+"lon":-118.403412,
+"apn":"4108-013-005",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6556 West 84th Place",
+"lat":33.961819,
+"lon":-118.403615,
+"apn":"4108-014-008",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6557 West 84th Place",
+"lat":33.962217,
+"lon":-118.403576,
+"apn":"4108-013-004",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6560 West 84th Place",
+"lat":33.961805,
+"lon":-118.403788,
+"apn":"4108-014-009",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6561 West 84th Place",
+"lat":33.962245,
+"lon":-118.403748,
+"apn":"4108-013-003",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6566 West 84th Place",
+"lat":33.961799,
+"lon":-118.403952,
+"apn":"4108-014-010",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6567 West 84th Place",
+"lat":33.962179,
+"lon":-118.403897,
+"apn":"4108-013-002",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6570 West 84th Place",
+"lat":33.961802,
+"lon":-118.404116,
+"apn":"4108-014-011",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6571 West 84th Place",
+"lat":33.962191,
+"lon":-118.404115,
+"apn":"4108-013-001",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6346 West 84th Street",
+"lat":33.962646,
+"lon":-118.397971,
+"apn":"4108-022-014",
+"year_built":1942,
+"units":1
+},
+{
+"address":"6347 West 84th Street",
+"lat":33.963064,
+"lon":-118.39799,
+"apn":"4108-023-006",
+"year_built":1942,
+"units":1
+},
+{
+"address":"6350 West 84th Street",
+"lat":33.962654,
+"lon":-118.398152,
+"apn":"4108-022-013",
+"year_built":1942,
+"units":1
+},
+{
+"address":"6353 West 84th Street",
+"lat":33.963089,
+"lon":-118.398152,
+"apn":"4108-023-007",
+"year_built":1942,
+"units":1
+},
+{
+"address":"6356 West 84th Street",
+"lat":33.962671,
+"lon":-118.398318,
+"apn":"4108-022-012",
+"year_built":1943,
+"units":1
+},
+{
+"address":"6362 West 84th Street",
+"lat":33.962701,
+"lon":-118.398485,
+"apn":"4108-022-011",
+"year_built":1943,
+"units":1
+},
+{
+"address":"6366 West 84th Street",
+"lat":33.962705,
+"lon":-118.39865,
+"apn":"4108-022-010",
+"year_built":1942,
+"units":1
+},
+{
+"address":"6372 West 84th Street",
+"lat":33.962719,
+"lon":-118.398817,
+"apn":"4108-022-009",
+"year_built":1943,
+"units":1
+},
+{
+"address":"6376 West 84th Street",
+"lat":33.962691,
+"lon":-118.398985,
+"apn":"4108-022-008",
+"year_built":1943,
+"units":1
+},
+{
+"address":"6400 West 84th Street",
+"lat":33.962738,
+"lon":-118.399147,
+"apn":"4108-022-007",
+"year_built":1942,
+"units":1
+},
+{
+"address":"6406 West 84th Street",
+"lat":33.962743,
+"lon":-118.399316,
+"apn":"4108-022-006",
+"year_built":1943,
+"units":1
+},
+{
+"address":"6410 West 84th Street",
+"lat":33.962702,
+"lon":-118.399484,
+"apn":"4108-022-005",
+"year_built":1943,
+"units":1
+},
+{
+"address":"6416 West 84th Street",
+"lat":33.962738,
+"lon":-118.399637,
+"apn":"4108-022-004",
+"year_built":1943,
+"units":1
+},
+{
+"address":"6420 West 84th Street",
+"lat":33.962761,
+"lon":-118.399815,
+"apn":"4108-022-003",
+"year_built":1942,
+"units":1
+},
+{
+"address":"6426 West 84th Street",
+"lat":33.962754,
+"lon":-118.399984,
+"apn":"4108-022-002",
+"year_built":1943,
+"units":1
+},
+{
+"address":"6430 West 84th Street",
+"lat":33.962725,
+"lon":-118.400148,
+"apn":"4108-022-001",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6440 West 84th Street",
+"lat":33.962774,
+"lon":-118.400594,
+"apn":"4108-012-012",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6446 West 84th Street",
+"lat":33.962757,
+"lon":-118.400758,
+"apn":"4108-012-013",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6450 West 84th Street",
+"lat":33.962756,
+"lon":-118.40093,
+"apn":"4108-012-014",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6456 West 84th Street",
+"lat":33.962749,
+"lon":-118.401099,
+"apn":"4108-012-015",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6460 West 84th Street",
+"lat":33.962737,
+"lon":-118.401265,
+"apn":"4108-012-016",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6466 West 84th Street",
+"lat":33.962738,
+"lon":-118.401429,
+"apn":"4108-012-017",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6470 West 84th Street",
+"lat":33.962766,
+"lon":-118.401597,
+"apn":"4108-012-018",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6500 West 84th Street",
+"lat":33.962739,
+"lon":-118.401769,
+"apn":"4108-012-019",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6506 West 84th Street",
+"lat":33.962704,
+"lon":-118.401916,
+"apn":"4108-012-020",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6510 West 84th Street",
+"lat":33.962727,
+"lon":-118.402104,
+"apn":"4108-012-021",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6516 West 84th Street",
+"lat":33.962704,
+"lon":-118.402269,
+"apn":"4108-012-022",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6520 West 84th Street",
+"lat":33.962702,
+"lon":-118.402443,
+"apn":"4108-013-012",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6526 West 84th Street",
+"lat":33.962657,
+"lon":-118.402584,
+"apn":"4108-013-013",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6530 West 84th Street",
+"lat":33.962702,
+"lon":-118.402774,
+"apn":"4108-013-014",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6536 West 84th Street",
+"lat":33.962693,
+"lon":-118.402938,
+"apn":"4108-013-015",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6540 West 84th Street",
+"lat":33.962676,
+"lon":-118.40311,
+"apn":"4108-013-016",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6546 West 84th Street",
+"lat":33.962687,
+"lon":-118.403274,
+"apn":"4108-013-017",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6547 West 84th Street",
+"lat":33.963075,
+"lon":-118.40326,
+"apn":"4108-010-017",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6550 West 84th Street",
+"lat":33.962658,
+"lon":-118.403443,
+"apn":"4108-013-018",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6551 West 84th Street",
+"lat":33.963078,
+"lon":-118.403426,
+"apn":"4108-010-016",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6556 West 84th Street",
+"lat":33.96264,
+"lon":-118.403612,
+"apn":"4108-013-019",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6557 West 84th Street",
+"lat":33.963041,
+"lon":-118.403592,
+"apn":"4108-010-015",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6560 West 84th Street",
+"lat":33.962614,
+"lon":-118.403772,
+"apn":"4108-013-020",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6561 West 84th Street",
+"lat":33.963033,
+"lon":-118.403763,
+"apn":"4108-010-014",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6566 West 84th Street",
+"lat":33.962599,
+"lon":-118.403944,
+"apn":"4108-013-021",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6567 West 84th Street",
+"lat":33.96301,
+"lon":-118.403921,
+"apn":"4108-010-013",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6570 West 84th Street",
+"lat":33.962588,
+"lon":-118.404109,
+"apn":"4108-013-022",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6571 West 84th Street",
+"lat":33.963016,
+"lon":-118.404096,
+"apn":"4108-010-012",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6341 West 85th Place",
+"lat":33.960645,
+"lon":-118.398059,
+"apn":"4108-020-014",
+"year_built":1942,
+"units":1
+},
+{
+"address":"6344 West 85th Place",
+"lat":33.960193,
+"lon":-118.398006,
+"apn":"4108-019-004",
+"year_built":1950,
+"units":1
+},
+{
+"address":"6345 West 85th Place",
+"lat":33.960626,
+"lon":-118.398217,
+"apn":"4108-020-013",
+"year_built":1941,
+"units":1
+},
+{
+"address":"6350 West 85th Place",
+"lat":33.960198,
+"lon":-118.398175,
+"apn":"4108-019-005",
+"year_built":1950,
+"units":1
+},
+{
+"address":"6351 West 85th Place",
+"lat":33.960618,
+"lon":-118.398385,
+"apn":"4108-020-012",
+"year_built":1942,
+"units":1
+},
+{
+"address":"6354 West 85th Place",
+"lat":33.960193,
+"lon":-118.398347,
+"apn":"4108-019-006",
+"year_built":1950,
+"units":1
+},
+{
+"address":"6357 West 85th Place",
+"lat":33.960655,
+"lon":-118.398546,
+"apn":"4108-020-011",
+"year_built":1942,
+"units":1
+},
+{
+"address":"6360 West 85th Place",
+"lat":33.960208,
+"lon":-118.398511,
+"apn":"4108-019-007",
+"year_built":1950,
+"units":1
+},
+{
+"address":"6361 West 85th Place",
+"lat":33.960669,
+"lon":-118.398713,
+"apn":"4108-020-010",
+"year_built":1942,
+"units":1
+},
+{
+"address":"6364 West 85th Place",
+"lat":33.960222,
+"lon":-118.398678,
+"apn":"4108-019-008",
+"year_built":1950,
+"units":1
+},
+{
+"address":"6367 West 85th Place",
+"lat":33.960699,
+"lon":-118.398876,
+"apn":"4108-020-009",
+"year_built":1942,
+"units":1
+},
+{
+"address":"6370 West 85th Place",
+"lat":33.960253,
+"lon":-118.398847,
+"apn":"4108-019-009",
+"year_built":1950,
+"units":1
+},
+{
+"address":"6373 West 85th Place",
+"lat":33.960697,
+"lon":-118.399042,
+"apn":"4108-020-008",
+"year_built":1942,
+"units":1
+},
+{
+"address":"6374 West 85th Place",
+"lat":33.960236,
+"lon":-118.399017,
+"apn":"4108-019-010",
+"year_built":1951,
+"units":1
+},
+{
+"address":"6400 West 85th Place",
+"lat":33.960273,
+"lon":-118.399184,
+"apn":"4108-019-011",
+"year_built":1951,
+"units":1
+},
+{
+"address":"6401 West 85th Place",
+"lat":33.960691,
+"lon":-118.399203,
+"apn":"4108-020-007",
+"year_built":1943,
+"units":1
+},
+{
+"address":"6406 West 85th Place",
+"lat":33.960282,
+"lon":-118.39935,
+"apn":"4108-019-012",
+"year_built":1951,
+"units":1
+},
+{
+"address":"6407 West 85th Place",
+"lat":33.960742,
+"lon":-118.399353,
+"apn":"4108-020-006",
+"year_built":1942,
+"units":1
+},
+{
+"address":"6410 West 85th Place",
+"lat":33.9603,
+"lon":-118.399518,
+"apn":"4108-019-013",
+"year_built":1951,
+"units":1
+},
+{
+"address":"6411 West 85th Place",
+"lat":33.960695,
+"lon":-118.399535,
+"apn":"4108-020-005",
+"year_built":1942,
+"units":1
+},
+{
+"address":"6414 West 85th Place",
+"lat":33.960281,
+"lon":-118.399687,
+"apn":"4108-019-030",
+"year_built":1942,
+"units":1
+},
+{
+"address":"6415 West 85th Place",
+"lat":33.960704,
+"lon":-118.399702,
+"apn":"4108-020-004",
+"year_built":1941,
+"units":1
+},
+{
+"address":"6420 West 85th Place",
+"lat":33.960265,
+"lon":-118.399856,
+"apn":"4108-019-021",
+"year_built":1942,
+"units":1
+},
+{
+"address":"6421 West 85th Place",
+"lat":33.960706,
+"lon":-118.399869,
+"apn":"4108-020-003",
+"year_built":1942,
+"units":1
+},
+{
+"address":"6426 West 85th Place",
+"lat":33.960321,
+"lon":-118.400021,
+"apn":"4108-019-022",
+"year_built":1942,
+"units":1
+},
+{
+"address":"6427 West 85th Place",
+"lat":33.960746,
+"lon":-118.400032,
+"apn":"4108-020-002",
+"year_built":1942,
+"units":1
+},
+{
+"address":"6430 West 85th Place",
+"lat":33.960251,
+"lon":-118.400186,
+"apn":"4108-019-023",
+"year_built":1943,
+"units":1
+},
+{
+"address":"6431 West 85th Place",
+"lat":33.960725,
+"lon":-118.400188,
+"apn":"4108-020-001",
+"year_built":1950,
+"units":1
+},
+{
+"address":"6441 West 85th Place",
+"lat":33.96072,
+"lon":-118.400599,
+"apn":"4108-016-022",
+"year_built":1942,
+"units":1
+},
+{
+"address":"6446 West 85th Place",
+"lat":33.960315,
+"lon":-118.400789,
+"apn":"4108-018-019",
+"year_built":1949,
+"units":1
+},
+{
+"address":"6447 West 85th Place",
+"lat":33.960698,
+"lon":-118.400782,
+"apn":"4108-016-021",
+"year_built":1942,
+"units":1
+},
+{
+"address":"6451 West 85th Place",
+"lat":33.960726,
+"lon":-118.400949,
+"apn":"4108-016-020",
+"year_built":1942,
+"units":1
+},
+{
+"address":"6452 West 85th Place",
+"lat":33.960279,
+"lon":-118.40095,
+"apn":"4108-018-018",
+"year_built":1949,
+"units":1
+},
+{
+"address":"6456 West 85th Place",
+"lat":33.96025,
+"lon":-118.401117,
+"apn":"4108-018-017",
+"year_built":1949,
+"units":1
+},
+{
+"address":"6457 West 85th Place",
+"lat":33.960698,
+"lon":-118.401114,
+"apn":"4108-016-019",
+"year_built":1942,
+"units":1
+},
+{
+"address":"6461 West 85th Place",
+"lat":33.960707,
+"lon":-118.401279,
+"apn":"4108-016-018",
+"year_built":1942,
+"units":1
+},
+{
+"address":"6462 West 85th Place",
+"lat":33.96026,
+"lon":-118.401286,
+"apn":"4108-018-016",
+"year_built":1949,
+"units":1
+},
+{
+"address":"6467 West 85th Place",
+"lat":33.960715,
+"lon":-118.401447,
+"apn":"4108-016-017",
+"year_built":1942,
+"units":1
+},
+{
+"address":"6468 West 85th Place",
+"lat":33.960269,
+"lon":-118.401454,
+"apn":"4108-018-015",
+"year_built":1949,
+"units":1
+},
+{
+"address":"6471 West 85th Place",
+"lat":33.960708,
+"lon":-118.401612,
+"apn":"4108-016-016",
+"year_built":1942,
+"units":1
+},
+{
+"address":"6472 West 85th Place",
+"lat":33.960252,
+"lon":-118.401629,
+"apn":"4108-018-014",
+"year_built":1949,
+"units":1
+},
+{
+"address":"6500 West 85th Place",
+"lat":33.960245,
+"lon":-118.401801,
+"apn":"4108-018-013",
+"year_built":1949,
+"units":1
+},
+{
+"address":"6501 West 85th Place",
+"lat":33.960732,
+"lon":-118.40178,
+"apn":"4108-016-015",
+"year_built":1942,
+"units":1
+},
+{
+"address":"6506 West 85th Place",
+"lat":33.960241,
+"lon":-118.401958,
+"apn":"4108-018-012",
+"year_built":1949,
+"units":1
+},
+{
+"address":"6507 West 85th Place",
+"lat":33.96068,
+"lon":-118.401941,
+"apn":"4108-016-014",
+"year_built":1942,
+"units":1
+},
+{
+"address":"6510 West 85th Place",
+"lat":33.960245,
+"lon":-118.402135,
+"apn":"4108-018-011",
+"year_built":1950,
+"units":1
+},
+{
+"address":"6511 West 85th Place",
+"lat":33.960687,
+"lon":-118.402107,
+"apn":"4108-016-013",
+"year_built":1942,
+"units":1
+},
+{
+"address":"6516 West 85th Place",
+"lat":33.960256,
+"lon":-118.402301,
+"apn":"4108-018-010",
+"year_built":1949,
+"units":1
+},
+{
+"address":"6517 West 85th Place",
+"lat":33.960665,
+"lon":-118.402273,
+"apn":"4108-016-012",
+"year_built":1942,
+"units":1
+},
+{
+"address":"6521 West 85th Place",
+"lat":33.960676,
+"lon":-118.402439,
+"apn":"4108-017-022",
+"year_built":1943,
+"units":1
+},
+{
+"address":"6522 West 85th Place",
+"lat":33.960233,
+"lon":-118.402463,
+"apn":"4108-018-009",
+"year_built":1950,
+"units":1
+},
+{
+"address":"6526 West 85th Place",
+"lat":33.960236,
+"lon":-118.40264,
+"apn":"4108-018-008",
+"year_built":1949,
+"units":1
+},
+{
+"address":"6527 West 85th Place",
+"lat":33.960672,
+"lon":-118.402605,
+"apn":"4108-017-021",
+"year_built":1943,
+"units":1
+},
+{
+"address":"6531 West 85th Place",
+"lat":33.960653,
+"lon":-118.402768,
+"apn":"4108-017-020",
+"year_built":1943,
+"units":1
+},
+{
+"address":"6532 West 85th Place",
+"lat":33.960224,
+"lon":-118.402804,
+"apn":"4108-018-007",
+"year_built":1950,
+"units":1
+},
+{
+"address":"6536 West 85th Place",
+"lat":33.960217,
+"lon":-118.402975,
+"apn":"4108-018-006",
+"year_built":1950,
+"units":1
+},
+{
+"address":"6537 West 85th Place",
+"lat":33.960645,
+"lon":-118.402935,
+"apn":"4108-017-019",
+"year_built":1943,
+"units":1
+},
+{
+"address":"6541 West 85th Place",
+"lat":33.960628,
+"lon":-118.403097,
+"apn":"4108-017-018",
+"year_built":1943,
+"units":1
+},
+{
+"address":"6542 West 85th Place",
+"lat":33.960187,
+"lon":-118.403147,
+"apn":"4108-018-005",
+"year_built":1950,
+"units":1
+},
+{
+"address":"6546 West 85th Place",
+"lat":33.9602,
+"lon":-118.403312,
+"apn":"4108-018-004",
+"year_built":1950,
+"units":1
+},
+{
+"address":"6547 West 85th Place",
+"lat":33.960666,
+"lon":-118.403253,
+"apn":"4108-017-017",
+"year_built":1943,
+"units":1
+},
+{
+"address":"6551 West 85th Place",
+"lat":33.960631,
+"lon":-118.403426,
+"apn":"4108-017-016",
+"year_built":1943,
+"units":1
+},
+{
+"address":"6552 West 85th Place",
+"lat":33.960154,
+"lon":-118.403473,
+"apn":"4108-018-003",
+"year_built":1950,
+"units":1
+},
+{
+"address":"6557 West 85th Place",
+"lat":33.960639,
+"lon":-118.403594,
+"apn":"4108-017-015",
+"year_built":1943,
+"units":1
+},
+{
+"address":"6558 West 85th Place",
+"lat":33.960147,
+"lon":-118.403668,
+"apn":"4108-018-002",
+"year_built":1957,
+"units":1
+},
+{
+"address":"6561 West 85th Place",
+"lat":33.960626,
+"lon":-118.403768,
+"apn":"4108-017-014",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6567 West 85th Place",
+"lat":33.960632,
+"lon":-118.403934,
+"apn":"4108-017-013",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6571 West 85th Place",
+"lat":33.96062,
+"lon":-118.404129,
+"apn":"4108-017-012",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6630-6632 West 85th Place",
+"lat":33.96019,
+"lon":-118.405522,
+"apn":"4112-029-026",
+"year_built":1950,
+"units":2
+},
+{
+"address":"6636 West 85th Place",
+"lat":33.960203,
+"lon":-118.40569,
+"apn":"4112-029-025",
+"year_built":1956,
+"units":1
+},
+{
+"address":"6640 West 85th Place",
+"lat":33.960184,
+"lon":-118.40586,
+"apn":"4112-029-024",
+"year_built":1950,
+"units":1
+},
+{
+"address":"6646 West 85th Place",
+"lat":33.960156,
+"lon":-118.406025,
+"apn":"4112-029-023",
+"year_built":1950,
+"units":1
+},
+{
+"address":"6650 West 85th Place",
+"lat":33.960198,
+"lon":-118.406189,
+"apn":"4112-029-022",
+"year_built":1950,
+"units":1
+},
+{
+"address":"6656 West 85th Place",
+"lat":33.960189,
+"lon":-118.406349,
+"apn":"4112-029-021",
+"year_built":1950,
+"units":1
+},
+{
+"address":"6660 West 85th Place",
+"lat":33.960172,
+"lon":-118.406523,
+"apn":"4112-029-020",
+"year_built":1950,
+"units":1
+},
+{
+"address":"6666 West 85th Place",
+"lat":33.960193,
+"lon":-118.406685,
+"apn":"4112-029-019",
+"year_built":1950,
+"units":1
+},
+{
+"address":"6670 West 85th Place",
+"lat":33.960194,
+"lon":-118.40685,
+"apn":"4112-029-018",
+"year_built":1950,
+"units":1
+},
+{
+"address":"6676 West 85th Place",
+"lat":33.960202,
+"lon":-118.40702,
+"apn":"4112-029-017",
+"year_built":1950,
+"units":1
+},
+{
+"address":"6680 West 85th Place",
+"lat":33.960185,
+"lon":-118.407173,
+"apn":"4112-029-016",
+"year_built":1950,
+"units":1
+},
+{
+"address":"6700 West 85th Place",
+"lat":33.960211,
+"lon":-118.407338,
+"apn":"4112-029-015",
+"year_built":1950,
+"units":1
+},
+{
+"address":"6706 West 85th Place",
+"lat":33.960197,
+"lon":-118.407503,
+"apn":"4112-029-014",
+"year_built":1951,
+"units":1
+},
+{
+"address":"6710 West 85th Place",
+"lat":33.960195,
+"lon":-118.407671,
+"apn":"4112-029-013",
+"year_built":1950,
+"units":1
+},
+{
+"address":"6716 West 85th Place",
+"lat":33.960199,
+"lon":-118.407833,
+"apn":"4112-029-012",
+"year_built":1950,
+"units":1
+},
+{
+"address":"6720 West 85th Place",
+"lat":33.960195,
+"lon":-118.407997,
+"apn":"4112-029-011",
+"year_built":1950,
+"units":1
+},
+{
+"address":"6726 West 85th Place",
+"lat":33.960155,
+"lon":-118.408162,
+"apn":"4112-029-010",
+"year_built":1950,
+"units":1
+},
+{
+"address":"6730 West 85th Place",
+"lat":33.960185,
+"lon":-118.408336,
+"apn":"4112-029-009",
+"year_built":1950,
+"units":1
+},
+{
+"address":"6736 West 85th Place",
+"lat":33.960199,
+"lon":-118.408492,
+"apn":"4112-029-008",
+"year_built":1950,
+"units":1
+},
+{
+"address":"6740 West 85th Place",
+"lat":33.960205,
+"lon":-118.408657,
+"apn":"4112-029-007",
+"year_built":1950,
+"units":1
+},
+{
+"address":"6746 West 85th Place",
+"lat":33.960192,
+"lon":-118.408821,
+"apn":"4112-029-006",
+"year_built":1950,
+"units":1
+},
+{
+"address":"6750 West 85th Place",
+"lat":33.960194,
+"lon":-118.408986,
+"apn":"4112-029-005",
+"year_built":1950,
+"units":1
+},
+{
+"address":"6800 West 85th Place",
+"lat":33.960161,
+"lon":-118.409152,
+"apn":"4112-029-004",
+"year_built":1950,
+"units":1
+},
+{
+"address":"6806 West 85th Place",
+"lat":33.960205,
+"lon":-118.409326,
+"apn":"4112-029-003",
+"year_built":1950,
+"units":1
+},
+{
+"address":"6810 West 85th Place",
+"lat":33.960203,
+"lon":-118.409481,
+"apn":"4112-029-002",
+"year_built":1950,
+"units":1
+},
+{
+"address":"6816 West 85th Place",
+"lat":33.960151,
+"lon":-118.409663,
+"apn":"4112-029-001",
+"year_built":1950,
+"units":1
+},
+{
+"address":"6342 West 85th Street",
+"lat":33.960957,
+"lon":-118.39798,
+"apn":"4108-020-022",
+"year_built":1942,
+"units":1
+},
+{
+"address":"6346 West 85th Street",
+"lat":33.961024,
+"lon":-118.398152,
+"apn":"4108-020-023",
+"year_built":1942,
+"units":1
+},
+{
+"address":"6347 West 85th Street",
+"lat":33.961468,
+"lon":-118.398026,
+"apn":"4108-021-015",
+"year_built":1943,
+"units":1
+},
+{
+"address":"6352 West 85th Street",
+"lat":33.961022,
+"lon":-118.398324,
+"apn":"4108-020-024",
+"year_built":1942,
+"units":1
+},
+{
+"address":"6353 West 85th Street",
+"lat":33.961467,
+"lon":-118.398204,
+"apn":"4108-021-014",
+"year_built":1948,
+"units":1
+},
+{
+"address":"6357 West 85th Street",
+"lat":33.961451,
+"lon":-118.398367,
+"apn":"4108-021-013",
+"year_built":1950,
+"units":1
+},
+{
+"address":"6358 West 85th Street",
+"lat":33.961057,
+"lon":-118.398495,
+"apn":"4108-020-025",
+"year_built":1945,
+"units":1
+},
+{
+"address":"6362 West 85th Street",
+"lat":33.961057,
+"lon":-118.398663,
+"apn":"4108-020-026",
+"year_built":1942,
+"units":1
+},
+{
+"address":"6363 West 85th Street",
+"lat":33.96148,
+"lon":-118.398538,
+"apn":"4108-021-012",
+"year_built":1945,
+"units":1
+},
+{
+"address":"6366 West 85th Street",
+"lat":33.961071,
+"lon":-118.398837,
+"apn":"4108-020-027",
+"year_built":1942,
+"units":1
+},
+{
+"address":"6367 West 85th Street",
+"lat":33.961503,
+"lon":-118.398701,
+"apn":"4108-021-011",
+"year_built":1942,
+"units":1
+},
+{
+"address":"6371 West 85th Street",
+"lat":33.961461,
+"lon":-118.398868,
+"apn":"4108-021-010",
+"year_built":1945,
+"units":1
+},
+{
+"address":"6372 West 85th Street",
+"lat":33.961081,
+"lon":-118.399004,
+"apn":"4108-020-028",
+"year_built":1945,
+"units":1
+},
+{
+"address":"6377 West 85th Street",
+"lat":33.961504,
+"lon":-118.399034,
+"apn":"4108-021-009",
+"year_built":1942,
+"units":1
+},
+{
+"address":"6400 West 85th Street",
+"lat":33.961071,
+"lon":-118.399173,
+"apn":"4108-020-029",
+"year_built":1942,
+"units":1
+},
+{
+"address":"6401 West 85th Street",
+"lat":33.961538,
+"lon":-118.399198,
+"apn":"4108-021-008",
+"year_built":1945,
+"units":1
+},
+{
+"address":"6404 West 85th Street",
+"lat":33.961109,
+"lon":-118.399341,
+"apn":"4108-020-030",
+"year_built":1942,
+"units":1
+},
+{
+"address":"6405 West 85th Street",
+"lat":33.961534,
+"lon":-118.39936,
+"apn":"4108-021-007",
+"year_built":1943,
+"units":1
+},
+{
+"address":"6410 West 85th Street",
+"lat":33.961092,
+"lon":-118.399516,
+"apn":"4108-020-031",
+"year_built":1942,
+"units":1
+},
+{
+"address":"6411 West 85th Street",
+"lat":33.961514,
+"lon":-118.399525,
+"apn":"4108-021-006",
+"year_built":1942,
+"units":1
+},
+{
+"address":"6414 West 85th Street",
+"lat":33.961098,
+"lon":-118.399675,
+"apn":"4108-020-032",
+"year_built":1942,
+"units":1
+},
+{
+"address":"6415-6417 West 85th Street",
+"lat":33.961514,
+"lon":-118.399691,
+"apn":"4108-021-005",
+"year_built":1942,
+"units":1
+},
+{
+"address":"6420 West 85th Street",
+"lat":33.961133,
+"lon":-118.399851,
+"apn":"4108-020-033",
+"year_built":1942,
+"units":1
+},
+{
+"address":"6421 West 85th Street",
+"lat":33.96151,
+"lon":-118.399862,
+"apn":"4108-021-040",
+"year_built":1941,
+"units":1
+},
+{
+"address":"6426 West 85th Street",
+"lat":33.961125,
+"lon":-118.400024,
+"apn":"4108-020-034",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6427 West 85th Street",
+"lat":33.961526,
+"lon":-118.400021,
+"apn":"4108-021-002",
+"year_built":1942,
+"units":1
+},
+{
+"address":"6430 West 85th Street",
+"lat":33.961128,
+"lon":-118.400179,
+"apn":"4108-020-035",
+"year_built":1942,
+"units":1
+},
+{
+"address":"6431 West 85th Street",
+"lat":33.961526,
+"lon":-118.400177,
+"apn":"4108-021-001",
+"year_built":1942,
+"units":1
+},
+{
+"address":"6440 West 85th Street",
+"lat":33.961086,
+"lon":-118.400593,
+"apn":"4108-016-001",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6441 West 85th Street",
+"lat":33.961542,
+"lon":-118.40059,
+"apn":"4108-015-022",
+"year_built":1950,
+"units":1
+},
+{
+"address":"6446 West 85th Street",
+"lat":33.96111,
+"lon":-118.400775,
+"apn":"4108-016-002",
+"year_built":1942,
+"units":1
+},
+{
+"address":"6447 West 85th Street",
+"lat":33.96151,
+"lon":-118.400776,
+"apn":"4108-015-021",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6450 West 85th Street",
+"lat":33.961152,
+"lon":-118.400943,
+"apn":"4108-016-003",
+"year_built":1942,
+"units":1
+},
+{
+"address":"6451 West 85th Street",
+"lat":33.961525,
+"lon":-118.400941,
+"apn":"4108-015-020",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6456 West 85th Street",
+"lat":33.9611,
+"lon":-118.401111,
+"apn":"4108-016-004",
+"year_built":1942,
+"units":1
+},
+{
+"address":"6457 West 85th Street",
+"lat":33.961577,
+"lon":-118.401111,
+"apn":"4108-015-019",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6460 West 85th Street",
+"lat":33.961114,
+"lon":-118.401278,
+"apn":"4108-016-005",
+"year_built":1942,
+"units":1
+},
+{
+"address":"6461 West 85th Street",
+"lat":33.961505,
+"lon":-118.401275,
+"apn":"4108-015-018",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6466 West 85th Street",
+"lat":33.961114,
+"lon":-118.401446,
+"apn":"4108-016-006",
+"year_built":1942,
+"units":1
+},
+{
+"address":"6467 West 85th Street",
+"lat":33.961521,
+"lon":-118.401442,
+"apn":"4108-015-017",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6470 West 85th Street",
+"lat":33.961113,
+"lon":-118.401617,
+"apn":"4108-016-007",
+"year_built":1942,
+"units":1
+},
+{
+"address":"6471 West 85th Street",
+"lat":33.961501,
+"lon":-118.401613,
+"apn":"4108-015-016",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6500 West 85th Street",
+"lat":33.961123,
+"lon":-118.40178,
+"apn":"4108-016-008",
+"year_built":1942,
+"units":1
+},
+{
+"address":"6501 West 85th Street",
+"lat":33.961523,
+"lon":-118.401778,
+"apn":"4108-015-015",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6506 West 85th Street",
+"lat":33.961073,
+"lon":-118.401949,
+"apn":"4108-016-009",
+"year_built":1942,
+"units":1
+},
+{
+"address":"6507 West 85th Street",
+"lat":33.961492,
+"lon":-118.401944,
+"apn":"4108-015-014",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6510 West 85th Street",
+"lat":33.961104,
+"lon":-118.402118,
+"apn":"4108-016-010",
+"year_built":1942,
+"units":1
+},
+{
+"address":"6511 West 85th Street",
+"lat":33.961494,
+"lon":-118.402115,
+"apn":"4108-015-013",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6516 West 85th Street",
+"lat":33.961038,
+"lon":-118.402262,
+"apn":"4108-016-011",
+"year_built":1943,
+"units":1
+},
+{
+"address":"6517 West 85th Street",
+"lat":33.961498,
+"lon":-118.402281,
+"apn":"4108-015-012",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6520 West 85th Street",
+"lat":33.961048,
+"lon":-118.402431,
+"apn":"4108-017-001",
+"year_built":1943,
+"units":1
+},
+{
+"address":"6521 West 85th Street",
+"lat":33.961478,
+"lon":-118.402449,
+"apn":"4108-014-022",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6526 West 85th Street",
+"lat":33.961081,
+"lon":-118.402618,
+"apn":"4108-017-002",
+"year_built":1943,
+"units":1
+},
+{
+"address":"6527 West 85th Street",
+"lat":33.961485,
+"lon":-118.402611,
+"apn":"4108-014-021",
+"year_built":1943,
+"units":1
+},
+{
+"address":"6530 West 85th Street",
+"lat":33.961047,
+"lon":-118.40278,
+"apn":"4108-017-003",
+"year_built":1943,
+"units":1
+},
+{
+"address":"6531 West 85th Street",
+"lat":33.961462,
+"lon":-118.402777,
+"apn":"4108-014-020",
+"year_built":1943,
+"units":1
+},
+{
+"address":"6536 West 85th Street",
+"lat":33.961032,
+"lon":-118.402951,
+"apn":"4108-017-004",
+"year_built":1943,
+"units":1
+},
+{
+"address":"6537 West 85th Street",
+"lat":33.961445,
+"lon":-118.402943,
+"apn":"4108-014-019",
+"year_built":1943,
+"units":1
+},
+{
+"address":"6540 West 85th Street",
+"lat":33.961066,
+"lon":-118.403114,
+"apn":"4108-017-005",
+"year_built":1943,
+"units":1
+},
+{
+"address":"6541 West 85th Street",
+"lat":33.961447,
+"lon":-118.403108,
+"apn":"4108-014-018",
+"year_built":1943,
+"units":1
+},
+{
+"address":"6546 West 85th Street",
+"lat":33.961025,
+"lon":-118.403283,
+"apn":"4108-017-006",
+"year_built":1943,
+"units":1
+},
+{
+"address":"6547 West 85th Street",
+"lat":33.961437,
+"lon":-118.403278,
+"apn":"4108-014-017",
+"year_built":1943,
+"units":1
+},
+{
+"address":"6550 West 85th Street",
+"lat":33.96104,
+"lon":-118.403447,
+"apn":"4108-017-007",
+"year_built":1943,
+"units":1
+},
+{
+"address":"6551 West 85th Street",
+"lat":33.961416,
+"lon":-118.403442,
+"apn":"4108-014-016",
+"year_built":1943,
+"units":1
+},
+{
+"address":"6555-6557 West 85th Street",
+"lat":33.961394,
+"lon":-118.403608,
+"apn":"4108-014-015",
+"year_built":1943,
+"units":1
+},
+{
+"address":"6556 West 85th Street",
+"lat":33.961011,
+"lon":-118.403615,
+"apn":"4108-017-008",
+"year_built":1943,
+"units":1
+},
+{
+"address":"6560 West 85th Street",
+"lat":33.960992,
+"lon":-118.40379,
+"apn":"4108-017-009",
+"year_built":1943,
+"units":1
+},
+{
+"address":"6561 West 85th Street",
+"lat":33.961417,
+"lon":-118.403783,
+"apn":"4108-014-014",
+"year_built":1943,
+"units":1
+},
+{
+"address":"6566 West 85th Street",
+"lat":33.960971,
+"lon":-118.403962,
+"apn":"4108-017-010",
+"year_built":1943,
+"units":1
+},
+{
+"address":"6567 West 85th Street",
+"lat":33.961388,
+"lon":-118.403945,
+"apn":"4108-014-013",
+"year_built":1943,
+"units":1
+},
+{
+"address":"6570 West 85th Street",
+"lat":33.960952,
+"lon":-118.404131,
+"apn":"4108-017-011",
+"year_built":1943,
+"units":1
+},
+{
+"address":"6571 West 85th Street",
+"lat":33.961352,
+"lon":-118.404107,
+"apn":"4108-014-012",
+"year_built":1943,
+"units":1
+},
+{
+"address":"6400-6402 West 86th Place",
+"lat":33.959115,
+"lon":-118.398952,
+"apn":"4122-006-007",
+"year_built":1944,
+"units":3
+},
+{
+"address":"6401-6403 West 86th Place",
+"lat":33.959326,
+"lon":-118.398494,
+"apn":"4122-003-016",
+"year_built":1945,
+"units":2
+},
+{
+"address":"6405 West 86th Place",
+"lat":33.959519,
+"lon":-118.398651,
+"apn":"4122-003-015",
+"year_built":1945,
+"units":2
+},
+{
+"address":"6406-6408 West 86th Place",
+"lat":33.9591,
+"lon":-118.399207,
+"apn":"4122-006-006",
+"year_built":1944,
+"units":2
+},
+{
+"address":"6407 West 86th Place",
+"lat":33.959614,
+"lon":-118.398436,
+"apn":"7352-002-029",
+"year_built":1938,
+"units":1
+},
+{
+"address":"6409-6411 West 86th Place",
+"lat":33.959526,
+"lon":-118.398901,
+"apn":"4122-003-019",
+"year_built":1945,
+"units":2
+},
+{
+"address":"6412-6414 West 86th Place",
+"lat":33.959086,
+"lon":-118.399422,
+"apn":"4122-006-005",
+"year_built":1944,
+"units":2
+},
+{
+"address":"6413-6415 West 86th Place",
+"lat":33.959526,
+"lon":-118.399088,
+"apn":"4122-003-017",
+"year_built":1945,
+"units":2
+},
+{
+"address":"6416-6418 West 86th Place",
+"lat":33.959117,
+"lon":-118.399585,
+"apn":"4122-006-004",
+"year_built":1944,
+"units":2
+},
+{
+"address":"6417-6419 West 86th Place",
+"lat":33.959526,
+"lon":-118.399263,
+"apn":"4122-003-018",
+"year_built":1945,
+"units":2
+},
+{
+"address":"6421-6423 West 86th Place",
+"lat":33.959522,
+"lon":-118.399451,
+"apn":"4122-003-005",
+"year_built":1945,
+"units":2
+},
+{
+"address":"6422-6424 West 86th Place",
+"lat":33.959111,
+"lon":-118.399789,
+"apn":"4122-006-003",
+"year_built":1944,
+"units":2
+},
+{
+"address":"6425-6427 West 86th Place",
+"lat":33.95953,
+"lon":-118.399625,
+"apn":"4122-003-004",
+"year_built":1945,
+"units":2
+},
+{
+"address":"6426-6428 West 86th Place",
+"lat":33.959079,
+"lon":-118.399962,
+"apn":"4122-006-002",
+"year_built":1944,
+"units":2
+},
+{
+"address":"6429-6431 West 86th Place",
+"lat":33.959525,
+"lon":-118.399813,
+"apn":"4122-003-020",
+"year_built":1945,
+"units":2
+},
+{
+"address":"6430-6432 West 86th Place",
+"lat":33.959093,
+"lon":-118.400143,
+"apn":"4122-006-001",
+"year_built":1944,
+"units":2
+},
+{
+"address":"6433-6435 West 86th Place",
+"lat":33.959521,
+"lon":-118.399989,
+"apn":"4122-003-013",
+"year_built":1945,
+"units":2
+},
+{
+"address":"6437-6439 West 86th Place",
+"lat":33.959523,
+"lon":-118.400176,
+"apn":"4122-003-014",
+"year_built":1945,
+"units":2
+},
+{
+"address":"6440-6442 West 86th Place",
+"lat":33.95909,
+"lon":-118.400648,
+"apn":"4122-007-011",
+"year_built":1944,
+"units":2
+},
+{
+"address":"6441-6443 West 86th Place",
+"lat":33.959522,
+"lon":-118.400628,
+"apn":"4122-004-015",
+"year_built":1945,
+"units":2
+},
+{
+"address":"6445-6447 West 86th Place",
+"lat":33.959519,
+"lon":-118.400814,
+"apn":"4122-004-020",
+"year_built":1945,
+"units":2
+},
+{
+"address":"6446-6448 West 86th Place",
+"lat":33.959052,
+"lon":-118.400832,
+"apn":"4122-007-022",
+"year_built":1944,
+"units":2
+},
+{
+"address":"6450-6452 West 86th Place",
+"lat":33.95908,
+"lon":-118.401027,
+"apn":"4122-007-008",
+"year_built":1944,
+"units":2
+},
+{
+"address":"6451-6453 West 86th Place",
+"lat":33.959519,
+"lon":-118.400986,
+"apn":"4122-004-019",
+"year_built":1945,
+"units":2
+},
+{
+"address":"6455-6457 West 86th Place",
+"lat":33.959521,
+"lon":-118.401167,
+"apn":"4122-004-016",
+"year_built":1945,
+"units":2
+},
+{
+"address":"6456-6458 West 86th Place",
+"lat":33.959113,
+"lon":-118.40124,
+"apn":"4122-007-007",
+"year_built":1944,
+"units":2
+},
+{
+"address":"6460-6462 West 86th Place",
+"lat":33.959108,
+"lon":-118.401428,
+"apn":"4122-007-006",
+"year_built":1944,
+"units":2
+},
+{
+"address":"6461-6463 West 86th Place",
+"lat":33.959521,
+"lon":-118.401339,
+"apn":"4122-004-018",
+"year_built":1945,
+"units":2
+},
+{
+"address":"6500-6502 West 86th Place",
+"lat":33.959108,
+"lon":-118.401637,
+"apn":"4122-007-024",
+"year_built":1944,
+"units":2
+},
+{
+"address":"6501-6503 West 86th Place",
+"lat":33.95952,
+"lon":-118.40152,
+"apn":"4122-004-022",
+"year_built":1945,
+"units":2
+},
+{
+"address":"6504-6506 West 86th Place",
+"lat":33.959097,
+"lon":-118.401835,
+"apn":"4122-007-023",
+"year_built":1944,
+"units":2
+},
+{
+"address":"6505-6507 West 86th Place",
+"lat":33.95952,
+"lon":-118.401692,
+"apn":"4122-004-014",
+"year_built":1945,
+"units":2
+},
+{
+"address":"6509-6511 West 86th Place",
+"lat":33.959515,
+"lon":-118.401878,
+"apn":"4122-004-017",
+"year_built":1945,
+"units":2
+},
+{
+"address":"6510-6512 West 86th Place",
+"lat":33.959105,
+"lon":-118.402044,
+"apn":"4122-007-001",
+"year_built":1944,
+"units":2
+},
+{
+"address":"6513-6515 West 86th Place",
+"lat":33.959528,
+"lon":-118.402045,
+"apn":"4122-004-021",
+"year_built":1945,
+"units":2
+},
+{
+"address":"6514-6516 West 86th Place",
+"lat":33.959099,
+"lon":-118.402229,
+"apn":"4122-008-008",
+"year_built":1944,
+"units":2
+},
+{
+"address":"6517-6519 West 86th Place",
+"lat":33.959519,
+"lon":-118.402225,
+"apn":"4122-004-013",
+"year_built":1945,
+"units":2
+},
+{
+"address":"6520-6522 West 86th Place",
+"lat":33.959109,
+"lon":-118.402481,
+"apn":"4122-008-007",
+"year_built":1944,
+"units":2
+},
+{
+"address":"6521-6523 West 86th Place",
+"lat":33.959518,
+"lon":-118.402397,
+"apn":"4122-005-014",
+"year_built":1945,
+"units":2
+},
+{
+"address":"6525-6527 West 86th Place",
+"lat":33.959518,
+"lon":-118.40258,
+"apn":"4122-005-019",
+"year_built":1945,
+"units":2
+},
+{
+"address":"6526-6528 West 86th Place",
+"lat":33.959109,
+"lon":-118.402649,
+"apn":"4122-008-006",
+"year_built":1944,
+"units":2
+},
+{
+"address":"6529-6531 West 86th Place",
+"lat":33.959517,
+"lon":-118.40275,
+"apn":"4122-005-023",
+"year_built":1945,
+"units":2
+},
+{
+"address":"6532-6534 West 86th Place",
+"lat":33.959104,
+"lon":-118.402892,
+"apn":"4122-008-016",
+"year_built":1944,
+"units":2
+},
+{
+"address":"6533-6535 West 86th Place",
+"lat":33.959514,
+"lon":-118.402931,
+"apn":"4122-005-015",
+"year_built":1945,
+"units":2
+},
+{
+"address":"6536-6538 West 86th Place",
+"lat":33.959108,
+"lon":-118.403069,
+"apn":"4122-008-003",
+"year_built":1944,
+"units":2
+},
+{
+"address":"6537-6539 West 86th Place",
+"lat":33.959534,
+"lon":-118.403103,
+"apn":"4122-005-016",
+"year_built":1945,
+"units":2
+},
+{
+"address":"6541-6543 West 86th Place",
+"lat":33.959514,
+"lon":-118.403288,
+"apn":"4122-005-020",
+"year_built":1945,
+"units":2
+},
+{
+"address":"6542-6544 West 86th Place",
+"lat":33.959108,
+"lon":-118.403283,
+"apn":"4122-008-002",
+"year_built":1944,
+"units":2
+},
+{
+"address":"6545-6547 West 86th Place",
+"lat":33.959516,
+"lon":-118.403456,
+"apn":"4122-005-018",
+"year_built":1945,
+"units":2
+},
+{
+"address":"6548-6550 West 86th Place",
+"lat":33.959108,
+"lon":-118.403524,
+"apn":"4122-008-001",
+"year_built":1944,
+"units":2
+},
+{
+"address":"6549-6551 West 86th Place",
+"lat":33.959513,
+"lon":-118.403632,
+"apn":"4122-005-017",
+"year_built":1945,
+"units":2
+},
+{
+"address":"6600-6602 West 86th Place",
+"lat":33.959097,
+"lon":-118.404617,
+"apn":"4122-015-009",
+"year_built":1949,
+"units":2
+},
+{
+"address":"6606 West 86th Place",
+"lat":33.959084,
+"lon":-118.404797,
+"apn":"4122-015-008",
+"year_built":1988,
+"units":7
+},
+{
+"address":"6612-6614 West 86th Place",
+"lat":33.959077,
+"lon":-118.404973,
+"apn":"4122-015-007",
+"year_built":1947,
+"units":2
+},
+{
+"address":"6618-6620 West 86th Place",
+"lat":33.959097,
+"lon":-118.40517,
+"apn":"4122-015-006",
+"year_built":1947,
+"units":2
+},
+{
+"address":"6622 West 86th Place",
+"lat":33.959084,
+"lon":-118.405354,
+"apn":"4122-015-005",
+"year_built":1988,
+"units":6
+},
+{
+"address":"6628 West 86th Place",
+"lat":33.959087,
+"lon":-118.405522,
+"apn":"4122-015-004",
+"year_built":1986,
+"units":6
+},
+{
+"address":"6632 West 86th Place",
+"lat":33.959092,
+"lon":-118.405708,
+"apn":"4122-015-003",
+"year_built":1947,
+"units":3
+},
+{
+"address":"6645 West 86th Place",
+"lat":33.959546,
+"lon":-118.406121,
+"apn":"4122-014-031",
+"year_built":1993,
+"units":1
+},
+{
+"address":"6722-6724 West 86th Place",
+"lat":33.959087,
+"lon":-118.407548,
+"apn":"4122-016-010",
+"year_built":1947,
+"units":2
+},
+{
+"address":"6732-6734 West 86th Place",
+"lat":33.959063,
+"lon":-118.407917,
+"apn":"4122-016-007",
+"year_built":1947,
+"units":2
+},
+{
+"address":"6740-6742 West 86th Place",
+"lat":33.959067,
+"lon":-118.408084,
+"apn":"4122-016-006",
+"year_built":1947,
+"units":2
+},
+{
+"address":"6744-6746 West 86th Place",
+"lat":33.959085,
+"lon":-118.40828,
+"apn":"4122-016-005",
+"year_built":1947,
+"units":2
+},
+{
+"address":"6750-6752 West 86th Place",
+"lat":33.959084,
+"lon":-118.408452,
+"apn":"4122-016-004",
+"year_built":1947,
+"units":2
+},
+{
+"address":"6756 West 86th Place",
+"lat":33.959093,
+"lon":-118.408648,
+"apn":"4122-016-003",
+"year_built":1948,
+"units":2
+},
+{
+"address":"6758-6760 West 86th Place",
+"lat":33.959076,
+"lon":-118.408821,
+"apn":"4122-016-002",
+"year_built":1988,
+"units":7
+},
+{
+"address":"6400 West 87th Place",
+"lat":33.957621,
+"lon":-118.398958,
+"apn":"4122-011-015",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6401 West 87th Place",
+"lat":33.958023,
+"lon":-118.39896,
+"apn":"4122-009-016",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6406 West 87th Place",
+"lat":33.957603,
+"lon":-118.399144,
+"apn":"4122-011-024",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6407 West 87th Place",
+"lat":33.95802,
+"lon":-118.399164,
+"apn":"4122-009-017",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6410 West 87th Place",
+"lat":33.957646,
+"lon":-118.399309,
+"apn":"4122-011-013",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6411 West 87th Place",
+"lat":33.957993,
+"lon":-118.399367,
+"apn":"4122-009-018",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6414 West 87th Place",
+"lat":33.957613,
+"lon":-118.399474,
+"apn":"4122-011-029",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6415 West 87th Place",
+"lat":33.958033,
+"lon":-118.39954,
+"apn":"4122-009-019",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6418 West 87th Place",
+"lat":33.957609,
+"lon":-118.39964,
+"apn":"4122-011-021",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6421 West 87th Place",
+"lat":33.957986,
+"lon":-118.399696,
+"apn":"4122-009-020",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6422 West 87th Place",
+"lat":33.957614,
+"lon":-118.399804,
+"apn":"4122-011-023",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6425 West 87th Place",
+"lat":33.957973,
+"lon":-118.399868,
+"apn":"4122-009-021",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6426 West 87th Place",
+"lat":33.957572,
+"lon":-118.399972,
+"apn":"4122-011-022",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6429 West 87th Place",
+"lat":33.957968,
+"lon":-118.400052,
+"apn":"4122-009-022",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6430 West 87th Place",
+"lat":33.957597,
+"lon":-118.400142,
+"apn":"4122-011-018",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6435 West 87th Place",
+"lat":33.957955,
+"lon":-118.400223,
+"apn":"4122-009-023",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6436 West 87th Place",
+"lat":33.957568,
+"lon":-118.40032,
+"apn":"4122-011-027",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6439 West 87th Place",
+"lat":33.95794,
+"lon":-118.400406,
+"apn":"4122-009-024",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6440 West 87th Place",
+"lat":33.957575,
+"lon":-118.400509,
+"apn":"4122-011-031",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6443 West 87th Place",
+"lat":33.957947,
+"lon":-118.400582,
+"apn":"4122-009-025",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6444 West 87th Place",
+"lat":33.957575,
+"lon":-118.400687,
+"apn":"4122-011-005",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6449 West 87th Place",
+"lat":33.957951,
+"lon":-118.400764,
+"apn":"4122-009-026",
+"year_built":1946,
+"units":1
+},
+{
+"address":"6450 West 87th Place",
+"lat":33.957592,
+"lon":-118.400877,
+"apn":"4122-011-017",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6453 West 87th Place",
+"lat":33.958005,
+"lon":-118.400937,
+"apn":"4122-009-027",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6454 West 87th Place",
+"lat":33.957565,
+"lon":-118.401049,
+"apn":"4122-011-025",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6457 West 87th Place",
+"lat":33.957951,
+"lon":-118.401116,
+"apn":"4122-009-028",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6458 West 87th Place",
+"lat":33.957595,
+"lon":-118.401217,
+"apn":"4122-011-020",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6461 West 87th Place",
+"lat":33.957946,
+"lon":-118.401298,
+"apn":"4122-009-029",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6462 West 87th Place",
+"lat":33.957611,
+"lon":-118.401381,
+"apn":"4122-011-019",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6465 West 87th Place",
+"lat":33.957963,
+"lon":-118.401469,
+"apn":"4122-010-012",
+"year_built":1945,
+"units":1
+},
+{
+"address":"6500 West 87th Place",
+"lat":33.957604,
+"lon":-118.401714,
+"apn":"4122-012-010",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6501 West 87th Place",
+"lat":33.957984,
+"lon":-118.401632,
+"apn":"4122-010-013",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6505 West 87th Place",
+"lat":33.957991,
+"lon":-118.401797,
+"apn":"4122-010-014",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6506 West 87th Place",
+"lat":33.957654,
+"lon":-118.401876,
+"apn":"4122-012-009",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6511 West 87th Place",
+"lat":33.958034,
+"lon":-118.401959,
+"apn":"4122-010-015",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6512 West 87th Place",
+"lat":33.957643,
+"lon":-118.402045,
+"apn":"4122-012-013",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6515 West 87th Place",
+"lat":33.958019,
+"lon":-118.402125,
+"apn":"4122-010-016",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6516 West 87th Place",
+"lat":33.957575,
+"lon":-118.402195,
+"apn":"4122-012-016",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6519 West 87th Place",
+"lat":33.958057,
+"lon":-118.402301,
+"apn":"4122-010-017",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6520 West 87th Place",
+"lat":33.957684,
+"lon":-118.402361,
+"apn":"4122-012-015",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6523 West 87th Place",
+"lat":33.958055,
+"lon":-118.402482,
+"apn":"4122-010-018",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6524 West 87th Place",
+"lat":33.957672,
+"lon":-118.402523,
+"apn":"4122-012-012",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6527 West 87th Place",
+"lat":33.958007,
+"lon":-118.40266,
+"apn":"4122-010-019",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6530 West 87th Place",
+"lat":33.957641,
+"lon":-118.402686,
+"apn":"4122-012-014",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6531 West 87th Place",
+"lat":33.957977,
+"lon":-118.402856,
+"apn":"4122-010-020",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6600 West 87th Place",
+"lat":33.957698,
+"lon":-118.404636,
+"apn":"4122-019-011",
+"year_built":1946,
+"units":1
+},
+{
+"address":"6601 West 87th Place",
+"lat":33.958079,
+"lon":-118.404635,
+"apn":"4122-017-014",
+"year_built":1946,
+"units":1
+},
+{
+"address":"6606 West 87th Place",
+"lat":33.957701,
+"lon":-118.404836,
+"apn":"4122-019-010",
+"year_built":1946,
+"units":1
+},
+{
+"address":"6607 West 87th Place",
+"lat":33.958105,
+"lon":-118.404821,
+"apn":"4122-017-015",
+"year_built":1946,
+"units":1
+},
+{
+"address":"6616 West 87th Place",
+"lat":33.957691,
+"lon":-118.405045,
+"apn":"4122-019-009",
+"year_built":1946,
+"units":1
+},
+{
+"address":"6617 West 87th Place",
+"lat":33.958076,
+"lon":-118.405033,
+"apn":"4122-017-016",
+"year_built":1946,
+"units":1
+},
+{
+"address":"6622 West 87th Place",
+"lat":33.957691,
+"lon":-118.405243,
+"apn":"4122-019-008",
+"year_built":1946,
+"units":1
+},
+{
+"address":"6623 West 87th Place",
+"lat":33.95806,
+"lon":-118.405253,
+"apn":"4122-017-017",
+"year_built":1946,
+"units":1
+},
+{
+"address":"6628 West 87th Place",
+"lat":33.957711,
+"lon":-118.405453,
+"apn":"4122-019-007",
+"year_built":1946,
+"units":1
+},
+{
+"address":"6629 West 87th Place",
+"lat":33.958081,
+"lon":-118.40546,
+"apn":"4122-017-018",
+"year_built":1946,
+"units":1
+},
+{
+"address":"6633 West 87th Place",
+"lat":33.958081,
+"lon":-118.405661,
+"apn":"4122-017-019",
+"year_built":1946,
+"units":1
+},
+{
+"address":"6634 West 87th Place",
+"lat":33.95769,
+"lon":-118.405662,
+"apn":"4122-019-006",
+"year_built":1946,
+"units":1
+},
+{
+"address":"6640 West 87th Place",
+"lat":33.95769,
+"lon":-118.40586,
+"apn":"4122-019-005",
+"year_built":1946,
+"units":1
+},
+{
+"address":"6644 West 87th Place",
+"lat":33.957709,
+"lon":-118.406078,
+"apn":"4122-019-003;4122019004",
+"year_built":1946,
+"units":1
+},
+{
+"address":"6645 West 87th Place",
+"lat":33.958095,
+"lon":-118.405868,
+"apn":"4122-017-020",
+"year_built":1946,
+"units":1
+},
+{
+"address":"6649 West 87th Place",
+"lat":33.958076,
+"lon":-118.406092,
+"apn":"4122-017-021",
+"year_built":1946,
+"units":1
+},
+{
+"address":"6655 West 87th Place",
+"lat":33.958079,
+"lon":-118.406299,
+"apn":"4122-017-022",
+"year_built":1946,
+"units":1
+},
+{
+"address":"6656 West 87th Place",
+"lat":33.957688,
+"lon":-118.406278,
+"apn":"4122-019-003",
+"year_built":1946,
+"units":1
+},
+{
+"address":"6660 West 87th Place",
+"lat":33.957688,
+"lon":-118.406477,
+"apn":"4122-019-002",
+"year_built":1946,
+"units":1
+},
+{
+"address":"6661 West 87th Place",
+"lat":33.958078,
+"lon":-118.406497,
+"apn":"4122-017-023",
+"year_built":1946,
+"units":1
+},
+{
+"address":"6666 West 87th Place",
+"lat":33.957672,
+"lon":-118.406688,
+"apn":"4122-019-001",
+"year_built":1946,
+"units":1
+},
+{
+"address":"6667 West 87th Place",
+"lat":33.958082,
+"lon":-118.406694,
+"apn":"4122-017-024",
+"year_built":1947,
+"units":1
+},
+{
+"address":"6700 West 87th Place",
+"lat":33.957686,
+"lon":-118.406896,
+"apn":"4122-020-009",
+"year_built":1946,
+"units":1
+},
+{
+"address":"6701 West 87th Place",
+"lat":33.958086,
+"lon":-118.406869,
+"apn":"4122-018-014",
+"year_built":1947,
+"units":1
+},
+{
+"address":"6706 West 87th Place",
+"lat":33.957687,
+"lon":-118.407093,
+"apn":"4122-020-008",
+"year_built":1946,
+"units":1
+},
+{
+"address":"6707 West 87th Place",
+"lat":33.958086,
+"lon":-118.407021,
+"apn":"4122-018-015",
+"year_built":1948,
+"units":1
+},
+{
+"address":"6711 West 87th Place",
+"lat":33.958113,
+"lon":-118.407196,
+"apn":"4122-018-016",
+"year_built":1947,
+"units":1
+},
+{
+"address":"6712 West 87th Place",
+"lat":33.957676,
+"lon":-118.40728,
+"apn":"4122-020-007",
+"year_built":1947,
+"units":1
+},
+{
+"address":"6716 West 87th Place",
+"lat":33.957708,
+"lon":-118.407446,
+"apn":"4122-020-006",
+"year_built":1946,
+"units":1
+},
+{
+"address":"6717 West 87th Place",
+"lat":33.958063,
+"lon":-118.407383,
+"apn":"4122-018-017",
+"year_built":1946,
+"units":1
+},
+{
+"address":"6722 West 87th Place",
+"lat":33.957692,
+"lon":-118.407622,
+"apn":"4122-020-005",
+"year_built":1946,
+"units":1
+},
+{
+"address":"6723 West 87th Place",
+"lat":33.958084,
+"lon":-118.407559,
+"apn":"4122-018-018",
+"year_built":1946,
+"units":1
+},
+{
+"address":"6727 West 87th Place",
+"lat":33.958086,
+"lon":-118.407731,
+"apn":"4122-018-019",
+"year_built":1948,
+"units":1
+},
+{
+"address":"6728 West 87th Place",
+"lat":33.957692,
+"lon":-118.407796,
+"apn":"4122-020-004",
+"year_built":1946,
+"units":1
+},
+{
+"address":"6732 West 87th Place",
+"lat":33.95766,
+"lon":-118.407971,
+"apn":"4122-020-003",
+"year_built":1946,
+"units":1
+},
+{
+"address":"6733 West 87th Place",
+"lat":33.958079,
+"lon":-118.407903,
+"apn":"4122-018-020",
+"year_built":1948,
+"units":1
+},
+{
+"address":"6738 West 87th Place",
+"lat":33.957692,
+"lon":-118.408144,
+"apn":"4122-020-002",
+"year_built":1946,
+"units":1
+},
+{
+"address":"6739 West 87th Place",
+"lat":33.958072,
+"lon":-118.408077,
+"apn":"4122-018-021",
+"year_built":1946,
+"units":1
+},
+{
+"address":"6743 West 87th Place",
+"lat":33.958073,
+"lon":-118.408253,
+"apn":"4122-018-022",
+"year_built":1946,
+"units":1
+},
+{
+"address":"6749 West 87th Place",
+"lat":33.958075,
+"lon":-118.408423,
+"apn":"4122-018-023",
+"year_built":1946,
+"units":1
+},
+{
+"address":"6755 West 87th Place",
+"lat":33.958071,
+"lon":-118.408598,
+"apn":"4122-018-024",
+"year_built":1946,
+"units":1
+},
+{
+"address":"6400 West 87th Street",
+"lat":33.958409,
+"lon":-118.398954,
+"apn":"4122-009-014",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6401 West 87th Street",
+"lat":33.95875,
+"lon":-118.398979,
+"apn":"4122-006-009",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6406 West 87th Street",
+"lat":33.958383,
+"lon":-118.399168,
+"apn":"4122-009-013",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6407 West 87th Street",
+"lat":33.958759,
+"lon":-118.399163,
+"apn":"4122-006-010",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6410 West 87th Street",
+"lat":33.958368,
+"lon":-118.399368,
+"apn":"4122-009-012",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6411 West 87th Street",
+"lat":33.958736,
+"lon":-118.399349,
+"apn":"4122-006-011",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6414 West 87th Street",
+"lat":33.958364,
+"lon":-118.399556,
+"apn":"4122-009-011",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6415 West 87th Street",
+"lat":33.958727,
+"lon":-118.399509,
+"apn":"4122-006-012",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6418 West 87th Street",
+"lat":33.958348,
+"lon":-118.399719,
+"apn":"4122-009-010",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6419 West 87th Street",
+"lat":33.95872,
+"lon":-118.399673,
+"apn":"4122-006-013",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6422 West 87th Street",
+"lat":33.958319,
+"lon":-118.399884,
+"apn":"4122-009-009",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6423 West 87th Street",
+"lat":33.958709,
+"lon":-118.399841,
+"apn":"4122-006-014",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6426 West 87th Street",
+"lat":33.958305,
+"lon":-118.400056,
+"apn":"4122-009-008",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6427 West 87th Street",
+"lat":33.958696,
+"lon":-118.400004,
+"apn":"4122-006-015",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6430 West 87th Street",
+"lat":33.958287,
+"lon":-118.400245,
+"apn":"4122-009-007",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6434 West 87th Street",
+"lat":33.958311,
+"lon":-118.400423,
+"apn":"4122-009-006",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6438 West 87th Street",
+"lat":33.958307,
+"lon":-118.400607,
+"apn":"4122-009-005",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6441 West 87th Street",
+"lat":33.958657,
+"lon":-118.400644,
+"apn":"4122-007-012",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6444 West 87th Street",
+"lat":33.958293,
+"lon":-118.400799,
+"apn":"4122-009-004",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6445 West 87th Street",
+"lat":33.958698,
+"lon":-118.400811,
+"apn":"4122-007-013",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6447 West 87th Street",
+"lat":33.958656,
+"lon":-118.400976,
+"apn":"4122-007-014",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6448 West 87th Street",
+"lat":33.958304,
+"lon":-118.400976,
+"apn":"4122-009-003",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6452 West 87th Street",
+"lat":33.958309,
+"lon":-118.401167,
+"apn":"4122-009-002",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6453 West 87th Street",
+"lat":33.958684,
+"lon":-118.40114,
+"apn":"4122-007-015",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6456 West 87th Street",
+"lat":33.958337,
+"lon":-118.401344,
+"apn":"4122-009-001",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6457 West 87th Street",
+"lat":33.958692,
+"lon":-118.401308,
+"apn":"4122-007-016",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6460 West 87th Street",
+"lat":33.958328,
+"lon":-118.401533,
+"apn":"4122-010-011",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6461 West 87th Street",
+"lat":33.958703,
+"lon":-118.401476,
+"apn":"4122-007-017",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6500 West 87th Street",
+"lat":33.958361,
+"lon":-118.401706,
+"apn":"4122-010-010",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6501 West 87th Street",
+"lat":33.958715,
+"lon":-118.40166,
+"apn":"4122-007-018",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6504 West 87th Street",
+"lat":33.958345,
+"lon":-118.401896,
+"apn":"4122-010-009",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6505 West 87th Street",
+"lat":33.958742,
+"lon":-118.401837,
+"apn":"4122-007-019",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6508 West 87th Street",
+"lat":33.958399,
+"lon":-118.402065,
+"apn":"4122-010-008",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6509 West 87th Street",
+"lat":33.95876,
+"lon":-118.402024,
+"apn":"4122-007-020",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6514 West 87th Street",
+"lat":33.958383,
+"lon":-118.402244,
+"apn":"4122-010-007",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6515 West 87th Street",
+"lat":33.95876,
+"lon":-118.402199,
+"apn":"4122-007-021",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6518 West 87th Street",
+"lat":33.958402,
+"lon":-118.402407,
+"apn":"4122-010-006",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6519 West 87th Street",
+"lat":33.958793,
+"lon":-118.402381,
+"apn":"4122-008-009",
+"year_built":1946,
+"units":1
+},
+{
+"address":"6522 West 87th Street",
+"lat":33.958444,
+"lon":-118.402566,
+"apn":"4122-010-005",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6523 West 87th Street",
+"lat":33.958811,
+"lon":-118.402587,
+"apn":"4122-008-010",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6526 West 87th Street",
+"lat":33.958406,
+"lon":-118.402727,
+"apn":"4122-010-004",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6527 West 87th Street",
+"lat":33.958812,
+"lon":-118.402789,
+"apn":"4122-008-011",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6530 West 87th Street",
+"lat":33.958453,
+"lon":-118.402895,
+"apn":"4122-010-003",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6533 West 87th Street",
+"lat":33.958847,
+"lon":-118.40298,
+"apn":"4122-008-012",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6536 West 87th Street",
+"lat":33.958436,
+"lon":-118.403101,
+"apn":"4122-010-002",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6537 West 87th Street",
+"lat":33.958772,
+"lon":-118.403187,
+"apn":"4122-008-013",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6540 West 87th Street",
+"lat":33.958404,
+"lon":-118.403296,
+"apn":"4122-010-001",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6543 West 87th Street",
+"lat":33.958798,
+"lon":-118.403388,
+"apn":"4122-008-014",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6547 West 87th Street",
+"lat":33.958721,
+"lon":-118.403517,
+"apn":"4122-008-015",
+"year_built":1944,
+"units":1
+},
+{
+"address":"6600 West 87th Street",
+"lat":33.958394,
+"lon":-118.404601,
+"apn":"4122-017-013",
+"year_built":1947,
+"units":1
+},
+{
+"address":"6601 West 87th Street",
+"lat":33.958773,
+"lon":-118.404623,
+"apn":"4122-015-010",
+"year_built":1947,
+"units":1
+},
+{
+"address":"6606 West 87th Street",
+"lat":33.958379,
+"lon":-118.404773,
+"apn":"4122-017-012",
+"year_built":1947,
+"units":1
+},
+{
+"address":"6607 West 87th Street",
+"lat":33.958817,
+"lon":-118.404776,
+"apn":"4122-015-011",
+"year_built":1947,
+"units":1
+},
+{
+"address":"6611 West 87th Street",
+"lat":33.958762,
+"lon":-118.40497,
+"apn":"4122-015-012",
+"year_built":1947,
+"units":1
+},
+{
+"address":"6612 West 87th Street",
+"lat":33.958362,
+"lon":-118.404965,
+"apn":"4122-017-011",
+"year_built":1947,
+"units":1
+},
+{
+"address":"6616 West 87th Street",
+"lat":33.958389,
+"lon":-118.405128,
+"apn":"4122-017-010",
+"year_built":1947,
+"units":1
+},
+{
+"address":"6617 West 87th Street",
+"lat":33.95877,
+"lon":-118.405147,
+"apn":"4122-015-013",
+"year_built":1947,
+"units":1
+},
+{
+"address":"6622 West 87th Street",
+"lat":33.958387,
+"lon":-118.4053,
+"apn":"4122-017-009",
+"year_built":1947,
+"units":1
+},
+{
+"address":"6623 West 87th Street",
+"lat":33.958769,
+"lon":-118.405322,
+"apn":"4122-015-014",
+"year_built":1947,
+"units":1
+},
+{
+"address":"6628 West 87th Street",
+"lat":33.958379,
+"lon":-118.405473,
+"apn":"4122-017-008",
+"year_built":1946,
+"units":1
+},
+{
+"address":"6629 West 87th Street",
+"lat":33.958793,
+"lon":-118.4055,
+"apn":"4122-015-015",
+"year_built":1946,
+"units":1
+},
+{
+"address":"6632 West 87th Street",
+"lat":33.958387,
+"lon":-118.405646,
+"apn":"4122-017-007",
+"year_built":1946,
+"units":1
+},
+{
+"address":"6633 West 87th Street",
+"lat":33.95879,
+"lon":-118.405678,
+"apn":"4122-015-016",
+"year_built":1946,
+"units":1
+},
+{
+"address":"6638 West 87th Street",
+"lat":33.958374,
+"lon":-118.40582,
+"apn":"4122-017-006",
+"year_built":1947,
+"units":1
+},
+{
+"address":"6639 West 87th Street",
+"lat":33.958778,
+"lon":-118.405855,
+"apn":"4122-015-017",
+"year_built":1946,
+"units":1
+},
+{
+"address":"6644 West 87th Street",
+"lat":33.958396,
+"lon":-118.405989,
+"apn":"4122-017-005",
+"year_built":1947,
+"units":1
+},
+{
+"address":"6645 West 87th Street",
+"lat":33.958787,
+"lon":-118.406031,
+"apn":"4122-015-018",
+"year_built":1946,
+"units":1
+},
+{
+"address":"6648 West 87th Street",
+"lat":33.958349,
+"lon":-118.40618,
+"apn":"4122-017-004",
+"year_built":1946,
+"units":1
+},
+{
+"address":"6649 West 87th Street",
+"lat":33.958769,
+"lon":-118.406207,
+"apn":"4122-015-019",
+"year_built":1946,
+"units":1
+},
+{
+"address":"6654 West 87th Street",
+"lat":33.958393,
+"lon":-118.406346,
+"apn":"4122-017-003",
+"year_built":1946,
+"units":1
+},
+{
+"address":"6655 West 87th Street",
+"lat":33.958781,
+"lon":-118.406358,
+"apn":"4122-015-020",
+"year_built":1945,
+"units":1
+},
+{
+"address":"6660 West 87th Street",
+"lat":33.958389,
+"lon":-118.406511,
+"apn":"4122-017-002",
+"year_built":1946,
+"units":1
+},
+{
+"address":"6661 West 87th Street",
+"lat":33.958785,
+"lon":-118.406535,
+"apn":"4122-015-021",
+"year_built":1945,
+"units":1
+},
+{
+"address":"6666 West 87th Street",
+"lat":33.958366,
+"lon":-118.406685,
+"apn":"4122-017-001",
+"year_built":1946,
+"units":1
+},
+{
+"address":"6667 West 87th Street",
+"lat":33.958759,
+"lon":-118.40671,
+"apn":"4122-016-014",
+"year_built":1945,
+"units":1
+},
+{
+"address":"6700 West 87th Street",
+"lat":33.958401,
+"lon":-118.406888,
+"apn":"4122-018-013",
+"year_built":1946,
+"units":1
+},
+{
+"address":"6701 West 87th Street",
+"lat":33.958776,
+"lon":-118.406886,
+"apn":"4122-016-015",
+"year_built":1945,
+"units":1
+},
+{
+"address":"6706 West 87th Street",
+"lat":33.958397,
+"lon":-118.407061,
+"apn":"4122-018-012",
+"year_built":1946,
+"units":1
+},
+{
+"address":"6707 West 87th Street",
+"lat":33.958789,
+"lon":-118.407063,
+"apn":"4122-016-016",
+"year_built":1945,
+"units":1
+},
+{
+"address":"6711 West 87th Street",
+"lat":33.95878,
+"lon":-118.407239,
+"apn":"4122-016-017",
+"year_built":1945,
+"units":1
+},
+{
+"address":"6712 West 87th Street",
+"lat":33.958374,
+"lon":-118.407235,
+"apn":"4122-018-011",
+"year_built":1946,
+"units":1
+},
+{
+"address":"6716 West 87th Street",
+"lat":33.958367,
+"lon":-118.407409,
+"apn":"4122-018-010",
+"year_built":1946,
+"units":1
+},
+{
+"address":"6717 West 87th Street",
+"lat":33.958784,
+"lon":-118.407415,
+"apn":"4122-016-018",
+"year_built":1945,
+"units":1
+},
+{
+"address":"6722 West 87th Street",
+"lat":33.958381,
+"lon":-118.407582,
+"apn":"4122-018-009",
+"year_built":1946,
+"units":1
+},
+{
+"address":"6723 West 87th Street",
+"lat":33.958781,
+"lon":-118.407592,
+"apn":"4122-016-019",
+"year_built":1945,
+"units":1
+},
+{
+"address":"6726 West 87th Street",
+"lat":33.958362,
+"lon":-118.407756,
+"apn":"4122-018-008",
+"year_built":1946,
+"units":1
+},
+{
+"address":"6729 West 87th Street",
+"lat":33.958757,
+"lon":-118.407768,
+"apn":"4122-016-020",
+"year_built":1945,
+"units":1
+},
+{
+"address":"6732 West 87th Street",
+"lat":33.958372,
+"lon":-118.407929,
+"apn":"4122-018-007",
+"year_built":1946,
+"units":1
+},
+{
+"address":"6733 West 87th Street",
+"lat":33.958803,
+"lon":-118.407945,
+"apn":"4122-016-021",
+"year_built":1945,
+"units":1
+},
+{
+"address":"6738 West 87th Street",
+"lat":33.958399,
+"lon":-118.408103,
+"apn":"4122-018-006",
+"year_built":1946,
+"units":1
+},
+{
+"address":"6739 West 87th Street",
+"lat":33.958794,
+"lon":-118.408121,
+"apn":"4122-016-022",
+"year_built":1945,
+"units":1
+},
+{
+"address":"6742 West 87th Street",
+"lat":33.958369,
+"lon":-118.408275,
+"apn":"4122-018-005",
+"year_built":1946,
+"units":1
+},
+{
+"address":"6743 West 87th Street",
+"lat":33.958762,
+"lon":-118.408326,
+"apn":"4122-016-023",
+"year_built":1946,
+"units":1
+},
+{
+"address":"6748 West 87th Street",
+"lat":33.958384,
+"lon":-118.40845,
+"apn":"4122-018-004",
+"year_built":1946,
+"units":1
+},
+{
+"address":"6749 West 87th Street",
+"lat":33.958781,
+"lon":-118.408498,
+"apn":"4122-016-024",
+"year_built":1946,
+"units":1
+},
+{
+"address":"6754 West 87th Street",
+"lat":33.958384,
+"lon":-118.408623,
+"apn":"4122-018-003",
+"year_built":1946,
+"units":1
+},
+{
+"address":"6755 West 87th Street",
+"lat":33.958762,
+"lon":-118.408676,
+"apn":"4122-016-025",
+"year_built":1946,
+"units":1
+},
+{
+"address":"6758 West 87th Street",
+"lat":33.958396,
+"lon":-118.408796,
+"apn":"4122-018-002",
+"year_built":1946,
+"units":1
+},
+{
+"address":"6761 West 87th Street",
+"lat":33.958762,
+"lon":-118.408855,
+"apn":"4122-016-026",
+"year_built":1946,
+"units":1
+},
+{
+"address":"6764 West 87th Street",
+"lat":33.958367,
+"lon":-118.40896,
+"apn":"4122-018-001",
+"year_built":1948,
+"units":1
+},
+{
+"address":"6767 West 87th Street",
+"lat":33.958765,
+"lon":-118.409004,
+"apn":"4122-016-027",
+"year_built":1948,
+"units":1
+},
+{
+"address":"6607 West 88th Street",
+"lat":33.957409,
+"lon":-118.4048,
+"apn":"4122-019-013",
+"year_built":1946,
+"units":1
+},
+{
+"address":"6613 West 88th Street",
+"lat":33.957397,
+"lon":-118.404986,
+"apn":"4122-019-014",
+"year_built":1946,
+"units":1
+},
+{
+"address":"6619 West 88th Street",
+"lat":33.957377,
+"lon":-118.405167,
+"apn":"4122-019-015",
+"year_built":1946,
+"units":1
+},
+{
+"address":"6623 West 88th Street",
+"lat":33.957388,
+"lon":-118.405339,
+"apn":"4122-019-016",
+"year_built":1946,
+"units":1
+},
+{
+"address":"6629 West 88th Street",
+"lat":33.957349,
+"lon":-118.405511,
+"apn":"4122-019-017",
+"year_built":1946,
+"units":1
+},
+{
+"address":"6635 West 88th Street",
+"lat":33.95734,
+"lon":-118.405683,
+"apn":"4122-019-018",
+"year_built":1946,
+"units":1
+},
+{
+"address":"6641 West 88th Street",
+"lat":33.957357,
+"lon":-118.405856,
+"apn":"4122-019-019",
+"year_built":1947,
+"units":1
+},
+{
+"address":"6645 West 88th Street",
+"lat":33.957366,
+"lon":-118.406027,
+"apn":"4122-019-020",
+"year_built":1947,
+"units":1
+},
+{
+"address":"6651 West 88th Street",
+"lat":33.957337,
+"lon":-118.406199,
+"apn":"4122-019-021",
+"year_built":1947,
+"units":1
+},
+{
+"address":"6655 West 88th Street",
+"lat":33.95737,
+"lon":-118.406368,
+"apn":"4122-019-022",
+"year_built":1947,
+"units":1
+},
+{
+"address":"6667-6677 West 88th Street",
+"lat":33.95735,
+"lon":-118.406712,
+"apn":"4122-019-024",
+"year_built":1946,
+"units":1
+},
+{
+"address":"6675 West 88th Street",
+"lat":33.957381,
+"lon":-118.406535,
+"apn":"4122-019-023",
+"year_built":1946,
+"units":1
+},
+{
+"address":"6701 West 88th Street",
+"lat":33.957384,
+"lon":-118.406883,
+"apn":"4122-020-010",
+"year_built":1946,
+"units":1
+},
+{
+"address":"6707 West 88th Street",
+"lat":33.957386,
+"lon":-118.40705,
+"apn":"4122-020-011",
+"year_built":1946,
+"units":1
+},
+{
+"address":"6711 West 88th Street",
+"lat":33.95736,
+"lon":-118.407225,
+"apn":"4122-020-012",
+"year_built":1946,
+"units":1
+},
+{
+"address":"6717 West 88th Street",
+"lat":33.957339,
+"lon":-118.407393,
+"apn":"4122-020-013",
+"year_built":1946,
+"units":1
+},
+{
+"address":"6723 West 88th Street",
+"lat":33.957392,
+"lon":-118.40758,
+"apn":"4122-020-014",
+"year_built":1946,
+"units":1
+},
+{
+"address":"6727 West 88th Street",
+"lat":33.957384,
+"lon":-118.407737,
+"apn":"4122-020-015",
+"year_built":1946,
+"units":1
+},
+{
+"address":"6733 West 88th Street",
+"lat":33.957389,
+"lon":-118.407921,
+"apn":"4122-020-016",
+"year_built":1946,
+"units":1
+},
+{
+"address":"6811 West 88th Street",
+"lat":33.957343,
+"lon":-118.408827,
+"apn":"4122-037-002",
+"year_built":1947,
+"units":1
+},
+{
+"address":"6817 West 88th Street",
+"lat":33.957357,
+"lon":-118.409022,
+"apn":"4122-037-003",
+"year_built":1946,
+"units":1
+},
+{
+"address":"6823 West 88th Street",
+"lat":33.957377,
+"lon":-118.409201,
+"apn":"4122-037-004",
+"year_built":1946,
+"units":1
+},
+{
+"address":"8309 Westlawn Avenue",
+"lat":33.963034,
+"lon":-118.407544,
+"apn":"4112-027-003",
+"year_built":1944,
+"units":1
+},
+{
+"address":"8312 Westlawn Avenue",
+"lat":33.96304,
+"lon":-118.407002,
+"apn":"4112-031-018",
+"year_built":1945,
+"units":1
+},
+{
+"address":"8313 Westlawn Avenue",
+"lat":33.962863,
+"lon":-118.407496,
+"apn":"4112-027-004",
+"year_built":1944,
+"units":1
+},
+{
+"address":"8316 Westlawn Avenue",
+"lat":33.962941,
+"lon":-118.406901,
+"apn":"4112-031-017",
+"year_built":1944,
+"units":1
+},
+{
+"address":"8317 Westlawn Avenue",
+"lat":33.962801,
+"lon":-118.407342,
+"apn":"4112-027-005",
+"year_built":1944,
+"units":1
+},
+{
+"address":"8321 Westlawn Avenue",
+"lat":33.96268,
+"lon":-118.40731,
+"apn":"4112-027-006",
+"year_built":1944,
+"units":1
+},
+{
+"address":"8322 Westlawn Avenue",
+"lat":33.962807,
+"lon":-118.406836,
+"apn":"4112-031-016",
+"year_built":1944,
+"units":1
+},
+{
+"address":"8325 Westlawn Avenue",
+"lat":33.962562,
+"lon":-118.407201,
+"apn":"4112-027-007",
+"year_built":1944,
+"units":1
+},
+{
+"address":"8326 Westlawn Avenue",
+"lat":33.962707,
+"lon":-118.406736,
+"apn":"4112-031-015",
+"year_built":1944,
+"units":1
+},
+{
+"address":"8329 Westlawn Avenue",
+"lat":33.96243,
+"lon":-118.407109,
+"apn":"4112-027-008",
+"year_built":1944,
+"units":1
+},
+{
+"address":"8332 Westlawn Avenue",
+"lat":33.962593,
+"lon":-118.406642,
+"apn":"4112-031-014;4112031015",
+"year_built":1944,
+"units":1
+},
+{
+"address":"8333 Westlawn Avenue",
+"lat":33.962325,
+"lon":-118.40701,
+"apn":"4112-027-009",
+"year_built":1944,
+"units":1
+},
+{
+"address":"8336 Westlawn Avenue",
+"lat":33.962463,
+"lon":-118.406559,
+"apn":"4112-031-013",
+"year_built":1944,
+"units":1
+},
+{
+"address":"8337 Westlawn Avenue",
+"lat":33.962205,
+"lon":-118.406945,
+"apn":"4112-027-010",
+"year_built":1944,
+"units":1
+},
+{
+"address":"8340 Westlawn Avenue",
+"lat":33.962341,
+"lon":-118.40647,
+"apn":"4112-031-012",
+"year_built":1944,
+"units":1
+},
+{
+"address":"8341 Westlawn Avenue",
+"lat":33.962065,
+"lon":-118.406876,
+"apn":"4112-027-011",
+"year_built":1944,
+"units":1
+},
+{
+"address":"8344 Westlawn Avenue",
+"lat":33.962206,
+"lon":-118.406415,
+"apn":"4112-031-011",
+"year_built":1944,
+"units":1
+},
+{
+"address":"8345 Westlawn Avenue",
+"lat":33.961946,
+"lon":-118.406801,
+"apn":"4112-028-001",
+"year_built":1944,
+"units":1
+},
+{
+"address":"8348 Westlawn Avenue",
+"lat":33.962066,
+"lon":-118.406383,
+"apn":"4112-031-010",
+"year_built":1944,
+"units":1
+},
+{
+"address":"8349 Westlawn Avenue",
+"lat":33.96181,
+"lon":-118.40675,
+"apn":"4112-028-002",
+"year_built":1944,
+"units":1
+},
+{
+"address":"8352 Westlawn Avenue",
+"lat":33.961936,
+"lon":-118.406312,
+"apn":"4112-030-011",
+"year_built":1944,
+"units":1
+},
+{
+"address":"8353 Westlawn Avenue",
+"lat":33.961642,
+"lon":-118.406747,
+"apn":"4112-028-003",
+"year_built":1944,
+"units":1
+},
+{
+"address":"8356 Westlawn Avenue",
+"lat":33.96181,
+"lon":-118.40624,
+"apn":"4112-030-010",
+"year_built":1944,
+"units":1
+},
+{
+"address":"8357 Westlawn Avenue",
+"lat":33.96155,
+"lon":-118.406648,
+"apn":"4112-028-004;4112028003",
+"year_built":1944,
+"units":1
+},
+{
+"address":"8360 Westlawn Avenue",
+"lat":33.961685,
+"lon":-118.406201,
+"apn":"4112-030-009;4112030010",
+"year_built":1944,
+"units":1
+},
+{
+"address":"8361 Westlawn Avenue",
+"lat":33.961414,
+"lon":-118.406629,
+"apn":"4112-028-005",
+"year_built":1944,
+"units":1
+},
+{
+"address":"8364 Westlawn Avenue",
+"lat":33.961538,
+"lon":-118.406164,
+"apn":"4112-030-008",
+"year_built":1944,
+"units":1
+},
+{
+"address":"8365 Westlawn Avenue",
+"lat":33.961275,
+"lon":-118.406586,
+"apn":"4112-028-006",
+"year_built":1944,
+"units":1
+},
+{
+"address":"8368 Westlawn Avenue",
+"lat":33.961399,
+"lon":-118.406135,
+"apn":"4112-030-007",
+"year_built":1944,
+"units":1
+},
+{
+"address":"8369 Westlawn Avenue",
+"lat":33.96114,
+"lon":-118.406512,
+"apn":"4112-028-007",
+"year_built":1944,
+"units":1
+},
+{
+"address":"8372 Westlawn Avenue",
+"lat":33.961265,
+"lon":-118.406099,
+"apn":"4112-030-006",
+"year_built":1944,
+"units":1
+},
+{
+"address":"8373 Westlawn Avenue",
+"lat":33.961004,
+"lon":-118.406528,
+"apn":"4112-028-008",
+"year_built":1944,
+"units":1
+},
+{
+"address":"8376 Westlawn Avenue",
+"lat":33.961131,
+"lon":-118.406028,
+"apn":"4112-030-005",
+"year_built":1944,
+"units":1
+},
+{
+"address":"8379 Westlawn Avenue",
+"lat":33.960856,
+"lon":-118.406528,
+"apn":"4112-028-009",
+"year_built":1944,
+"units":1
+},
+{
+"address":"8380 Westlawn Avenue",
+"lat":33.960988,
+"lon":-118.40605,
+"apn":"4112-030-004",
+"year_built":1944,
+"units":1
+},
+{
+"address":"8383 Westlawn Avenue",
+"lat":33.960719,
+"lon":-118.406504,
+"apn":"4112-028-010",
+"year_built":1944,
+"units":1
+},
+{
+"address":"8384 Westlawn Avenue",
+"lat":33.960851,
+"lon":-118.406012,
+"apn":"4112-030-003",
+"year_built":1944,
+"units":1
+},
+{
+"address":"8387 Westlawn Avenue",
+"lat":33.960583,
+"lon":-118.406501,
+"apn":"4112-028-011",
+"year_built":1944,
+"units":1
+},
+{
+"address":"8388 Westlawn Avenue",
+"lat":33.960708,
+"lon":-118.405982,
+"apn":"4112-030-002",
+"year_built":1944,
+"units":1
+},
+{
+"address":"8392 Westlawn Avenue",
+"lat":33.960573,
+"lon":-118.405982,
+"apn":"4112-030-001",
+"year_built":1944,
+"units":1
+}
+]
