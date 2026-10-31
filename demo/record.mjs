@@ -37,14 +37,15 @@ async function logIn() {
 async function showReply() {
     if (!record) return;
     await agentRows.last().evaluate((row) => row.scrollIntoView({ block: 'start', behavior: 'smooth' }));
-    await pause(2500);
+    await pause(3500);
     let atBottom = false;
-    while (!atBottom) {
+    while (!atBottom) {   // each step is checked after the previous smooth scroll has finished
         atBottom = await page.locator('#messages').evaluate((list) => {
-            list.scrollBy({ top: 250, behavior: 'smooth' });
-            return list.scrollTop + list.clientHeight + 250 >= list.scrollHeight;
+            if (list.scrollTop + list.clientHeight >= list.scrollHeight - 1) return true;
+            list.scrollBy({ top: 200, behavior: 'smooth' });
+            return false;
         });
-        await pause(1800);
+        await pause(2500);
     }
 }
 
