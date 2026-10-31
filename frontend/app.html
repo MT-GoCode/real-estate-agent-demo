@@ -1,5 +1,42 @@
 <!doctype html>
 <html lang="en">
-<head><meta charset="utf-8"><title>Property Research Agent</title><link rel="stylesheet" href="/frontend/style.css"></head>
-<body><p>Logged in.</p><form method="post" action="/logout"><button>Log out</button></form></body>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Property Research Agent</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css" integrity="sha384-sHL9NAb7lN7rfvG5lfHpm643Xkcjzp4jFvuavGOndn6pjVqS6ny56CAt3nsEVT4H" crossorigin="anonymous">
+<link rel="stylesheet" href="/frontend/style.css">
+<script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js" integrity="sha384-cxOPjt7s7Iz04uaHJceBmS+qpjv2JkIHNVcuOrM+YHwZOmJGBXI00mdUXEq65HTH" crossorigin="anonymous" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/marked@18.1.2/lib/marked.umd.js" integrity="sha384-nCN5FOaVTXXYilftBH/VQuC9ypBYOxrctAZn2x7ggYClXaporWSzM0y+ODhb8MTi" crossorigin="anonymous" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/dompurify@3.4.17/dist/purify.min.js" integrity="sha384-P0JNneQf81HOl9VwNXK76cQ9VMD6Nfsnepxb0cCOg8+UzEdzgPHAPV4wVQrvYQSx" crossorigin="anonymous" defer></script>
+<script src="/frontend/app.js" type="module"></script>
+</head>
+<body class="app">
+
+<main id="map">
+  <button id="help-button" title="How to use this">?</button>
+  <div id="fake-badge">Demo data: real addresses, everything else is made up</div>
+</main>
+
+<dialog id="help">
+  <h2>How to use this</h2>
+  <p>Zoom into map and click on a property, click "Ask an agent" and ask for help with research!</p>
+  <form method="dialog"><button>Got it</button></form>
+</dialog>
+
+<aside id="chat">
+  <header>
+    <nav id="chats"></nav>
+    <button id="new-chat">New chat</button>
+    <form method="post" action="/logout"><button id="logout">Log out</button></form>
+  </header>
+  <section id="messages"></section>
+  <form id="ask">
+    <textarea id="text" rows="2" maxlength="10000" placeholder="Ask about a property…"></textarea>
+    <button id="send">Send</button>
+  </form>
+  <footer id="cost"></footer>
+</aside>
+
+</body>
 </html>

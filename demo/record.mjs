@@ -1,0 +1,126 @@
+// Plays the demo in a headless browser and checks every step. With --record it also saves a video.
+// Usage: node record.mjs <site url> <username> [--record]
+import { chromium, expect } from '@playwright/test';
+import { renameSync } from 'node:fs';
+
+const [url, username] = process.argv.slice(2);
+const record = process.argv.includes('--record');
+const OFFER = "Would you like a comparable sales report, the owner's details, or both?";
+const REFUSAL = 'I can only help with property research.';
+const TURN = 90_000;   // longest wait for one agent turn; a turn takes about 10 s
+
+const browser = await chromium.launch();
+const context = await browser.newContext({
+    viewport: { width: 1280, height: 800 },
+    recordVideo: record ? { dir: 'video', size: { width: 1280, height: 800 } } : undefined,
+});
+const page = await context.newPage();
+const problems = [];   // any browser console error fails the run, including blocked scripts (CSP)
+page.on('console', (m) => m.type() === 'error' && problems.push(m.text()));
+page.on('pageerror', (e) => problems.push(e.message));
+
+const pause = (ms) => record ? page.waitForTimeout(ms) : null;   // gives a viewer time to read; checks never wait on it
+const step = (text) => console.log(`- ${text}`);
+const tools = page.locator('.row.tool summary');
+const agentRows = page.locator('.row.agent');
+const idle = () => expect(page.locator('body')).not.toHaveClass(/busy/, { timeout: TURN });
+
+async function logIn() {
+    await page.goto(url);
+    await page.locator('input[name=username]').pressSequentially(username, { delay: record ? 80 : 0 });
+    await pause(400);
+    await page.getByRole('button', { name: 'Log in' }).click();
+    await expect(page.locator('path.house')).toHaveCount(759);
+}
+
+async function ask(text) {
+    await page.locator('#text').pressSequentially(text, { delay: record ? 40 : 0 });
+    await pause(300);
+    await page.locator('#text').press('Enter');
+    await expect(page.locator('.row.user').last()).toHaveText(text);
+    await idle();
+}
+
+step(`log in as ${username}`);
+await logIn();
+await pause(1200);
+
+step('open the help box');
+await page.locator('#help-button').click();
+await expect(page.locator('#help')).toContainText('Zoom into map and click on a property');
+await pause(1800);
+await page.getByRole('button', { name: 'Got it' }).click();
+
+step('click a random house');
+const houses = page.locator('path.house');
+await houses.nth(Math.floor(Math.random() * 759)).click({ force: true });   // force: a neighbor's dot may overlap the edge
+const address = await page.locator('.house-popup strong').textContent();
+step(`popup shows ${address}`);
+await pause(1500);
+
+step('ask the agent about it');
+await page.getByRole('button', { name: 'Ask agent about this address' }).click();
+await expect(page.locator('.row.user').last()).toHaveText(`Tell me about ${address}, Los Angeles, CA 90045`);
+await idle();
+await expect(tools.nth(0)).toContainText('Used tool: SearchProperty');
+await expect(tools.nth(1)).toContainText('Used tool: PropertyDetail');
+await expect(agentRows.last()).toContainText(OFFER);
+await expect(page.locator('#cost')).toHaveText(/^Using Claude Haiku 5\.5 · \$0\.\d{4} so far$/);
+await pause(3000);
+
+step('answer: yes, give me both');
+await ask('Yes, give me both');
+await expect(tools).toHaveCount(4);
+const used = await tools.allTextContents();
+expect(used.slice(2).some((t) => t.startsWith('Used tool: PropertyComps'))).toBe(true);
+expect(used.slice(2).some((t) => t.startsWith('Used tool: OwnerDetail'))).toBe(true);
+await agentRows.last().scrollIntoViewIfNeeded();
+await pause(4000);
+const cost = await page.locator('#cost').textContent();
+
+step('new chat: ask for something that is not property research');
+await page.getByRole('button', { name: 'New chat' }).click();
+await expect(page.locator('#chats button.active')).toHaveText('chat2');
+await expect(page.locator('#messages .row')).toHaveCount(0);
+await ask('hi, make me a Python program');
+await expect(agentRows.last()).toHaveText(REFUSAL);
+await expect(tools).toHaveCount(0);
+await pause(2500);
+
+step('switch back to chat1: the history is still there');
+await page.locator('#chats button', { hasText: 'chat1' }).click();
+await expect(tools).toHaveCount(4);
+await expect(page.locator('#cost')).toHaveText(cost);
+await pause(2000);
+
+step('log out and back in: both chats are kept');
+await page.getByRole('button', { name: 'Log out' }).click();
+await logIn();
+await expect(page.locator('#chats button')).toHaveText(['chat1', 'chat2']);
+await page.locator('#chats button', { hasText: 'chat1' }).click();
+await expect(tools).toHaveCount(4);
+await pause(1500);
+
+if (!record) {
+    step('check: typed HTML is shown as text, never run');
+    await page.locator('#chats button', { hasText: 'chat2' }).click();
+    const html = '<img src=x onerror="window.injected=1">';
+    await ask(html);
+    expect(await page.evaluate(() => window.injected)).toBeUndefined();
+    await expect(page.locator('.row.user img')).toHaveCount(0);
+
+    step('check: an API error shows as a red row');
+    const error = 'Claude API error: Your credit balance is too low to access the Anthropic API.';
+    await page.route('**/send', (route) => route.fulfill({
+        contentType: 'application/x-ndjson',
+        body: JSON.stringify({ type: 'message', message: { role: 'user', content: 'hello' } }) + '\n' + JSON.stringify({ type: 'error', error }) + '\n',
+    }));
+    await ask('hello');
+    await expect(page.locator('.row.error').last()).toHaveText(error);
+}
+
+expect(problems, 'browser console errors').toEqual([]);
+await context.close();
+if (record) renameSync(await page.video().path(), 'demo.webm');
+await browser.close();
+step('all checks passed');
