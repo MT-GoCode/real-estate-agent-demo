@@ -26,6 +26,7 @@ Claude never touches the database. It can only ask; our code decides what to run
 | `tools.php` | The four tools. Each one is a description that Claude reads plus a PHP function that runs. |
 | `agent.php` | The loop above, the one HTTP request to Claude, and the price calculation. |
 | `server.php` | The website: login, chat list, and sending a message (streams each step to the browser). |
+| `Caddyfile` | Web server settings: every request goes to `server.php`, so no other file can be downloaded. |
 | `frontend/` | The pages the browser shows: login, the map and the chat. |
 | `db.php`, `seed.php` | The four SQLite files in `data/` and the script that fills the house and owner data. |
 | `test.php` | Every test: tools, real conversations with Claude, and the website over HTTP. |
@@ -49,7 +50,7 @@ You need the FrankenPHP binary (PHP 8.5 with a web server built in) and an Anthr
 ```sh
 echo 'ANTHROPIC_API_KEY=sk-ant-...' > .env && chmod 600 .env
 frankenphp php-cli seed.php                       # build data/houses.db and data/owners.db
-set -a; . ./.env; set +a; frankenphp run --config Caddyfile   # http://127.0.0.1:8080
+set -a; . ./.env; set +a; frankenphp run --config Caddyfile   # open http://127.0.0.1:8080 in Chrome
 frankenphp php-cli test.php                       # all tests (or: test.php tools | agent | server)
 ```
 
@@ -67,7 +68,7 @@ sudo systemctl start real-estate-agent
 ```
 
 **Update PHP:** download the newest `frankenphp-linux-x86_64` from
-https://github.com/php/frankenphp/releases, replace `/home/dev/bin/frankenphp`, restart the service.
+https://github.com/php/frankenphp/releases, replace `/home/dev/bin/frankenphp`, `chmod +x` it, restart the service.
 
 **Reset demo users** (before recording the demo again, and after each check run):
 

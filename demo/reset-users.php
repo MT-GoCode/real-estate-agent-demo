@@ -3,8 +3,7 @@
 // Usage: frankenphp php-cli demo/reset-users.php 'linht'      or      'check-%'  (% matches anything)
 require __DIR__ . '/../db.php';
 
-$users = 'SELECT id FROM users.users WHERE username LIKE ?';
-$chats = db()->prepare("DELETE FROM chats.chats WHERE user_id IN ($users)");
+$chats = db()->prepare('DELETE FROM chats.chats WHERE user_id IN (SELECT id FROM users.users WHERE username LIKE ?)');
 $chats->execute([$argv[1]]);
 $people = db()->prepare('DELETE FROM users.users WHERE username LIKE ?');
 $people->execute([$argv[1]]);

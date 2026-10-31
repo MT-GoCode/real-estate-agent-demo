@@ -53,14 +53,19 @@ await page.getByRole('button', { name: 'Got it' }).click();
 
 step('click a random house');
 const houses = page.locator('path.house');
-await houses.nth(Math.floor(Math.random() * 759)).click({ force: true });   // force: a neighbor's dot may overlap the edge
+const map = await page.locator('#map').boundingBox();
+const onScreen = await houses.evaluateAll((dots, map) => dots.flatMap((dot, i) => {   // dots well inside the map, clear of its buttons
+    const r = dot.getBoundingClientRect();
+    return r.width && r.left > map.x + 60 && r.right < map.x + map.width - 60 && r.top > map.y + 60 && r.bottom < map.y + map.height - 60 ? [i] : [];
+}), map);
+await houses.nth(onScreen[Math.floor(Math.random() * onScreen.length)]).click();
 const address = await page.locator('.house-popup strong').textContent();
 step(`popup shows ${address}`);
 await pause(1500);
 
 step('ask the agent about it');
 await page.getByRole('button', { name: 'Ask agent about this address' }).click();
-await expect(page.locator('.row.user').last()).toHaveText(`Tell me about ${address}, Los Angeles, CA 90045`);
+await expect(page.locator('.row.user').last()).toHaveText(`Tell me about ${address}`);
 await idle();
 await expect(tools.nth(0)).toContainText('Used tool: SearchProperty');
 await expect(tools.nth(1)).toContainText('Used tool: PropertyDetail');

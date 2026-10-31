@@ -140,7 +140,7 @@ if ($path === '/frontend/style.css')                              page('style.cs
 if ($path === '/login' && $post)                                  log_in();
 if ($path === '/logout' && $post)                                 log_out();
 if (!$user)                                                       fail(401, 'Log in first.');
-if ($path === '/api/houses')                                      reply(db()->query('SELECT id, address, lat, lon FROM properties')->fetchAll());
+if ($path === '/api/houses')                                      reply(db()->query("SELECT id, address || ', " . CITY . "' AS address, lat, lon FROM properties")->fetchAll());
 if ($path === '/api/chats' && $post)                              reply(new_chat($user));
 if ($path === '/api/chats')                                       reply(list_chats($user));
 if (preg_match('#^/api/chats/(\d+)$#', $path, $m))                reply(open_chat($user, (int) $m[1]));
