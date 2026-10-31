@@ -15,41 +15,39 @@ const PRICES = [
 ];
 
 // One user turn. $messages is the whole conversation, ending with the user's new message.
-// Whenever the conversation can be saved (never halfway through a tool call), this calls
-// $save(the messages added since the last save, the token usage of each Claude call since then).
+// After every call to Claude this calls $save(the new messages, the call's token usage),
+// so the chat is saved step by step, and never halfway through a tool call.
 function run_agent(array &$messages, callable $save): void
 {
-    $saved = count($messages);
-    $usages = [];
     while (true) {
         $reply = claude($messages);
-        $usages[] = $reply['usage'];
         $stop = $reply['content'] === [] ? 'empty reply' : $reply['stop_reason'];
         if ($stop !== 'tool_use' && $stop !== 'end_turn') {
-            $save(array_slice($messages, $saved), $usages);   // record what was already paid for
+            $save([], $reply['usage']);   // nothing to keep, but the call was paid for
             throw new RuntimeException("Claude stopped early ($stop).");
         }
         $messages[] = ['role' => 'assistant', 'content' => $reply['content']];
-        if ($stop === 'end_turn') break;
+        if ($stop === 'end_turn') {      // Claude answered in words: the turn is over
+            $save([array_last($messages)], $reply['usage']);
+            return;
+        }
 
         // Claude asked for one or more tools. Run each one and send all the results back together.
         $results = [];
         foreach ($reply['content'] as $block) {
             if ($block['type'] !== 'tool_use') continue;
             try {
-                $results[] = ['type' => 'tool_result', 'tool_use_id' => $block['id'], 'content' => json_encode(run_tool($block['name'], $block['input']))];
+                $result = ['content' => json_encode(run_tool($block['name'], $block['input']))];
             } catch (ToolError $e) {     // the tool could not answer, e.g. no such address
-                $results[] = ['type' => 'tool_result', 'tool_use_id' => $block['id'], 'content' => $e->getMessage(), 'is_error' => true];
+                $result = ['content' => $e->getMessage(), 'is_error' => true];
             } catch (Throwable $e) {     // a PHP error; its text holds server details, so send only its kind
-                $results[] = ['type' => 'tool_result', 'tool_use_id' => $block['id'], 'content' => get_class($e) . ': the tool failed or got bad arguments.', 'is_error' => true];
+                $result = ['content' => get_class($e) . ': the tool failed or got bad arguments.', 'is_error' => true];
             }
+            $results[] = ['type' => 'tool_result', 'tool_use_id' => $block['id']] + $result;
         }
         $messages[] = ['role' => 'user', 'content' => $results];
-        $save(array_slice($messages, $saved), $usages);
-        $saved = count($messages);
-        $usages = [];
+        $save(array_slice($messages, -2), $reply['usage']);
     }
-    $save(array_slice($messages, $saved), $usages);
 }
 
 // One HTTP request to Claude's Messages API. Returns Claude's reply.
@@ -59,11 +57,11 @@ function claude(array $messages): array
     curl_setopt_array($curl, [
         CURLOPT_POST => true,
         CURLOPT_RETURNTRANSFER => true,
-        CURLOPT_TIMEOUT => 120,
+        CURLOPT_TIMEOUT => 120,          // 3x the time the longest possible reply takes
         CURLOPT_HTTPHEADER => ['content-type: application/json', 'anthropic-version: 2023-06-01', 'x-api-key: ' . getenv('ANTHROPIC_API_KEY')],
         CURLOPT_POSTFIELDS => json_encode([
             'model' => MODEL,
-            'max_tokens' => 4096,
+            'max_tokens' => 4096,        // about 8x the longest reply measured in the demo
             'tools' => TOOLS,
             // The tools and this prompt are the same in every request, so Claude caches them...
             'system' => [['type' => 'text', 'text' => file_get_contents(__DIR__ . '/SYSTEM_PROMPT.txt'), 'cache_control' => ['type' => 'ephemeral']]],

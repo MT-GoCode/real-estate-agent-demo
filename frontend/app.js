@@ -20,12 +20,13 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 const houses = await (await fetch('/api/houses')).json();
 const area = L.latLngBounds(houses.map((h) => [h.lat, h.lon])).pad(0.1);
 map.fitBounds(area);
-map.setMinZoom(map.getZoom());          // zoomed out as far as allowed, every house still has its dot
+map.setMinZoom(map.getZoom());          // the whole neighborhood: the farthest you can zoom out
+map.zoomIn(1, { animate: false });      // start one step closer, where the dots stand apart
 map.setMaxBounds(area);
 map.options.maxBoundsViscosity = 1;     // the map cannot be dragged away from the neighborhood
 
 for (const house of houses) {
-    L.circleMarker([house.lat, house.lon], { className: 'house', radius: 6, color: '#fff', weight: 1.5, fillColor: '#d32f2f', fillOpacity: 1 })
+    L.circleMarker([house.lat, house.lon], { className: 'house', radius: 5, color: '#fff', weight: 1, fillColor: '#d32f2f', fillOpacity: 1 })
         .bindPopup(() => popup(house))
         .addTo(map);
 }

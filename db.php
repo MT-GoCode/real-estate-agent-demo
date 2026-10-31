@@ -24,7 +24,6 @@ function db(): PDO
     $db->exec("CREATE TABLE IF NOT EXISTS chats.chats (
         id INTEGER PRIMARY KEY, user_id INTEGER NOT NULL, title TEXT NOT NULL,
         messages TEXT NOT NULL DEFAULT '[]',     -- the exact message list sent to Claude
-        version INTEGER NOT NULL DEFAULT 0,      -- +1 on every save, so two tabs cannot overwrite each other
         cost_usd REAL NOT NULL DEFAULT 0, created_at TEXT NOT NULL)");
     return $db;
 }

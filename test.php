@@ -145,17 +145,16 @@ function turn(array &$messages, string $text): array
     echo "  > user: $text\n";
     $messages[] = ['role' => 'user', 'content' => $text];
     $added = [];
-    run_agent($messages, function (array $new, array $usages) use (&$added) {
-        $last = end($new);
+    run_agent($messages, function (array $new, array $usage) use (&$added) {
+        $last = array_last($new);
         check(!($last['role'] === 'assistant' && in_array('tool_use', array_column($last['content'], 'type'), true)), 'saved a tool call without its result');
-        check(count($usages) === count(array_filter($new, fn($m) => $m['role'] === 'assistant')), 'not exactly one usage per Claude call');
         foreach ($new as $m) foreach ($m['content'] as $b) echo match ($b['type']) {
             'tool_use' => "  . Used tool: $b[name] " . json_encode($b['input']) . "\n",
             'tool_result' => '  . result: ' . (($b['is_error'] ?? false) ? 'ERROR ' : '') . substr($b['content'], 0, 100) . "...\n",
             'text' => '  < agent: ' . str_replace("\n", "\n           ", $b['text']) . "\n",
             default => '',
         };
-        printf("  \$ %.6f\n", array_sum(array_map('price', $usages)));
+        printf("  \$ %.6f\n", price($usage));
         array_push($added, ...$new);
     });
     return $added;
@@ -166,7 +165,7 @@ function blocks(array $messages, string $type): array
     foreach ($messages as $m) if (is_array($m['content'])) foreach ($m['content'] as $b) if ($b['type'] === $type) $found[] = $b;   // a typed user message is a plain string
     return $found;
 }
-function final_text(array $added): string { return implode("\n", array_column(blocks([end($added)], 'text'), 'text')); }
+function final_text(array $added): string { return implode("\n", array_column(blocks([array_last($added)], 'text'), 'text')); }
 
 $chat = [];
 $subject = raw("SELECT id, address, lat, lon FROM properties WHERE address = '8311 Kenyon Avenue'")[0];
@@ -248,13 +247,15 @@ function start_server(string $key): string
     return "http://127.0.0.1:$port";
 }
 
-// One HTTP request. $body: an array is sent as a form, a string as JSON. $lines (optional) collects the streamed lines with arrival times.
-function http(string $method, string $url, ?string $cookie = null, array|string|null $body = null, ?array &$lines = null, ?Closure $stop_after = null): array
+// One HTTP request. $body: an array is sent as a form, a string as JSON.
+// Returns the status, headers, body, session cookie, and the body's lines (decoded) with their arrival times.
+// $hang_up(lines so far) can return true to hang up mid-response, like a closed browser tab.
+function http(string $method, string $url, ?string $cookie = null, array|string|null $body = null, ?Closure $hang_up = null): array
 {
     $headers = [];
     $curl = curl_init($url);
     curl_setopt_array($curl, [
-        CURLOPT_CUSTOMREQUEST => $method, CURLOPT_RETURNTRANSFER => true, CURLOPT_PATH_AS_IS => true,
+        CURLOPT_CUSTOMREQUEST => $method, CURLOPT_PATH_AS_IS => true,
         CURLOPT_HTTPHEADER => array_filter([$cookie ? "Cookie: $cookie" : null, is_string($body) ? 'Content-Type: application/json' : null]),
         CURLOPT_HEADERFUNCTION => function ($c, $h) use (&$headers) {
             if (str_contains($h, ':')) { [$k, $v] = explode(':', $h, 2); $headers[strtolower($k)][] = trim($v); }
@@ -262,24 +263,21 @@ function http(string $method, string $url, ?string $cookie = null, array|string|
         },
     ]);
     if ($body !== null) curl_setopt($curl, CURLOPT_POSTFIELDS, is_array($body) ? http_build_query($body) : $body);
-    $text = '';
-    if ($lines !== null || $stop_after) {
-        $buffer = '';
-        curl_setopt($curl, CURLOPT_WRITEFUNCTION, function ($c, $chunk) use (&$buffer, &$lines, &$text, $stop_after) {
-            $text .= $chunk;
-            $buffer .= $chunk;
-            while (($n = strpos($buffer, "\n")) !== false) {
-                $lines[] = [microtime(true), json_decode(substr($buffer, 0, $n), true)];
-                $buffer = substr($buffer, $n + 1);
-                if ($stop_after && $stop_after($lines)) return 0;   // returning 0 makes curl hang up, like a closed tab
-            }
-            return strlen($chunk);
-        });
-    }
-    $result = curl_exec($curl);
-    if ($lines === null && !$stop_after) $text = $result;
+    $text = $buffer = '';
+    $lines = [];
+    curl_setopt($curl, CURLOPT_WRITEFUNCTION, function ($c, $chunk) use (&$text, &$buffer, &$lines, $hang_up) {
+        $text .= $chunk;
+        $buffer .= $chunk;
+        while (($n = strpos($buffer, "\n")) !== false) {
+            $lines[] = [microtime(true), json_decode(substr($buffer, 0, $n), true)];
+            $buffer = substr($buffer, $n + 1);
+            if ($hang_up && $hang_up($lines)) return 0;   // returning 0 makes curl hang up
+        }
+        return strlen($chunk);
+    });
+    curl_exec($curl);
     preg_match('/PHPSESSID=[^;]+/', implode("\n", $headers['set-cookie'] ?? []), $m);
-    return ['status' => curl_getinfo($curl, CURLINFO_RESPONSE_CODE), 'headers' => $headers, 'body' => $text, 'cookie' => $m[0] ?? $cookie];
+    return ['status' => curl_getinfo($curl, CURLINFO_RESPONSE_CODE), 'headers' => $headers, 'body' => $text, 'cookie' => $m[0] ?? $cookie, 'lines' => $lines];
 }
 
 function login(string $base, string $name): string
@@ -294,8 +292,7 @@ function chat(string $base, string $cookie, int $id): array { return json_decode
 // Sends a message and returns the streamed lines (each decoded), printing them like the chat window would.
 function send_text(string $base, string $cookie, int $id, string $text): array
 {
-    $lines = [];
-    http('POST', "$base/api/chats/$id/send", $cookie, json_encode(['text' => $text]), $lines);
+    $lines = http('POST', "$base/api/chats/$id/send", $cookie, json_encode(['text' => $text]))['lines'];
     foreach ($lines as [, $line]) echo '  | ' . substr(json_encode($line), 0, 140) . "\n";
     return $lines;
 }
@@ -355,21 +352,20 @@ test('server', 'send_streams_the_turn_live', function () use (&$server, &$alice)
     $streamed = array_column(array_filter(array_column($lines, 1), fn($l) => $l['type'] === 'message'), 'message');
     check($streamed[0] === ['role' => 'user', 'content' => 'Tell me about 8311 Kenyon Avenue'], 'first line is not the user message');
     check(array_column(blocks($streamed, 'tool_use'), 'name') === ['SearchProperty', 'PropertyDetail'], 'tool calls not streamed');
-    $last = end($lines)[1];
+    $last = array_last($lines)[1];
     check($last['type'] === 'cost' && $last['cost'] > 0 && $last['model'] === 'Claude Haiku 5.5', 'last line is not the cost');
-    check(end($lines)[0] - $lines[0][0] > 0.5, 'lines arrived all at once (not streamed)');
+    check(array_last($lines)[0] - $lines[0][0] > 0.5, 'lines arrived all at once (not streamed)');
     $saved = chat($server, $alice, 1);
     check($saved['messages'] === $streamed, 'saved chat differs from what was streamed');
     check(abs($saved['cost_usd'] - $last['cost']) < 1e-12 && $saved['model'] === 'Claude Haiku 5.5', 'saved cost differs');
 });
 
 test('server', 'closing_the_tab_does_not_break_the_chat', function () use (&$server, &$alice) {
-    $lines = [];
-    http('POST', "$server/api/chats/1/send", $alice, json_encode(['text' => 'Yes, give me both']), $lines, fn($l) => count($l) >= 1);
+    http('POST', "$server/api/chats/1/send", $alice, json_encode(['text' => 'Yes, give me both']), fn($lines) => count($lines) >= 1);
     $deadline = microtime(true) + 60;   // a turn takes about 10 s
     do {
         usleep(500000);
-        $last = end(chat($server, $alice, 1)['messages']);
+        $last = array_last(chat($server, $alice, 1)['messages']);
         $done = $last['role'] === 'assistant' && blocks([$last], 'tool_use') === [];
     } while (!$done && microtime(true) < $deadline);
     check($done, 'the turn did not finish after the client hung up');

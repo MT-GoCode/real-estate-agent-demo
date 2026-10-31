@@ -27,9 +27,9 @@ function reply(array $data, int $status = 200): never
 
 function fail(int $status, string $message): never { reply(['error' => $message], $status); }
 
-function page(string $file): never   // one of the four files in frontend/
+function page(string $file, string $type): never   // one of the four files in frontend/
 {
-    header('Content-Type: ' . ['html' => 'text/html; charset=utf-8', 'js' => 'text/javascript', 'css' => 'text/css'][pathinfo($file, PATHINFO_EXTENSION)]);
+    header("Content-Type: $type");
     readfile(__DIR__ . "/frontend/$file");
     exit;
 }
@@ -78,20 +78,18 @@ function chat_of(int $user, int $id): array   // the chat, but only if it belong
 function open_chat(int $user, int $id): array
 {
     $chat = chat_of($user, $id);
-    return ['id' => $chat['id'], 'title' => $chat['title'], 'messages' => json_decode($chat['messages'], true),
-            'cost_usd' => $chat['cost_usd'], 'model' => MODEL_NAME];
+    return ['messages' => json_decode($chat['messages'], true), 'cost_usd' => $chat['cost_usd'], 'model' => MODEL_NAME];
 }
 
-// Saves the chat, unless someone else saved it after we read it (two tabs sending at once).
-// Returns the chat's total cost so far.
-function save(int $id, int &$version, array $messages, float $cost): float
+// Saves the chat, but only if it still has the $had messages we started from: otherwise another
+// tab saved it in the meantime, and saving would erase that. Returns the chat's total cost so far.
+function save(int $id, array $messages, int $had, float $cost): float
 {
-    $q = db()->prepare('UPDATE chats.chats SET messages = ?, cost_usd = cost_usd + ?, version = version + 1
-                        WHERE id = ? AND version = ? RETURNING cost_usd');
-    $q->execute([json_encode($messages), $cost, $id, $version]);
+    $q = db()->prepare('UPDATE chats.chats SET messages = ?, cost_usd = cost_usd + ?
+                        WHERE id = ? AND json_array_length(messages) = CAST(? AS INTEGER) RETURNING cost_usd');   // CAST: PDO sends numbers as text
+    $q->execute([json_encode($messages), $cost, $id, $had]);
     $total = $q->fetchColumn();
     if ($total === false) throw new RuntimeException('This chat was changed in another tab. Reload the page to see it.');
-    $version++;
     return $total;
 }
 
@@ -116,12 +114,11 @@ function send(int $user, int $id): never
 
     $messages = json_decode($chat['messages'], true);
     $messages[] = ['role' => 'user', 'content' => trim($text)];
-    $version = $chat['version'];
     try {
-        save($id, $version, $messages, 0);
-        stream(['type' => 'message', 'message' => end($messages)]);
-        run_agent($messages, function (array $new, array $usages) use ($id, &$version, &$messages) {
-            $total = save($id, $version, $messages, array_sum(array_map('price', $usages)));
+        save($id, $messages, count($messages) - 1, 0);
+        stream(['type' => 'message', 'message' => array_last($messages)]);
+        run_agent($messages, function (array $new, array $usage) use ($id, &$messages) {
+            $total = save($id, $messages, count($messages) - count($new), price($usage));
             foreach ($new as $message) stream(['type' => 'message', 'message' => $message]);
             stream(['type' => 'cost', 'cost' => $total, 'model' => MODEL_NAME]);
         });
@@ -137,10 +134,11 @@ $user = $_SESSION['user_id'] ?? null;
 $path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 $post = $_SERVER['REQUEST_METHOD'] === 'POST';
 
-if ($path === '/')                                                page($user ? 'app.html' : 'login.html');
+if ($path === '/')                                                page($user ? 'app.html' : 'login.html', 'text/html; charset=utf-8');
+if ($path === '/frontend/app.js')                                 page('app.js', 'text/javascript');
+if ($path === '/frontend/style.css')                              page('style.css', 'text/css');
 if ($path === '/login' && $post)                                  log_in();
 if ($path === '/logout' && $post)                                 log_out();
-if (preg_match('#^/frontend/(app\.js|style\.css)$#', $path, $m))  page($m[1]);
 if (!$user)                                                       fail(401, 'Log in first.');
 if ($path === '/api/houses')                                      reply(db()->query('SELECT id, address, lat, lon FROM properties')->fetchAll());
 if ($path === '/api/chats' && $post)                              reply(new_chat($user));

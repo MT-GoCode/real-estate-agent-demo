@@ -51,7 +51,8 @@ function run_tool(string $name, array $input): array
 const ABBREVIATIONS = ['w' => 'west', 'ave' => 'avenue', 'av' => 'avenue', 'st' => 'street', 'pl' => 'place'];
 function address_key(string $address): string
 {
-    $words = preg_split('/\s+/', trim(strtolower(str_replace('.', '', explode(',', $address)[0]))));
+    $street = explode(',', $address)[0];   // drop ", Los Angeles, CA"
+    $words = preg_split('/\s+/', trim(strtolower(str_replace('.', '', $street))));
     return implode(' ', array_map(fn($word) => ABBREVIATIONS[$word] ?? $word, $words));
 }
 
