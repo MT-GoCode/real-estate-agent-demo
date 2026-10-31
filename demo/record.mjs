@@ -33,6 +33,21 @@ async function logIn() {
     await expect(page.locator('path.house')).toHaveCount(759);
 }
 
+// Video only: scroll slowly through the agent's latest reply, so a viewer can read it.
+async function showReply() {
+    if (!record) return;
+    await agentRows.last().evaluate((row) => row.scrollIntoView({ block: 'start', behavior: 'smooth' }));
+    await pause(2500);
+    let atBottom = false;
+    while (!atBottom) {
+        atBottom = await page.locator('#messages').evaluate((list) => {
+            list.scrollBy({ top: 250, behavior: 'smooth' });
+            return list.scrollTop + list.clientHeight + 250 >= list.scrollHeight;
+        });
+        await pause(1800);
+    }
+}
+
 async function ask(text) {
     await page.locator('#text').pressSequentially(text, { delay: record ? 40 : 0 });
     await pause(300);
@@ -71,7 +86,7 @@ await expect(tools.nth(0)).toContainText('Used tool: SearchProperty');
 await expect(tools.nth(1)).toContainText('Used tool: PropertyDetail');
 await expect(agentRows.last()).toContainText(OFFER);
 await expect(page.locator('#cost')).toHaveText(/^Using Claude Haiku 5\.5 · \$0\.\d{4} so far$/);
-await pause(3000);
+await showReply();
 
 step('answer: yes, give me both');
 await ask('Yes, give me both');
@@ -79,8 +94,7 @@ await expect(tools).toHaveCount(4);
 const used = await tools.allTextContents();
 expect(used.slice(2).some((t) => t.startsWith('Used tool: PropertyComps'))).toBe(true);
 expect(used.slice(2).some((t) => t.startsWith('Used tool: OwnerDetail'))).toBe(true);
-await agentRows.last().scrollIntoViewIfNeeded();
-await pause(4000);
+await showReply();
 const cost = await page.locator('#cost').textContent();
 
 step('new chat: ask for something that is not property research');
