@@ -3,7 +3,6 @@
 
 const $ = (id) => document.getElementById(id);
 const make = (tag, properties) => Object.assign(document.createElement(tag), properties);   // a new page element
-let chats = [];        // [{id, title}] of this user
 let chatId = null;     // the chat on screen
 
 async function api(path, options) {
@@ -25,18 +24,18 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
 }).addTo(map);
 
-const houses = await api('/api/houses');
-const area = L.latLngBounds(houses.map((h) => [h.lat, h.lon])).pad(0.1);
-map.fitBounds(area);
-map.setMinZoom(map.getZoom());          // the whole neighborhood: the farthest you can zoom out
-map.zoomIn(1, { animate: false });      // start one step closer, where the dots stand apart
-map.setMaxBounds(area);
-map.options.maxBoundsViscosity = 1;     // the map cannot be dragged away from the neighborhood
-
-for (const house of houses) {
-    L.circleMarker([house.lat, house.lon], { className: 'house', radius: 5, color: '#fff', weight: 1, fillColor: '#d32f2f', fillOpacity: 1 })
-        .bindPopup(() => popup(house))
-        .addTo(map);
+function drawHouses(houses) {   // a red dot per house, and the map locked to their neighborhood
+    const area = L.latLngBounds(houses.map((h) => [h.lat, h.lon])).pad(0.1);
+    map.fitBounds(area);
+    map.setMinZoom(map.getZoom());          // the whole neighborhood: the farthest you can zoom out
+    map.zoomIn(1, { animate: false });      // start one step closer, where the dots stand apart
+    map.setMaxBounds(area);
+    map.options.maxBoundsViscosity = 1;     // the map cannot be dragged away from the neighborhood
+    for (const house of houses) {
+        L.circleMarker([house.lat, house.lon], { className: 'house', radius: 5, color: '#fff', weight: 1, fillColor: '#d32f2f', fillOpacity: 1 })
+            .bindPopup(() => popup(house))
+            .addTo(map);
+    }
 }
 
 function popup(house) {   // built from elements, never from HTML text
@@ -172,9 +171,10 @@ $('text').onkeydown = (event) => {   // Enter sends, Shift+Enter makes a new lin
 };
 
 
-// ---------- start: open the user's latest chat (a new user gets chat1) ----------
+// ---------- start: open the user's latest chat (a new user gets chat1), then show the houses ----------
 
-chats = await api('/api/chats');
+let chats = await api('/api/chats');   // [{id, title}] of this user
 if (chats.length === 0) chats.push(await api('/api/chats', { method: 'POST' }));
 await openChat(chats.at(-1).id);
 setBusy(false);   // the chat starts locked in app.html until it has loaded
+drawHouses(await api('/api/houses'));

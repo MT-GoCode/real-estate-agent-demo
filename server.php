@@ -61,6 +61,13 @@ function list_chats(int $user): array
     return $q->fetchAll();
 }
 
+function list_houses(): array   // every house, with its full address, for the map
+{
+    $q = db()->prepare("SELECT id, address || ', ' || ? AS address, lat, lon FROM properties");
+    $q->execute([CITY]);
+    return $q->fetchAll();
+}
+
 function new_chat(int $user): array
 {
     $title = 'chat' . (count(list_chats($user)) + 1);
@@ -140,7 +147,7 @@ if ($path === '/frontend/style.css')                              page('style.cs
 if ($path === '/login' && $post)                                  log_in();
 if ($path === '/logout' && $post)                                 log_out();
 if (!$user)                                                       fail(401, 'Log in first.');
-if ($path === '/api/houses')                                      reply(db()->query("SELECT id, address || ', " . CITY . "' AS address, lat, lon FROM properties")->fetchAll());
+if ($path === '/api/houses')                                      reply(list_houses());
 if ($path === '/api/chats' && $post)                              reply(new_chat($user));
 if ($path === '/api/chats')                                       reply(list_chats($user));
 if (preg_match('#^/api/chats/(\d+)$#', $path, $m))                reply(open_chat($user, (int) $m[1]));

@@ -1,7 +1,6 @@
 # Runs the site on ox-dev. Install: see README, "Deploy".
 [Unit]
 Description=Property Research Agent demo (FrankenPHP)
-After=network-online.target
 
 [Service]
 User=dev

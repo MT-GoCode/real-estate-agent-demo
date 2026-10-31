@@ -19,10 +19,11 @@ function db(): PDO
     foreach (['owners', 'chats', 'users'] as $name) $db->exec("ATTACH '$dir/$name.db' AS $name");
     foreach (['main', 'owners', 'chats', 'users'] as $name) $db->exec("PRAGMA $name.journal_mode = WAL");   // readers never wait for a writer
 
+    // AUTOINCREMENT: an id is never reused, so a deleted user's old login cookie can never open someone else's chats
     $db->exec('CREATE TABLE IF NOT EXISTS users.users (
-        id INTEGER PRIMARY KEY, username TEXT NOT NULL UNIQUE, created_at TEXT NOT NULL)');
+        id INTEGER PRIMARY KEY AUTOINCREMENT, username TEXT NOT NULL UNIQUE, created_at TEXT NOT NULL)');
     $db->exec("CREATE TABLE IF NOT EXISTS chats.chats (
-        id INTEGER PRIMARY KEY, user_id INTEGER NOT NULL, title TEXT NOT NULL,
+        id INTEGER PRIMARY KEY AUTOINCREMENT, user_id INTEGER NOT NULL, title TEXT NOT NULL,
         messages TEXT NOT NULL DEFAULT '[]',     -- the exact message list sent to Claude
         cost_usd REAL NOT NULL DEFAULT 0, created_at TEXT NOT NULL)");
     return $db;

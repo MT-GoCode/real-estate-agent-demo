@@ -29,6 +29,7 @@ Claude never touches the database. It can only ask; our code decides what to run
 | `Caddyfile` | Web server settings: every request goes to `server.php`, so no other file can be downloaded. |
 | `frontend/` | The pages the browser shows: login, the map and the chat. |
 | `db.php`, `seed.php` | The four SQLite files in `data/` and the script that fills the house and owner data. |
+| `deploy/`, `demo/reset-users.php` | The service that keeps the site running on ox-dev, and a script that deletes demo users. |
 | `test.php` | Every test: tools, real conversations with Claude, and the website over HTTP. |
 | `demo/record.mjs` | Plays the demo in a browser, checks each step, and can record a video. |
 
