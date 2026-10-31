@@ -21,7 +21,8 @@ function run_agent(array &$messages, callable $save): void
 {
     while (true) {
         $reply = claude($messages);
-        $stop = $reply['content'] === [] ? 'empty reply' : $reply['stop_reason'];
+        $stop = $reply['stop_reason'];
+        if ($reply['content'] === []) $stop = 'empty reply';
         if ($stop !== 'tool_use' && $stop !== 'end_turn') {
             $save([], $reply['usage']);   // nothing to keep, but the call was paid for
             throw new RuntimeException("Claude stopped early ($stop).");
