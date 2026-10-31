@@ -16,13 +16,6 @@ async function api(path, options) {
 }
 
 
-// ---------- start: open the user's latest chat (a new user gets chat1) ----------
-
-chats = await api('/api/chats');
-if (chats.length === 0) chats.push(await api('/api/chats', { method: 'POST' }));
-await openChat(chats.at(-1).id);
-
-
 // ---------- the map ----------
 
 const map = L.map('map', { zoomControl: false });
@@ -177,3 +170,11 @@ $('text').onkeydown = (event) => {   // Enter sends, Shift+Enter makes a new lin
         $('ask').requestSubmit();
     }
 };
+
+
+// ---------- start: open the user's latest chat (a new user gets chat1) ----------
+
+chats = await api('/api/chats');
+if (chats.length === 0) chats.push(await api('/api/chats', { method: 'POST' }));
+await openChat(chats.at(-1).id);
+setBusy(false);   // the chat starts locked in app.html until it has loaded

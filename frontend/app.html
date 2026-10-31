@@ -12,6 +12,7 @@
 <script src="/frontend/app.js" type="module"></script>
 </head>
 <body class="app">
+<!-- The chat controls start disabled; app.js enables them once the chat has loaded. -->
 
 <main id="map">
   <button id="help-button" title="How to use this">?</button>
@@ -32,8 +33,8 @@
   </header>
   <section id="messages"></section>
   <form id="ask">
-    <textarea id="text" rows="2" maxlength="10000" placeholder="Ask about a property…"></textarea>
-    <button id="send">Send</button>
+    <textarea id="text" rows="2" maxlength="10000" placeholder="Ask about a property…" disabled></textarea>
+    <button id="send" disabled>Send</button>
   </form>
   <footer id="cost"></footer>
 </aside>
