@@ -1,0 +1,14 @@
+# Runs the site on ox-dev. Install: see README, "Deploy".
+[Unit]
+Description=Property Research Agent demo (FrankenPHP)
+After=network-online.target
+
+[Service]
+User=dev
+WorkingDirectory=/home/dev/apps/real-estate-agent-demo
+EnvironmentFile=/home/dev/apps/real-estate-agent-demo/.env
+ExecStart=/home/dev/bin/frankenphp run --config Caddyfile
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

@@ -13,7 +13,7 @@
 
 require __DIR__ . '/tools.php';
 
-$dir = getenv('DATA_DIR') ?: __DIR__ . '/data';
+$dir = data_dir();
 foreach (['houses', 'owners'] as $name)
     foreach (['', '-wal', '-shm'] as $suffix)
         if (file_exists("$dir/$name.db$suffix")) unlink("$dir/$name.db$suffix");

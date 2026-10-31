@@ -2,12 +2,15 @@
 // One SQLite connection for the whole app. houses.db is the main file; the other three
 // are attached by name, so a query says owners.owners, chats.chats or users.users.
 
+// Where the four database files live. Tests point DATA_DIR at a scratch folder.
+function data_dir(): string { return getenv('DATA_DIR') ?: __DIR__ . '/data'; }
+
 function db(): PDO
 {
     static $db = null;
     if ($db) return $db;
 
-    $dir = getenv('DATA_DIR') ?: __DIR__ . '/data';   // tests point this at a scratch folder
+    $dir = data_dir();
     $db = new PDO("sqlite:$dir/houses.db", options: [
         PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
         PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,

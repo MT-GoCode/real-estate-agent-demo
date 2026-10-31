@@ -1,0 +1,14 @@
+# FrankenPHP is the Caddy web server with PHP built in. Every request goes to server.php,
+# so nothing else in this folder (.env, the databases, the PHP source) can be downloaded.
+# HTTPS is added in front of this by Tailscale Funnel.
+{
+	admin off
+	frankenphp
+}
+
+http://:{$PORT:8080} {
+	bind 127.0.0.1
+	root * .
+	rewrite * /server.php
+	php
+}

@@ -163,7 +163,7 @@ function turn(array &$messages, string $text): array
 function blocks(array $messages, string $type): array
 {
     $found = [];
-    foreach ($messages as $m) foreach ($m['content'] as $b) if ($b['type'] === $type) $found[] = $b;
+    foreach ($messages as $m) if (is_array($m['content'])) foreach ($m['content'] as $b) if ($b['type'] === $type) $found[] = $b;   // a typed user message is a plain string
     return $found;
 }
 function final_text(array $added): string { return implode("\n", array_column(blocks([end($added)], 'text'), 'text')); }
@@ -225,6 +225,185 @@ test('agent', 'api_errors_surface_with_their_message', function () {
     finally { putenv("ANTHROPIC_API_KEY=$key"); }
     echo "  error: $message\n";
     check($message === 'Claude API error: invalid x-api-key', 'bad key did not raise Anthropic\'s error message');
+});
+
+
+// ---------- server: the website, over real HTTP ----------
+
+// Starts the web server on a free port, with the scratch data and the given API key. Stopped when the tests end.
+function start_server(string $key): string
+{
+    global $scratch;
+    $socket = stream_socket_server('tcp://127.0.0.1:0');
+    $port = (int) explode(':', stream_socket_get_name($socket, false))[1];
+    fclose($socket);
+    $env = ['PORT' => $port, 'DATA_DIR' => $scratch, 'ANTHROPIC_API_KEY' => $key, 'HOME' => getenv('HOME'), 'PATH' => getenv('PATH')];
+    $server = proc_open([PHP_BINARY, 'run', '--config', __DIR__ . '/Caddyfile'], [1 => ['file', "$scratch/server-$port.log", 'a'], 2 => ['file', "$scratch/server-$port.log", 'a']], $pipes, __DIR__, $env);
+    register_shutdown_function(fn() => proc_terminate($server));
+    $deadline = microtime(true) + 10;   // it starts in about 0.3 s
+    while (!@fsockopen('127.0.0.1', $port)) {
+        check(microtime(true) < $deadline, 'server did not start: ' . file_get_contents("$scratch/server-$port.log"));
+        usleep(50000);
+    }
+    return "http://127.0.0.1:$port";
+}
+
+// One HTTP request. $body: an array is sent as a form, a string as JSON. $lines (optional) collects the streamed lines with arrival times.
+function http(string $method, string $url, ?string $cookie = null, array|string|null $body = null, ?array &$lines = null, ?Closure $stop_after = null): array
+{
+    $headers = [];
+    $curl = curl_init($url);
+    curl_setopt_array($curl, [
+        CURLOPT_CUSTOMREQUEST => $method, CURLOPT_RETURNTRANSFER => true, CURLOPT_PATH_AS_IS => true,
+        CURLOPT_HTTPHEADER => array_filter([$cookie ? "Cookie: $cookie" : null, is_string($body) ? 'Content-Type: application/json' : null]),
+        CURLOPT_HEADERFUNCTION => function ($c, $h) use (&$headers) {
+            if (str_contains($h, ':')) { [$k, $v] = explode(':', $h, 2); $headers[strtolower($k)][] = trim($v); }
+            return strlen($h);
+        },
+    ]);
+    if ($body !== null) curl_setopt($curl, CURLOPT_POSTFIELDS, is_array($body) ? http_build_query($body) : $body);
+    $text = '';
+    if ($lines !== null || $stop_after) {
+        $buffer = '';
+        curl_setopt($curl, CURLOPT_WRITEFUNCTION, function ($c, $chunk) use (&$buffer, &$lines, &$text, $stop_after) {
+            $text .= $chunk;
+            $buffer .= $chunk;
+            while (($n = strpos($buffer, "\n")) !== false) {
+                $lines[] = [microtime(true), json_decode(substr($buffer, 0, $n), true)];
+                $buffer = substr($buffer, $n + 1);
+                if ($stop_after && $stop_after($lines)) return 0;   // returning 0 makes curl hang up, like a closed tab
+            }
+            return strlen($chunk);
+        });
+    }
+    $result = curl_exec($curl);
+    if ($lines === null && !$stop_after) $text = $result;
+    preg_match('/PHPSESSID=[^;]+/', implode("\n", $headers['set-cookie'] ?? []), $m);
+    return ['status' => curl_getinfo($curl, CURLINFO_RESPONSE_CODE), 'headers' => $headers, 'body' => $text, 'cookie' => $m[0] ?? $cookie];
+}
+
+function login(string $base, string $name): string
+{
+    $r = http('POST', "$base/login", null, ['username' => $name]);
+    check($r['status'] === 303 && str_starts_with($r['cookie'] ?? '', 'PHPSESSID='), "login as $name failed");
+    return $r['cookie'];
+}
+
+function chat(string $base, string $cookie, int $id): array { return json_decode(http('GET', "$base/api/chats/$id", $cookie)['body'], true); }
+
+// Sends a message and returns the streamed lines (each decoded), printing them like the chat window would.
+function send_text(string $base, string $cookie, int $id, string $text): array
+{
+    $lines = [];
+    http('POST', "$base/api/chats/$id/send", $cookie, json_encode(['text' => $text]), $lines);
+    foreach ($lines as [, $line]) echo '  | ' . substr(json_encode($line), 0, 140) . "\n";
+    return $lines;
+}
+
+$server = null;
+$alice = null;
+test('server', 'login_page_and_username_rules', function () use (&$server) {
+    $server = start_server(getenv('ANTHROPIC_API_KEY'));
+    $r = http('GET', "$server/");
+    check($r['status'] === 200 && str_contains($r['body'], 'name="username"') && str_contains($r['body'], 'enter anything, just a prototype'), 'no login form at /');
+    check(http('POST', "$server/login", null, ['username' => '  '])['status'] === 400, 'blank username accepted');
+    check(http('POST', "$server/login", null, ['username' => str_repeat('é', 41)])['status'] === 400, '41-character username accepted');
+    $cookie = login($server, str_repeat('é', 40));
+    check(str_contains(http('GET', "$server/", $cookie)['body'], 'action="/logout"'), 'logged-in / is not the app page');
+});
+
+test('server', 'security_headers_and_hidden_files', function () use (&$server) {
+    $h = http('GET', "$server/")['headers'];
+    check(str_contains($h['content-security-policy'][0] ?? '', "frame-ancestors 'none'") && str_contains($h['content-security-policy'][0], "script-src 'self' https://cdn.jsdelivr.net;"), 'CSP missing');
+    check(($h['x-content-type-options'][0] ?? '') === 'nosniff' && ($h['referrer-policy'][0] ?? '') === 'strict-origin-when-cross-origin', 'nosniff/referrer header missing');
+    $cookie = login($server, 'peeker');
+    foreach (['/.env', '/data/chats.db', '/data/houses.db', '/server.php', '/agent.php', '/SYSTEM_PROMPT.txt', '/frontend/../.env', '/frontend/../server.php', '/frontend/login.html/../../.env'] as $path) {
+        $r = http('GET', $server . $path, $cookie);
+        check(in_array($r['status'], [401, 404], true), "$path answered $r[status]");
+        foreach ([getenv('ANTHROPIC_API_KEY'), 'SQLite format', '<?php', 'You are a property research agent'] as $secret)
+            check(!str_contains($r['body'], $secret), "$path leaked file contents");
+    }
+});
+
+test('server', 'chats_belong_to_their_user', function () use (&$server, &$alice) {
+    $alice = login($server, 'alice');
+    $first = json_decode(http('POST', "$server/api/chats", $alice)['body'], true);
+    $second = json_decode(http('POST', "$server/api/chats", $alice)['body'], true);
+    check([$first['title'], $second['title']] === ['chat1', 'chat2'], 'chats are not numbered chat1, chat2');
+    check(json_decode(http('GET', "$server/api/chats", $alice)['body'], true) === [$first, $second], 'chat list wrong');
+    $bob = login($server, 'bob');
+    check(http('GET', "$server/api/chats/$first[id]", $bob)['status'] === 404, "bob can read alice's chat");
+    check(http('POST', "$server/api/chats/$first[id]/send", $bob, json_encode(['text' => 'hi']))['status'] === 404, "bob can write to alice's chat");
+    check(json_decode(http('GET', "$server/api/chats", $bob)['body'], true) === [], "bob sees alice's chats");
+});
+
+test('server', 'bad_messages_are_refused_before_saving', function () use (&$server, &$alice) {
+    foreach (['{"text":"   "}', '{"text":["x"]}', '{"text":' . json_encode(str_repeat('a', 10001)) . '}', 'not json'] as $body)
+        check(http('POST', "$server/api/chats/1/send", $alice, $body)['status'] === 400, "accepted the body $body");
+    check(chat($server, $alice, 1)['messages'] === [], 'a refused message was saved');
+});
+
+test('server', 'logout_ends_the_session', function () use (&$server) {
+    $cookie = login($server, 'leaver');
+    check(http('GET', "$server/api/chats", $cookie)['status'] === 200, 'logged-in request refused');
+    http('POST', "$server/logout", $cookie);
+    check(http('GET', "$server/api/chats", $cookie)['status'] === 401, 'the old cookie still works after logout');
+});
+
+test('server', 'send_streams_the_turn_live', function () use (&$server, &$alice) {
+    $lines = send_text($server, $alice, 1, 'Tell me about 8311 Kenyon Avenue');
+    $streamed = array_column(array_filter(array_column($lines, 1), fn($l) => $l['type'] === 'message'), 'message');
+    check($streamed[0] === ['role' => 'user', 'content' => 'Tell me about 8311 Kenyon Avenue'], 'first line is not the user message');
+    check(array_column(blocks($streamed, 'tool_use'), 'name') === ['SearchProperty', 'PropertyDetail'], 'tool calls not streamed');
+    $last = end($lines)[1];
+    check($last['type'] === 'cost' && $last['cost'] > 0 && $last['model'] === 'Claude Haiku 5.5', 'last line is not the cost');
+    check(end($lines)[0] - $lines[0][0] > 0.5, 'lines arrived all at once (not streamed)');
+    $saved = chat($server, $alice, 1);
+    check($saved['messages'] === $streamed, 'saved chat differs from what was streamed');
+    check(abs($saved['cost_usd'] - $last['cost']) < 1e-12 && $saved['model'] === 'Claude Haiku 5.5', 'saved cost differs');
+});
+
+test('server', 'closing_the_tab_does_not_break_the_chat', function () use (&$server, &$alice) {
+    $lines = [];
+    http('POST', "$server/api/chats/1/send", $alice, json_encode(['text' => 'Yes, give me both']), $lines, fn($l) => count($l) >= 1);
+    $deadline = microtime(true) + 60;   // a turn takes about 10 s
+    do {
+        usleep(500000);
+        $last = end(chat($server, $alice, 1)['messages']);
+        $done = $last['role'] === 'assistant' && blocks([$last], 'tool_use') === [];
+    } while (!$done && microtime(true) < $deadline);
+    check($done, 'the turn did not finish after the client hung up');
+    $lines = send_text($server, $alice, 1, 'Thanks!');
+    check(!in_array('error', array_column(array_column($lines, 1), 'type'), true), 'the chat broke after the client hung up');
+});
+
+test('server', 'two_tabs_sending_at_once', function () use (&$server, &$alice) {
+    $id = json_decode(http('POST', "$server/api/chats", $alice)['body'], true)['id'];
+    $multi = curl_multi_init();
+    $handles = [];
+    foreach (['Tell me about 8311 Kenyon Avenue', 'Tell me about 8315 Kenyon Avenue'] as $text) {
+        $c = curl_init("$server/api/chats/$id/send");
+        curl_setopt_array($c, [CURLOPT_POST => true, CURLOPT_RETURNTRANSFER => true, CURLOPT_POSTFIELDS => json_encode(['text' => $text]),
+            CURLOPT_HTTPHEADER => ["Cookie: $alice", 'Content-Type: application/json']]);
+        curl_multi_add_handle($multi, $c);
+        $handles[] = $c;
+    }
+    do { curl_multi_exec($multi, $running); curl_multi_select($multi); } while ($running);
+    $errors = 0;
+    foreach ($handles as $c) $errors += substr_count(curl_multi_getcontent($c), 'changed in another tab');
+    check($errors === 1, "expected exactly one 'changed in another tab' error, got $errors");
+    $lines = send_text($server, $alice, $id, 'Thanks!');
+    check(!in_array('error', array_column(array_column($lines, 1), 'type'), true), 'the chat is broken after two tabs collided');
+});
+
+test('server', 'api_errors_stream_into_the_chat', function () {
+    $bad = start_server('sk-ant-not-a-real-key');
+    $cookie = login($bad, 'nokey');
+    $id = json_decode(http('POST', "$bad/api/chats", $cookie)['body'], true)['id'];
+    $lines = array_column(send_text($bad, $cookie, $id, 'hi'), 1);
+    check(count($lines) === 2 && $lines[0]['message']['content'] === 'hi' && $lines[1] === ['type' => 'error', 'error' => 'Claude API error: invalid x-api-key'], 'the API error was not streamed');
+    $saved = chat($bad, $cookie, $id);
+    check($saved['messages'] === [['role' => 'user', 'content' => 'hi']] && $saved['cost_usd'] == 0, 'chat changed beyond the user message');
 });
 
 
