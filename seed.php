@@ -7,7 +7,7 @@
 // (762 houses; 3 without a parcel number or year built were dropped.)
 //
 // FAKE: everything else -- values, sales, mortgages, owners, phones, emails. The numbers are only
-// meant to look plausible for Westchester. The random generator starts from a fixed seed, so
+// meant to look plausible for Westchester, valued as of 2026. The random generator starts from a fixed seed, so
 // every run builds exactly the same data and property ids never change.
 // Only houses.db and owners.db are rebuilt; users and chats are never touched.
 
@@ -66,6 +66,8 @@ foreach (json_decode(file_get_contents(__DIR__ . '/data/westchester.json'), true
     $id = $i + 1;
     $unit_sqft = $h['units'] == 1 ? mt_rand(1100, 2400) : mt_rand(700, 1100);   // a house, or one apartment of a multi-unit
     $sqft = $h['units'] * $unit_sqft;
+    $beds = $h['units'] * min(5, max(1, round($unit_sqft / 550)));
+    $baths = $h['units'] * min(3.5, max(1, round($unit_sqft / 350) / 2));   // to the nearest half bath
     $market = round($sqft * mt_rand(900, 1100), -3);               // today's value, ~$900-1,100 per sq ft
     $sale_year = mt_rand(max($h['year_built'], 1975), NOW - 1);
     $sale_date = day_in($sale_year);
@@ -74,7 +76,7 @@ foreach (json_decode(file_get_contents(__DIR__ . '/data/westchester.json'), true
     $property->execute([
         $id, $h['address'], address_key($h['address']), $h['apn'], $h['lat'], $h['lon'],
         match ($h['units']) { 1 => 'Single Family Residence', 2 => 'Duplex', default => 'Multi-family' }, $h['units'],
-        $h['units'] * min(5, max(1, round($unit_sqft / 550))), $h['units'] * min(3.5, max(1, round($unit_sqft / 350) / 2)), $sqft, mt_rand(50, 75) * 100, $h['year_built'],
+        $beds, $baths, $sqft, mt_rand(50, 75) * 100, $h['year_built'],
         $sale_date, $sale_price,
         chance(0.8) ? $market : null,                                  // about 1 in 5 houses has no valuation
         min($market, round($sale_price * 1.02 ** $years)),             // California Prop 13: assessment grows at most 2% a year
@@ -96,7 +98,7 @@ foreach (json_decode(file_get_contents(__DIR__ . '/data/westchester.json'), true
     $last = pick(LAST);
     $r = mt_rand(1, 100);
     $type = $r <= 82 ? 'Individual' : ($r <= 94 ? 'Trust' : 'LLC');
-    $occupied = $type != 'LLC' && chance(0.78);
+    $occupied = $type !== 'LLC' && chance(0.78);
     $owner->execute([
         $id,
         match ($type) {
@@ -109,7 +111,7 @@ foreach (json_decode(file_get_contents(__DIR__ . '/data/westchester.json'), true
         (int) $occupied,
         pick(match (true) { $years < 5 => ['25-34', '35-44'], $years < 15 => ['35-44', '45-54'],
                             $years < 30 => ['45-54', '55-64'], default => ['65-74', '75+'] }),
-        $type == 'LLC' ? 'info@' . strtolower($last) . '-holdings.example.com' : strtolower("$first.$last") . '@example.com',
+        $type === 'LLC' ? 'info@' . strtolower($last) . '-holdings.example.com' : strtolower("$first.$last") . '@example.com',
     ]);
     foreach (range(1, mt_rand(1, 3)) as $_)                            // 555-0100..0199 is reserved for fiction
         $phone->execute([$id, sprintf('(310) 555-01%02d', mt_rand(0, 99)), pick(['Mobile', 'Mobile', 'Landline', 'VoIP']), (int) chance(0.3)]);

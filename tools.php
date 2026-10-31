@@ -44,10 +44,12 @@ function run_tool(string $name, array $input): array
     return $name(...$input);
 }
 
-// "8701  Kenyon Avenue, Los Angeles" -> "8701 kenyon avenue"
+// The lookup key for an address: "8311  W. Kenyon Ave, Los Angeles" -> "8311 west kenyon avenue"
+const ABBREVIATIONS = ['w' => 'west', 'ave' => 'avenue', 'av' => 'avenue', 'st' => 'street', 'pl' => 'place'];
 function address_key(string $address): string
 {
-    return strtolower(trim(preg_replace('/\s+/', ' ', explode(',', $address)[0])));
+    $words = preg_split('/\s+/', trim(strtolower(str_replace('.', '', explode(',', $address)[0]))));
+    return implode(' ', array_map(fn($word) => ABBREVIATIONS[$word] ?? $word, $words));
 }
 
 function SearchProperty(string $address): array
@@ -70,7 +72,8 @@ function PropertyDetail(int $id): array
     $debt = array_sum(array_column($mortgages, 'balance'));
 
     unset($p['address_key']);
-    return ['address' => "$p[address], " . CITY] + $p + [
+    $p['address'] .= ', ' . CITY;
+    return $p + [
         'mortgage_count' => count($mortgages),
         'total_mortgage_balance' => $debt,
         'estimated_equity' => $p['estimated_value'] === null ? null : $p['estimated_value'] - $debt,
@@ -101,7 +104,8 @@ function OwnerDetail(int $id): array
 
     $q = db()->prepare('SELECT number, line_type, do_not_call FROM owners.phones WHERE property_id = ?');
     $q->execute([$id]);
-    $phones = array_map(fn($ph) => ['do_not_call' => (bool) $ph['do_not_call']] + $ph, $q->fetchAll());
+    $phones = $q->fetchAll();
+    foreach ($phones as &$phone) $phone['do_not_call'] = (bool) $phone['do_not_call'];
 
     $o['owner_occupied'] = (bool) $o['owner_occupied'];
     $o['years_owned'] = (new DateTime($o['last_sale_date']))->diff(new DateTime('today'))->y;
