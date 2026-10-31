@@ -1,7 +1,7 @@
-// Plays the demo in a headless browser and checks every step. With --record it also saves a video.
+// Plays the demo in a headless browser and checks every step. With --record it also saves a video
+// (demo.webm) at a viewer's pace, with the mouse pointer drawn in.
 // Usage: node record.mjs <site url> <username> [--record]
 import { chromium, expect } from '@playwright/test';
-import { renameSync } from 'node:fs';
 
 const [url, username] = process.argv.slice(2);
 const record = process.argv.includes('--record');
@@ -10,11 +10,12 @@ const REFUSAL = 'I can only help with property research.';
 const TURN = 90_000;   // longest wait for one agent turn; a turn takes about 10 s
 
 const browser = await chromium.launch();
-const context = await browser.newContext({
-    viewport: { width: 1280, height: 800 },
-    recordVideo: record ? { dir: 'video', size: { width: 1280, height: 800 } } : undefined,
-});
+const context = await browser.newContext({ viewport: { width: 1280, height: 800 } });
 const page = await context.newPage();
+if (record) {   // full-size frames at best quality (the screencast cannot exceed the viewport's size)
+    await page.screencast.start({ path: 'demo.webm', size: { width: 1280, height: 800 }, quality: 100, fps: 30 });
+    await page.screencast.showActions({ cursor: 'pointer', duration: 1000, style: { title: 'display: none' } });
+}
 const problems = [];   // any browser console error fails the run, including blocked scripts (CSP)
 page.on('console', (m) => m.type() === 'error' && problems.push(m.text()));
 page.on('pageerror', (e) => problems.push(e.message));
@@ -27,8 +28,8 @@ const idle = () => expect(page.locator('body')).not.toHaveClass(/busy/, { timeou
 
 async function logIn() {
     await page.goto(url);
-    await page.locator('input[name=username]').pressSequentially(username, { delay: record ? 80 : 0 });
-    await pause(400);
+    await page.locator('input[name=username]').pressSequentially(username, { delay: record ? 150 : 0 });
+    await pause(800);
     await page.getByRole('button', { name: 'Log in' }).click();
     await expect(page.locator('path.house')).toHaveCount(759);
 }
@@ -37,21 +38,21 @@ async function logIn() {
 async function showReply() {
     if (!record) return;
     await agentRows.last().evaluate((row) => row.scrollIntoView({ block: 'start', behavior: 'smooth' }));
-    await pause(3500);
+    await pause(5000);
     let atBottom = false;
     while (!atBottom) {   // each step is checked after the previous smooth scroll has finished
         atBottom = await page.locator('#messages').evaluate((list) => {
             if (list.scrollTop + list.clientHeight >= list.scrollHeight - 1) return true;
-            list.scrollBy({ top: 200, behavior: 'smooth' });
+            list.scrollBy({ top: 160, behavior: 'smooth' });
             return false;
         });
-        await pause(2500);
+        await pause(3000);
     }
 }
 
 async function ask(text) {
-    await page.locator('#text').pressSequentially(text, { delay: record ? 40 : 0 });
-    await pause(300);
+    await page.locator('#text').pressSequentially(text, { delay: record ? 100 : 0 });
+    await pause(800);
     await page.locator('#text').press('Enter');
     await expect(page.locator('.row.user').last()).toHaveText(text);
     await idle();
@@ -59,12 +60,12 @@ async function ask(text) {
 
 step(`log in as ${username}`);
 await logIn();
-await pause(1200);
+await pause(2500);
 
 step('open the help box');
 await page.locator('#help-button').click();
 await expect(page.locator('#help')).toContainText('Zoom into map and click on a property');
-await pause(1800);
+await pause(3500);
 await page.getByRole('button', { name: 'Got it' }).click();
 
 step('click a random house');
@@ -77,7 +78,7 @@ const onScreen = await houses.evaluateAll((dots, map) => dots.flatMap((dot, i) =
 await houses.nth(onScreen[Math.floor(Math.random() * onScreen.length)]).click();
 const address = await page.locator('.house-popup strong').textContent();
 step(`popup shows ${address}`);
-await pause(1500);
+await pause(2500);
 
 step('ask the agent about it');
 await page.getByRole('button', { name: 'Ask agent about this address' }).click();
@@ -105,13 +106,13 @@ await expect(page.locator('#messages .row')).toHaveCount(0);
 await ask('hi, make me a Python program');
 await expect(agentRows.last()).toHaveText(REFUSAL);
 await expect(tools).toHaveCount(0);
-await pause(2500);
+await pause(4000);
 
 step('switch back to chat1: the history is still there');
 await page.locator('#chats button', { hasText: 'chat1' }).click();
 await expect(tools).toHaveCount(4);
 await expect(page.locator('#cost')).toHaveText(cost);
-await pause(2000);
+await pause(3500);
 
 step('log out and back in: both chats are kept');
 await page.getByRole('button', { name: 'Log out' }).click();
@@ -119,7 +120,7 @@ await logIn();
 await expect(page.locator('#chats button')).toHaveText(['chat1', 'chat2']);
 await page.locator('#chats button', { hasText: 'chat1' }).click();
 await expect(tools).toHaveCount(4);
-await pause(1500);
+await pause(3000);
 
 if (!record) {
     step('check: typed HTML is shown as text, never run');
@@ -140,7 +141,6 @@ if (!record) {
 }
 
 expect(problems, 'browser console errors').toEqual([]);
-await context.close();
-if (record) renameSync(await page.video().path(), 'demo.webm');
+if (record) await page.screencast.stop();
 await browser.close();
 step('all checks passed');

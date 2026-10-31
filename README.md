@@ -87,5 +87,5 @@ On a Mac with Node.js and ffmpeg:
 cd demo && npm install && npx playwright install chromium-headless-shell
 node record.mjs https://ox-dev.tail4914b3.ts.net:8443 check-$(date +%s)    # checks every step, no video
 node record.mjs https://ox-dev.tail4914b3.ts.net:8443 linht --record       # same steps, saves demo.webm
-ffmpeg -i demo.webm -c:v libx264 -pix_fmt yuv420p -movflags +faststart demo.mp4
+ffmpeg -i demo.webm -c:v libx264 -crf 16 -preset slow -pix_fmt yuv420p -movflags +faststart demo.mp4
 ```
